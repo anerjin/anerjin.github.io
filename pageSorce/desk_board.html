@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title>UD</title>
+
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- css -->
+	<link rel="stylesheet" href="ui_deskboard/assets/css/desk_ui.css" />
+	<link rel="stylesheet" href="ui_deskboard/assets/css/desk_board.css" />
+	<link rel="stylesheet" href="ui_deskboard/assets/css/desk_widget.css" />
+	<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+
+	<!-- jquery -->
+	<script src="plugin/jquery/jquery.min.js"></script>
+    <script src="plugin/jquery/jquery-ui.min.js"></script>
+
+	<!-- desk js -->
+    <script src="ui_deskboard/assets/js/common.js"></script>
+	<script src="ui_deskboard/assets/js/desk_board.js"></script>
+    <script src="ui_deskboard/assets/js/desk_widget.js"></script>
+	
+	<!-- plugin js -->
+	<script src="ui_deskboard/plugin/contextmenu/jquery.nu-context-menu.js"></script>
+	
+
+	
+
+
+
+</head>
+
+<body>
+<div id="wrap" data-theme="glass">
+
+	<!-- desk -->
+	<div id="desk">
+		<!-- toolbar -->
+		<div id="toolbar">
+            <div class="status loading"></div>
+            <div class="toolbarWrap anime">
+                <div class="deskDock">
+                    <button type="button" class="appPlusOnf toolTip-bottom" data-ui="appPlusOpen" title="apps">
+                        <img src="../pageSorce/ui_deskboard/assets/images/desk/apps.svg" alt="apps">
+                    </button>
+                    <div class="dockBox">
+                        <ul id="dock"></ul>
+                    </div>
+                </div>
+                <div class="tools">
+                    <button type="button" id="show_desktop" title="Show/Hide" class="i mti-vector-selection toolTip-bottom" disabled>
+                        <img src="../pageSorce/ui_deskboard/assets/images/desk/tab_inactive.svg" alt="tab_inactive">
+                    </button>
+                    <button type="button" class="toolTip-bottom" title="FullScreen" data-ui="btnFullScreen">
+                        <img src="../pageSorce/ui_deskboard/assets/images/desk/fullSize.svg" alt="fullSize">
+                    </button>
+					<button type="button" class="toolTip-bottom" title="FullScreen Off" data-ui="btnFullScreenOff" style="display: none;">
+						<img src="../pageSorce/ui_deskboard/assets/images/desk/defaultSize.svg" alt="defaultSize">
+					</button>
+                    <button type="button" id="profileInfo" class="toolTip-bottom" title="Profile">
+                        <img src="../pageSorce/ui_deskboard/assets/images/desk/person.svg" alt="person">
+                    </button>
+                    <button type="button" id="notifyInfo" class="toolTip-bottom" title="Notifycations">
+                        <img src="../pageSorce/ui_deskboard/assets/images/desk/notifications.svg" alt="notifications">
+                    </button>
+                    <!-- <button type="button" id="notifiInfo" class="toolTip-bottom" title="notifications_0n">
+                        <img src="../pageSorce/ui_deskboard/assets/images/desk/notifications_0n.svg" alt="notifications_0n">
+                    </button> -->
+                    <button type="button" class="widegtOnf toolTip-bottom" data-ui="widegtOnf" title="widget">
+                        <img src="../pageSorce/ui_deskboard/assets/images/desk/segment.svg" alt="segment">
+                    </button>
+    
+                </div>
+            </div>
+		</div>
+
+		<!-- desktop -->
+		<div id="desktop">
+
+			<!-- deskApp -->
+			<div id="deskApp">
+				<ul>
+
+					<li>
+						<div class="app" rel="#icon_dock_pixlr">
+							<span class="icon"><img src="ui_deskboard/app/pixlr/icon.png" alt="mario"></span>
+							<p class="name">pixlr</p>
+						</div>
+					</li>
+					<li>
+						<div class="app" rel="#icon_dock_colorscripter">
+							<span class="icon"><img src="ui_deskboard/app/colorscripter/icon.png" alt="mario"></span>
+							<p class="name">color scripter</p>
+						</div>
+					</li>
+
+				</ul>
+			</div>
+
+			<!-- window init -->
+
+			<!-- sideWidget -->
+			<div id="widget" class="themeGlass">
+				<div class="widgetWrap">
+					
+					<div class="widget fw"></div>
+					<div class="widget"></div>
+					<div class="widget"></div>
+					<div class="widget fw"></div>
+					<div class="widget fwh"></div>
+					<div class="widget"></div>
+					<div class="widget"></div>
+				</div>
+				
+				<!--buttonWrap-->
+				<div class="buttonWrap">
+					<button type="button" class="button white round sBtn">위젯스토어</button>	
+				</div>
+				
+			</div>
+
+		</div>
+
+
+		<!-- wallpaper -->
+		<div class="wallpaper" style="background: url(ui_deskboard/assets/images/bg/bg10.jpg) no-repeat #333;"></div>
+
+	</div>
+
+
+	<!-- profile card -->
+	<div id="profileInfoCard" class="cardInfo profile">
+		<div class="userInfoBox">
+			<div class="userPhoto"><img src="ui_deskboard/assets/images/desk/person_circlebg.svg" alt="thomas"></div>
+			<div class="userInfo">
+				<strong>Thomas Cruise</strong>
+				<p>thomas@gmail.com</p>
+			</div>
+		</div>
+		<button type="button" id="myDesk" rel="#icon_dock_mydesk" class="button prime square fw mBtn">My Desk</button>
+		<div class="infoTools">
+			<button type="button" class="lock" onclick="location='desk_lock.html'">화면잠금</button>
+			<button type="button" class="">로그아웃</button>
+		</div>
+	</div>
+
+
+	<!-- notify -->
+	<div id="notifyInfoCard" class="cardInfo notify">
+		<div class="notifyHeader">
+			<span class="redNumber">
+				<strong>9</strong>개의 알림이 있습니다.
+			</span>
+			<span class="tools">
+				<button type="button" class="button white round sBtn">모두읽기</button>
+			</span>
+		</div>
+		<div class="notifyList">
+			<!-- none card -->
+			<div class="notifyItem">
+				<div class="infoBox nodata">알림이 없습니다.</div>
+			</div>
+
+			<!-- notifyItem -->
+			<div class="notifyItem">
+				<div class="infoBox">
+					<span class="appIcon"><img src="ui_deskboard/app/pixlr/icon.png" alt="pixlr"></span>
+					<span class="info">
+						<strong class="title">pixlr 기한만료</strong>
+						<p class="desc">2024년 8월 12일 기준 4일 남았습니다.</p>
+					</span>
+				</div>
+				<button type="button" class="i mti-minus-circle"></button>
+			</div>
+
+			<!-- notifyItem -->
+			<div class="notifyItem">
+				<div class="infoBox">
+					<span class="appIcon"><img src="ui_deskboard/app/pixlr/icon.png" alt="pixlr"></span>
+					<span class="info">
+						<strong class="title">pixlr 기한만료</strong>
+						<p class="desc">2024년 8월 12일 기준 4일 남았습니다.</p>
+					</span>
+				</div>
+				<button type="button" class="i mti-minus-circle"></button>
+			</div>
+
+			<!-- notifyItem -->
+			<div class="notifyItem">
+				<div class="infoBox">
+					<span class="appIcon"><img src="ui_deskboard/app/pixlr/icon.png" alt="pixlr"></span>
+					<span class="info">
+						<strong class="title">pixlr 기한만료</strong>
+						<p class="desc">2024년 8월 12일 기준 4일 남았습니다.</p>
+					</span>
+				</div>
+				<button type="button" class="i mti-minus-circle"></button>
+			</div>
+
+			<!-- notifyItem -->
+			<div class="notifyItem">
+				<div class="infoBox">
+					<span class="appIcon"><img src="ui_deskboard/app/pixlr/icon.png" alt="pixlr"></span>
+					<span class="info">
+						<strong class="title">pixlr 기한만료</strong>
+						<p class="desc">2024년 8월 12일 기준 4일 남았습니다.</p>
+					</span>
+				</div>
+				<button type="button" class="i mti-minus-circle"></button>
+			</div>
+
+			<!-- notifyItem -->
+			<div class="notifyItem">
+				<div class="infoBox">
+					<span class="appIcon"><img src="ui_deskboard/app/pixlr/icon.png" alt="pixlr"></span>
+					<span class="info">
+						<strong class="title">pixlr 기한만료</strong>
+						<p class="desc">2024년 8월 12일 기준 4일 남았습니다.</p>
+					</span>
+				</div>
+				<button type="button" class="i mti-minus-circle"></button>
+			</div>
+			<!-- notifyItem -->
+			<div class="notifyItem">
+				<div class="infoBox">
+					<span class="appIcon"><img src="ui_deskboard/app/pixlr/icon.png" alt="pixlr"></span>
+					<span class="info">
+						<strong class="title">pixlr 기한만료</strong>
+						<p class="desc">2024년 8월 12일 기준 4일 남았습니다.</p>
+					</span>
+				</div>
+				<button type="button" class="i mti-minus-circle"></button>
+			</div>
+			
+		
+		
+		</div>
+
+		<div class="buttonWrap">
+			<button type="button" class="button white round sBtn">더보기</button>	
+		</div>
+
+	</div>
+
+
+
+
+	
+
+
+</div>
+
+
+
+
+</body>
+</html>

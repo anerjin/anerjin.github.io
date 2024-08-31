@@ -1,0 +1,81 @@
+/* ----------------------------------------------
+APP UI - Talk
+------------------------------------------------*/
+#window_talk .winBody.winsideOut .winside {border-right:0; }
+#window_talk .winBody .winside .winsideBody {height:calc(100% - 36px);}
+#window_talk .winBody .winside .winsideBody .sIndex {height:calc(100% - 81px);}
+#window_talk .winBody .winside .winsideBody .sIndex .siHeader .button.zmdi-check {color:#55bce7;}
+#window_talk .winBody .winside .winsideBody .sIndex ul {height:calc(100% - 62px);}
+#window_talk .winBody .winContainer .winContent .viewBox .viewBoxheader {min-width:400px; background:#fff; border-bottom:0; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);}
+#window_talk .winBody .winContainer .winContent .viewBox .viewBoxheader .buttonBox {height:40px;}
+#window_talk .winBody .winContainer .winContent .viewBox .viewBoxheader .buttonBox .user {margin:0 10px;}
+#window_talk .winBody .winContainer .winContent .viewBox .viewBoxheader .buttonBox .user .photo {display:inline-block; margin-top:4px; cursor:pointer;}
+#window_talk .winBody .winContainer .winContent .viewBox .viewBoxheader .buttonBox .user .photo img {width:32px; height:32px; border-radius:50%; border:2px solid rgba(255, 255, 255, 0);}
+#window_talk .winBody .winContainer .winContent .viewBox .viewBoxheader .buttonBox .user .photo.main {margin-right:2px;}
+#window_talk .winBody .winContainer .winContent .viewBox .viewBoxheader .buttonBox .user .photo.main img  {border:2px solid #55bce7;}
+#window_talk .winBody .winContainer .winContent .viewBox .viewBoxheader .buttonBox .user .photo.standby img  {animation:talkUser 1s infinite;}
+@keyframes talkUser {0%{background:none;} 50% {background:#a1acb9;}}
+#window_talk .winBody .winContainer .winContent .viewBox .viewBoxBody {height:calc(100% - 40px); min-width:400px; background:rgb(215, 228, 233);}
+#window_talk .winBody .winContainer .winContent .viewBox .viewBoxBody .talkMessage {height:calc(100% - 70px); overflow:auto;}
+#window_talk .winBody .winContainer .winContent .viewBox .viewBoxBody .talkMessage .message_box {padding:10px;}
+#window_talk .winBody .winContainer .winContent .viewBox .viewBoxBody .talkMessage .message_box:first-child {margin-top:41px;}
+#window_talk .winBody .winContainer .winContent .viewBox .viewBoxBody .talkMessage .message_box:before{content:""; display:block; }
+#window_talk .winBody .winContainer .winContent .viewBox .viewBoxBody .talkMessage .message_box:after{content:"";display:block;clear:both}
+#window_talk .winBody .winContainer .winContent .viewBox .viewBoxBody .talkMessage .message_box .profile_img {display:inline-block; width:30px; height:30px; border-radius:50%; vertical-align:top; box-shadow:0 0 1px rgba(76,86,103,.2),0 1px 1px rgba(31,37,50,.3);}
+#window_talk .winBody .winContainer .winContent .viewBox .viewBoxBody .talkMessage .message_box .profile_img img {width:30px; height:30px; border-radius:50%;}
+#window_talk .winBody .winContainer .winContent .viewBox .viewBoxBody .talkMessage .message_box .message {display:inline-block; margin:0 10px; vertical-align:top; background:#8799fd; color:#fff; border-radius:6px; padding:10px; font-size:12px; line-height:18px; max-width:60%; word-break:break-all; font-weight: bold; box-shadow: 0 1px 4px rgb(155, 190, 203);}
+#window_talk .winBody .winContainer .winContent .viewBox .viewBoxBody .talkMessage .message_box .me .message {float:right; background:#55bce7;}
+#window_talk .winBody .winContainer .winContent .viewBox .viewBoxBody .talkWrite {height:70px; position:relative; box-shadow: 0px 0px 5px rgba(153, 171, 178, 0.6);}
+#window_talk .winBody .winContainer .winContent .viewBox .viewBoxBody .talkWrite input {border:0;}
+#window_talk .winBody .winContainer .winContent .viewBox .viewBoxBody .talkWrite input:-ms-input-placeholder {color:rgba(0,0,0,0.6) !important; opacity:0.6;}
+#window_talk .winBody .winContainer .winContent .viewBox .viewBoxBody .talkWrite input::-webkit-input-placeholder {color:rgba(0,0,0,0.6) !important; opacity:0.6;}
+#window_talk .winBody .winContainer .winContent .viewBox .viewBoxBody .talkWrite input:focus {}
+#window_talk .winBody .winContainer .winContent .viewBox .viewBoxBody .talkWrite button {border:0; height:40px;}
+#window_talk .winBody .winContainer .winContent .viewBox .viewBoxBody .talkWrite button:before {font-size:20px;}
+#window_talk .winBody .winContainer .winContent .viewBox .viewBoxBody .talkWrite .inputWrap { width:calc(100% - 30px);}
+#window_talk .winBody .winContainer .winContent .viewBox .viewBoxBody .talkWrite .inputWrap input {font-size:14px; color:#55bce7; font-weight:bold; height:40px;}
+#window_talk .winBody .winContainer .winContent .listBox .listBoxBody ul li {padding-left:10px;}
+#window_talk .winBody .winContainer .winContent .listBox .listBoxBody ul li.message {}
+#window_talk .winBody .winContainer .winContent .listBox .listBoxBody ul li.message:before {content:"\f260"; font: normal normal normal 20px/1 'Material-Design-Iconic-Font'; display: block; -webkit-font-smoothing: antialiased; position:absolute; top:4px; right:6px; color:#55bce7; font-size:24px; animation:message 1s infinite;}
+
+button.button.talk, .button .talk {background:#55bce7; color:#FFF;}
+
+@keyframes message {
+	0% {transform:scale(0.8);-webkit-transform:scale(0.8);} 
+	50% {transform:scale(1);-webkit-transform:scale(1);}
+	100% {transform:scale(0.8);-webkit-transform:scale(0.8);}
+}
+
+#window_talk .winBody .winContainer .winContent .listBox .listBoxBody ul li .userThumb {display:flex; align-items:center; /* */ display:-webkit-flex; -webkit-align-items:center; /* */  display:-ms-flexbox; -ms-flex-align: center; margin-right:10px;}
+#window_talk .winBody .winContainer .winContent .listBox .listBoxBody ul li .userThumb .thumb {display:block; width:43px; height:43px; background:url(../../assets/images/gui/user.png)#a1acb9; background-size:cover; border-radius:50%; position:relative;}
+#window_talk .winBody .winContainer .winContent .listBox .listBoxBody ul li .userThumb .thumb img {display:block; width:43px; height:43px; border-radius:50%;}
+#window_talk .winBody .winContainer .winContent .listBox .listBoxBody ul li .userThumb .thumb.star:before {content:"\f27d"; font: normal normal normal 20px/1 'Material-Design-Iconic-Font'; display: block; -webkit-font-smoothing: antialiased; position:absolute; top:-7px; left:-7px; color:#fdb101; font-size:16px;}
+#window_talk .winBody .winContainer .winContent .listBox .listBoxBody ul li .userInfo {width:calc(100% - 40px); font-size:12px; line-height:20px; color:#8da1ae; padding:10px 0; cursor:pointer;}
+#window_talk .winBody .winContainer .winContent .listBox .listBoxBody ul li .userInfo .name {display:block; color:#5a6f7d; font-weight:bold; font-size:14px;}
+#window_talk .winBody .winContainer .winContent .listBox .listBoxBody ul li .userInfo p {display:-webkit-box; -webkit-line-clamp:1; -webkit-box-orient: vertical; word-wrap:break-word; line-height: 1.7em; height:1.7em; white-space:normal; text-overflow:ellipsis; overflow:hidden;}
+#window_talk .winBody .winContainer .winContent .listBox .listBoxBody ul li.active {background:#55bce7;}
+#window_talk .winBody .winContainer .winContent .listBox .listBoxBody ul li.active .userInfo .name {color:#FFF;}
+#window_talk .winBody .winContainer .winContent .listBox .listBoxBody ul li.active .userInfo p {color:rgba(255, 255, 255, 0.8);}
+
+/* theme */
+#window_talk .winHeader .control button.back {color:#55bce7;}
+#window_talk .winHeader .control button.back:disabled {color:#88939a;}
+#window_talk .winHeader .tools .buttonGroup button.active {color:#55bce7;}
+#window_talk .winHeader .appName {color:#55bce7;}
+#window_talk .winHeader .tools .buttonGroup button.spin:before {color:#55bce7;}
+#window_talk .buttonGroup button:hover {color:#55bce7 !important;}
+#window_talk .buttonGroup button.prime {background:#55bce7;}
+#window_talk .buttonGroup button.prime:hover {color:#fff;}
+#window_talk .winBody .winside .winsideBody .mIndex ul li:hover {background:#55bce7;}
+#window_talk .winBody .winside .winsideBody .mIndex ul li:hover em {color:#55bce7;}
+#window_talk .winBody .winside .winsideBody .mIndex ul li.active {background:#55bce7;}
+#window_talk .winBody .winside .winsideBody .mIndex ul li.active em {color:#55bce7;}
+#window_talk .winBody .winside .winsideBody .sIndex ul li:hover {color:#55bce7;}
+#window_talk .winBody .winside .winsideBody .sIndex ul li:hover em {background:#55bce7;}
+#window_talk .winBody .winside .winsideBody .sIndex ul li.active {color:#55bce7;}
+#window_talk .winBody .winside .winsideBody .sIndex ul li.active em {background:#55bce7;}
+#window_talk .winBody .winContainer .winContent .viewBox .connectBox .connect i {color:#55bce7;}
+#window_talk .winBody .winContainer .winContent .listBox .listBoxheader h2 {color:#55bce7;}
+#window_talk .winBody .winSetting .winSetHeader h2 {color:#55bce7;}
+
+

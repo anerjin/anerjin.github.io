@@ -1,0 +1,148 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900');
+
+/* ----------------------------------------------
+ADMIN UI - COMMON
+------------------------------------------------*/
+/* ---- setup ----*/
+html, body {color:#666; min-width:1280px; height:100%; font-size:12px; font-family:'Roboto', sans-serif; background:#f9f9f9; overflow:hidden;}
+a {color:#aaa; font-size:14px; text-decoration:none;}
+a:hover {color:#fff;}
+
+/* Tooltip -Styles */
+.tooltip {padding:5px; background-image:url(../images/gui/tooltip.gif); background-repeat:no-repeat; opacity:0.85; font-size:11px; filter:alpha(opacity=85);}
+.tooltip-inner {max-width:200px; padding:5px 10px; border-radius:3px; background:#000; box-shadow:0 0 3px rgba(0, 0, 0, 0.25); color:white; text-align:center; pointer-events:none;}
+.tooltip-bottom {background-position:top center;}
+.tooltip-top {background-position:bottom center;}
+.tooltip-left {background-position:right center;}
+.tooltip-right {background-position:left center;}
+
+/* ---- G_icon ----*/
+.a {font:normal normal normal 16px/1 'Material-Design-Iconic-Font'; display:block;}
+
+/* ---- animate ----*/
+.a {transition:all .2s cubic-bezier(.7,0,.3,1); transform:all .2s cubic-bezier(.7,0,.3,1);-webkit-transition:all .2s cubic-bezier(.7,0,.3,1);}
+
+/* ---- animate 2 ----*/
+.a {transition:all .2s cubic-bezier(0, 0, 0.1, 1); transform:all .2s cubic-bezier(0, 0, 0.1, 1);-webkit-transition:all .2s cubic-bezier(0, 0, 0.1, 1);}
+
+/* ---- restrict ----*/
+.a {text-overflow:ellipsis; overflow:hidden; white-space:nowrap;}
+
+/* ---- layout_flex ----*/
+/* fb_ewy */
+.header,
+.container .containerHeader,
+.container .containerBody .contents .contentsHeader
+{display:flex; justify-content:space-between; align-items:center;/* */ display:-webkit-flex; -webkit-justify-content:space-between; -webkit-align-items:center;/* */ display: -ms-flexbox; -ms-flex-pack:justify; -ms-flex-align: center;}
+
+.side .navi ul li a
+{display:flex; justify-content:flex-start; align-items:center; /* */ display:-webkit-flex; -webkit-justify-content:flex-start; -webkit-align-items:center;/* */ display: -ms-flexbox; -ms-flex-pack:start; -ms-flex-align: center;}
+
+/* fb_ew */
+.a {display:flex; justify-content:space-between; /* */ display:-webkit-flex; -webkit-justify-content:space-between;/* */ display: -ms-flexbox; -ms-flex-pack:justify;}
+
+
+/* fb_y */
+.a
+{display:flex; align-items:center; /* */ display:-webkit-flex; -webkit-align-items:center; /* */  display:-ms-flexbox; -ms-flex-align: center;}
+
+/* fb_xy */
+.container .tabsWrap
+{display:flex; justify-content:center; align-items:center; /* */ display:-webkit-flex; -webkit-justify-content:center; -webkit-align-items:center; /* */ display: -ms-flexbox; -ms-flex-pack:center; -ms-flex-align: center;}
+/* ----------------------------------------------
+ADMIN UI
+------------------------------------------------*/
+#wraps {width:100%; height:100%; font-size:0;}
+
+.side {width:260px; height:calc(100% - 0px); background:#333; display:inline-block; vertical-align:top; font-size:12px; overflow:auto;}
+.side h1 {height:60px; font-size:20px; color:#fff;}
+.side h1 i {font-size:30px; margin-right:4px;}
+.side .user {padding:10px 24px; background:#222; height:80px; box-sizing:border-box; line-height:20px;}
+.side .user strong {font-size:16px; color:#fff;}
+.side .user dl {color:#777;}
+.side .user dl dt {font-weight:bold;}
+.side .user dl dd {}
+.side .user dl dd a {font-size:11px;}
+.side .navi {}
+.side .navi ul {}
+.side .navi ul li {display:block;}
+.side .navi ul li a {padding:12px 0 12px 20px;}
+.side .navi ul li a i {font-size:24px; width:36px; text-align:left;}
+.side .navi ul li a span {font-size:14px;}
+.side .navi ul li:hover a {color:#5d9beb; }
+.side .navi ul li.active a {background:#3e3e3e; color:#5d9beb; }
+.side .navi ul li ul {}
+.side .navi ul li ul li {}
+.side .navi ul li ul li a {background:#2d2d2d !important; color:#999!important; font-size:12px; text-indent:36px; border-bottom:1px solid #333;}
+.side .navi ul li ul li.active a {color:#5d9beb !important; }
+
+.container {width:calc(100% - 260px); height:calc(100% - 0px); display:inline-block; vertical-align:top; font-size:12px; position:relative;}
+
+.container .header {height:60px; background:#fff; box-shadow:0 1px 0px 0 rgba(0,0,0,0.2); position:relative; z-index:1;}
+.container .header .sta {margin:0 18px;}
+.container .header .sta h1 {font-size:20px; color:#333;}
+.container .header .sta h1 i { display:inline-block; vertical-align:top; font-size:21px;}
+.container .header .tools {margin:0 20px;}
+.container .header .tools button {width:40px; height:40px; font-size:24px; color:#666;}
+
+.container .containerHeader {height:80px; padding:0 20px; border-bottom: 1px solid #e0e0e0;}
+.container .containerHeader .title {font-size:20px; font-weight:bold; color:#666;}
+.container .containerHeader .tools {}
+
+.container .containerBody {height:calc(100% - 140px); overflow:auto;}
+.container .containerBody .contents {height:calc(100% - 0px);}
+.container .containerBody .contents .contentsHeader {height:40px;}
+.container .containerBody .contents .contentsHeader .title {margin:0 10px; font-size:16px; font-weight:bold; }
+.container .containerBody .contents .contentsHeader .tools {margin:0 20px;}
+.container .containerBody .contents .contentsBody {height:calc(100% - 0px);}
+
+.container .containerBody .contents .contentsBody .boardList {height:100%;}
+.container .containerBody .contents .contentsBody .pgSection .boxShadow {padding:10px 20px; height:100%; box-shadow: 1px 1px 1px 0 rgba(0,0,0,.07), 1px 2px 5px 0 rgba(0,0,0,.06);}
+.container .containerBody .contents .contentsBody .pgSection .boxShadow.widget {margin-bottom:12px;}
+.container .containerBody .contents .contentsBody .pgSection .boxShadow.widget .columnBody {border:0px;}
+.container .containerBody .contents .contentsBody .pgSection .boxShadow.widget .columnBody .number {display:block; text-align:center; font-size:40px; font-weight:bold;}
+
+.container .containerBody .contents .contentsBody .pgSection .column_100 .column_20 {width:calc(20% - 13px); vertical-align:top; height:100%;}
+.container .containerBody .contents .contentsBody .pgSection .column_100 .column_30 {width:calc(30% - 13px); vertical-align:top; height:100%;}
+.container .containerBody .contents .contentsBody .pgSection .column_100 .column_40 {width:calc(40% - 13px); vertical-align:top; height:100%;}
+.container .containerBody .contents .contentsBody .pgSection .column_100 .column_60 {width:calc(60% - 13px); vertical-align:top; height:100%;}
+.container .containerBody .contents .contentsBody .pgSection .column_100 .column_70 {width:calc(70% - 13px); vertical-align:top; height:100%;}
+.container .containerBody .contents .contentsBody .pgSection .column_100 .column_80 {width:calc(80% - 13px); vertical-align:top; height:100%;}
+.container .containerBody .contents .contentsBody .pgSection .column_100 .column_50 {width:calc(50% - 13px); vertical-align:top; height:100%;}
+
+.container .containerBody .contents .contentsBody .dashboard {padding:0 20px; height:100%; overflow:auto;}
+
+/* ----------------------------------------------
+LOGIN UI
+------------------------------------------------*/
+/* ---- login ----*/
+.loginWrap {width:100%; height:100%;}
+.loginWrap:after {content:''; background:url(https://static.pexels.com/photos/461077/pexels-photo-461077.jpeg)#333; background-size:cover; position:fixed; top:0px; left:0; right:0; bottom:0px; z-index:1;}
+.loginBox, .loginInfoBox {height:100%; position:relative; z-index:2;}
+.loginBox .login, .loginInfoBox .loginInfo {width:360px; height:500px;}
+
+/* login */
+.loginBox {background:rgba(0, 0, 0, 0.8); width:40%;}
+.loginBox .login {padding:0 30px;}
+.loginBox .login h1 {display:block; margin-bottom:10px; font-size:30px; font-weight:bold; color:#FFF;}
+.loginBox .login .loginForm {}
+.loginBox .login .loginForm .inputWrap { margin-bottom:16px;}
+.loginBox .login .loginForm .inputWrap .addon span,
+.loginBox .login .loginForm .inputWrap input {border:0; background:rgba(255, 255, 255, 0.1);}
+.loginBox .login .loginForm .persistent {display:block; color:#FFF; margin-bottom:20px;}
+.loginBox .login .loginForm .persistent label:before {color:inherit;}
+.loginBox .login .loginForm .buttonBox {display:block; color:#FFF; margin-bottom:20px;}
+.loginBox .login .loginForm .buttonBox button {border:0 !important;}
+.loginBox .login .loginForm .infoText {display:block; font-size:14px; color:#FFF; line-height:22px; padding-left:24px; position:relative;}
+.loginBox .login .loginForm .infoText i {position:absolute; top:0; left:0; font-size:20px;}
+.loginBox .login .loginForm .required { display:block; margin-bottom:20px; text-align:center; font-size:12px;}
+
+/* loginInfo */
+.loginInfoBox {width:60%; background:rgba(0, 0, 0, 0.6);}
+.loginInfoBox .loginInfo {padding:0 30px; color:#FFF;}
+.loginInfoBox .loginInfo h2 {display:block; margin-bottom:10px; font-size:40px; font-weight:bold;}
+
+
+

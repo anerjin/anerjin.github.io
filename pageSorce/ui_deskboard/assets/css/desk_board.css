@@ -1,0 +1,478 @@
+@charset "utf-8";
+/* ----------------------------------------------
+DESK UI - COMMON
+------------------------------------------------*/
+
+:root {
+    --main-color:#6451F6;
+}
+
+.anime {transition:all .16s cubic-bezier(.7,0,.3,1); transform:all .16s cubic-bezier(.7,0,.3,1);-webkit-transition:all .16s cubic-bezier(.7,0,.3,1);}
+
+/* pop */
+#addBox .modalBox {margin-bottom:200px;}
+#adduserBox .modalBox {margin-bottom:200px;}
+#adduserBox .modalBox .inputWrap .addon button {border:1px solid #3f93ff;}
+#adduserBox .modalBox .userList {}
+#adduserBox .modalBox .userList ul { display:block; margin:20px 0; max-height:240px; overflow:auto;}
+#adduserBox .modalBox .userList ul li {display:flex; justify-content:space-between; align-items:center;/* */ display:-webkit-flex; -webkit-justify-content:space-between; -webkit-align-items:center;/* */ display: -ms-flexbox; -ms-flex-pack:justify; -ms-flex-align: center; margin-bottom:10px;}
+#adduserBox .modalBox .userList ul li .user {}
+#adduserBox .modalBox .userList ul li .user .thumb {display:inline-block; vertical-align:middle; width:40px; height:40px; background: url(../images/gui/user.png)#a1acb9; background-size:cover; border-radius:50%;}
+#adduserBox .modalBox .userList ul li .user .thumb img {width:40px; height:40px; border-radius:50%;}
+#adduserBox .modalBox .userList ul li .user .info {display:inline-block; vertical-align:middle; margin-left:10px; font-size:14px;}
+
+
+/* ---- setup ----*/
+html, body {color:#333; min-width:1024px; height:100%; font-size:12px; overflow:hidden;}
+a {color:#333; font-size:14px; text-decoration:none;}
+a:hover {color:var(--main-color);}
+
+
+/* ----------------------------------------------
+DESK UI
+------------------------------------------------*/
+/* ---- popup ----*/
+.popupBox {position:fixed; top:0px; left:0px; right:0px; bottom:0px; z-index:9999; display: flex; justify-content:center; align-items:center; backdrop-filter:blur(10px);}
+.popupBox .dim {position:fixed; top:0px; left:0px; right:0px; bottom:0px; z-index:1; background:rgba(0,0,0,0.1); transition:background-color .2s; -webkit-transition:background-color .2s;}
+.popupBox .popup, .popupBox .apps {animation:showPop 0.2s; -webkit-animation:showPop 0.2s;}
+
+@keyframes showPop {0% {transform:scale(0.9);-webkit-transform:scale(0.9);} 100% {transform:scale(1);-webkit-transform:scale(1);}}
+@-webkit-keyframes showPop {0% {transform:scale(0.94);-webkit-transform:scale(0.94);} 100% {transform:scale(1);-webkit-transform:scale(1);}}
+
+/* ---- layout_setting ----*/
+#wrap {width:100%; height:100%;}
+#wrap .wallpaper {background-size:cover !important; background-position:center top !important; position:fixed; top:-20px; left:-20px; right:-20px; bottom:-20px;}
+#desk {width:100%; height:100%; position:relative;}
+#desk, #widget {font-size:12px;}
+
+/* widgetSetting on/off */
+#wrap.widgetOpen #desk   {}
+#wrap.widgetOpen #widget {right:0px;}
+
+/* ---- data-theme ----*/
+/* glass */
+#wrap[data-theme="glass"] #toolbar .toolbarWrap {background:rgba(255, 255, 255, 0.5);}
+#wrap[data-theme="glass"] .widget {background:rgba(255, 255, 255, 0.7);}
+#wrap[data-theme="glass"] .cardInfo {background:rgba(255, 255, 255, 0.7);}
+#wrap[data-theme="glass"] .cardInfo.notify .notifyList .notifyItem {background:#fff;}
+
+/* dark */
+#wrap[data-theme="dark"] #toolbar .toolbarWrap {background:rgba(0, 0, 0, 0.4);}
+#wrap[data-theme="dark"] #toolbar button {filter:brightness(10);}
+#wrap[data-theme="dark"] #toolbar button:hover {background:rgba(255, 255, 255, 0.2);}
+#wrap[data-theme="dark"] #toolbar button.active {background:var(--main-color); filter:brightness(1);}
+#wrap[data-theme="dark"] .widget {background:rgba(0, 0, 0, 0.4);}
+#wrap[data-theme="dark"] .cardInfo.profile .userInfoBox .userInfo strong {color:#fff;}
+#wrap[data-theme="dark"] .cardInfo.profile .userInfoBox .userInfo p {color:rgba(255, 255, 255, 0.6);}
+#wrap[data-theme="dark"] .cardInfo.profile .infoTools button {color:#fff;}
+#wrap[data-theme="dark"] .cardInfo {background:rgba(0, 0, 0, 0.4);}
+#wrap[data-theme="dark"] .cardInfo.notify .notifyHeader .redNumber {color:#fff;}
+#wrap[data-theme="dark"] .cardInfo.notify .notifyList .notifyItem {background:rgba(0, 0, 0, 0.5);}
+#wrap[data-theme="dark"] .cardInfo.notify .notifyList .notifyItem .infoBox .info .title {color:#fff;}
+#wrap[data-theme="dark"] .cardInfo.notify .notifyList .notifyItem .infoBox .info .desc {color:#fff;}
+#wrap[data-theme="dark"] .cardInfo.notify .notifyList .notifyItem .infoBox.nodata {color:#fff;}
+#wrap[data-theme="dark"] button.button.white {background:rgba(0, 0, 0, 0.8); color:#fff;}
+#wrap[data-theme="dark"] #toolbar .toolbarWrap .deskDock:has(.dockBox ul li) .dockBox {border-right:1px dashed rgba(255, 255, 255, 0.2); border-left:1px dashed rgba(255, 255, 255, 0.2);}
+#wrap[data-theme="dark"] ~ .nu-context-menu ul {background:rgba(0, 0, 0, 0.8);}
+#wrap[data-theme="dark"] ~ .nu-context-menu ul li {color:#fff;}
+/* ---- toolbar ui ----*/
+/* toolbar */
+#toolbar {display:flex; align-items:center; justify-content:center; position:relative; width:100%; height:56px; padding:0 20px; z-index:1; box-sizing:border-box; animation:showHeader 0.6s;-webkit-animation:showHeader 0.6s;}
+
+#toolbar .status {position:relative;}
+#toolbar .toolbarWrap {display:flex; border-radius:10px; backdrop-filter:blur(20px); box-shadow:2px 2px 10px rgba(0, 0, 0, 0.2);}
+#toolbar .toolbarWrap:has(.dockBox ul li){gap:10px;}
+#toolbar .toolbarWrap .status {}
+
+#toolbar .toolbarWrap .deskDock {display:flex; align-items:center; padding-left: 8px;}
+#toolbar .toolbarWrap .deskDock:has(.dockBox ul li) {gap:8px;}
+#toolbar .toolbarWrap .deskDock:has(.dockBox ul li) .dockBox {padding:8px 12px; border-right:1px dashed rgba(0, 0, 0, 0.3); border-left:1px dashed rgba(0, 0, 0, 0.3);}
+#toolbar .toolbarWrap .deskDock .dockBox {}
+#toolbar .toolbarWrap .deskDock .dockBox ul {display:flex; align-items:center; gap:12px;}
+#toolbar .toolbarWrap .deskDock .dockBox ul li {display:block; height:30px; width:30px; border-radius:5px; position:relative; background:#C7C7C7; animation:appShow 0.2s; -webkit-animation:appShow 0.2s;}
+#toolbar .toolbarWrap .deskDock .dockBox ul li::before {content:''; display:block; position:absolute; left:50%; bottom:-7px; width:4px; height:4px; border-radius:4px; background:var(--main-color); transform:translate(-50%, 0);}
+
+	@keyframes showHeader {0% {transform:translate(0,-36px);-webkit-transform:translate(0,-36px);} 100% {transform:translate(0,0);-webkit-transform:translate(0,0);}}
+	@-webkit-keyframes showHeader {0% {transform:translate(0,-36px);-webkit-transform:translate(0,-36px);} 100% {transform:translate(0,0);-webkit-transform:translate(0,0);}}
+
+	@keyframes appShow {0% {transform:scale(0.5);-webkit-transform:scale(0.5); opacity:0;} 100% {transform:scale(1);-webkit-transform:scale(1); opacity:1;}}
+	@-webkit-keyframes appShow {0% {transform:scale(0.5);-webkit-transform:scale(0.5); opacity:0;} 100% {transform:scale(1);-webkit-transform:scale(1); opacity:1;}}
+
+#toolbar .toolbarWrap .deskDock .dockBox ul li span.appIcon {display:block; height:inherit; width:inherit; border-radius:5px; position:relative; overflow:hidden; cursor:pointer;}
+
+#toolbar .toolbarWrap .deskDock .dockBox ul li span.appIcon img {height:inherit; width:inherit;}
+#toolbar .toolbarWrap .deskDock .dockBox ul li.inactive {opacity:0.5; filter:grayscale(100%); -webkit-filter: grayscale(100%);}
+#toolbar .toolbarWrap .deskDock .dockBox ul li.inactive::before {display:none;}
+/* cardBox */
+#toolbar .toolbarWrap .tools {display:flex; align-items:center; padding:8px; gap:12px; }
+
+/* cardInfo */
+.cardInfo {position:fixed; top:40px; left:50%; transform:translate(-50%, 0); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-radius:12px; z-index:999; box-shadow:0px 10px 25px 0px rgba(0, 0, 0, 0.4); padding:16px; visibility:hidden; overflow:hidden; opacity:0; transition:all .16s cubic-bezier(.7,0,.3,1);}
+.cardInfo.active {visibility:visible; opacity:1; top:56px;}
+.cardInfo.profile {min-width:240px;}
+.cardInfo.profile .userInfoBox {display:flex; align-items:center; margin-bottom:12px; gap:12px;}
+.cardInfo.profile .userInfoBox .userPhoto {}
+.cardInfo.profile .userInfoBox .userInfo {display:flex; align-items:flex-start; flex-direction:column; gap:6px;}
+.cardInfo.profile .userInfoBox .userInfo strong {color:#000; font-size:12px; font-weight:600;}
+.cardInfo.profile .userInfoBox .userInfo p {color:#666; font-size:10px; font-weight:400;}
+.cardInfo.profile .infoTools {display:flex; justify-content:space-between; align-items:center; margin-top:12px;}
+.cardInfo.profile .infoTools button {width:50%; font-size:12px;}
+
+.cardInfo.notify {bottom:20px; min-width:340px; height:calc(100% - 80px); border-radius:16px;}
+.cardInfo.notify .notifyHeader {display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;}
+.cardInfo.notify .notifyHeader .redNumber {color:#000; font-size:14px;}
+.cardInfo.notify .notifyHeader .redNumber strong {color:var(--main-color);}
+.cardInfo.notify .notifyHeader .tools {}
+.cardInfo.notify .notifyList {display:flex; flex-direction:column; height:calc(100% - 100px); overflow:auto; gap:8px;}
+.cardInfo.notify .notifyList::-webkit-scrollbar {height:0px; width:0px}
+.cardInfo.notify .notifyList::-webkit-scrollbar-thumb {background:rgba(255, 255, 255, 0); background-clip:padding-box; border:3px solid transparent; border-radius:20px}
+.cardInfo.notify .notifyList .notifyItem {display:flex; flex-direction:column; padding:16px; border-radius:8px;}
+.cardInfo.notify .notifyList .notifyItem .infoBox {display:flex; align-items:flex-start; gap:16px;}
+.cardInfo.notify .notifyList .notifyItem .infoBox.nodata {justify-content:center; color:#000; font-weight:600;}
+.cardInfo.notify .notifyList .notifyItem .infoBox .appIcon {width:36px; min-width:36px; height:36px; overflow:hidden; border-radius:8px; background:#ddd;}
+.cardInfo.notify .notifyList .notifyItem .infoBox .appIcon img {width:inherit; height:inherit;}
+.cardInfo.notify .notifyList .notifyItem .infoBox .info {display:flex; flex-direction:column; line-height:1.4; gap:4px;}
+.cardInfo.notify .notifyList .notifyItem .infoBox .info .title {color:#000; font-size:12px; font-weight:600; word-break:break-all;}
+.cardInfo.notify .notifyList .notifyItem .infoBox .info .desc {color:#000; font-size:12px; font-weight:400; word-wrap:break-word;}
+.cardInfo.notify .buttonWrap {display:flex; justify-content:center; padding:20px 0 0;}
+
+#toolbar button {display:flex; justify-content:center; align-items:center; width:32px; height:32px; border-radius:6px;}
+#toolbar button:hover {background:rgba(0, 0, 0, 0.2);}
+#toolbar button.active {background: var(--main-color);}
+#toolbar button:hover img,
+#toolbar button.active img {filter:brightness(10);}
+
+#toolbar #show_desktop {}
+#toolbar #show_desktop:disabled {opacity:0.3; pointer-events:none;}
+
+#toolbar .appPlusOnf {}
+#toolbar .widegtOnf {}
+
+/* ----------------------------------------------
+DESK UI - desktop
+------------------------------------------------*/
+/* desktop */
+#desktop {width:100%; height:calc(100% - 46px); position:relative; overflow:hidden;}
+
+/* ----------------------------------------------
+DESK UI - DESKAPP
+------------------------------------------------*/
+#deskApp {position:absolute; top:20px; left:10px; bottom:0px; z-index:1;}
+#deskApp ul {display:flex; flex-direction:column; flex-wrap:wrap; align-content:flex-start; gap:20px;}
+#deskApp ul li {display:block; vertical-align:top; width:80px; height:94px;}
+#deskApp ul li .app {display:flex; align-items:center; flex-direction:column; position:relative; text-align:center; cursor:pointer; gap:10px;}
+#deskApp ul li .app .icon {display:inline-block; width:60px; height:60px; border-radius:12px; overflow:hidden; background:rgba(255,255,255,0.2); backdrop-filter:blur(20px); box-shadow:0px 10px 10px -4px rgba(0, 0, 0, 0.4); pointer-events:none;}
+#deskApp ul li .app .icon img {width:60px; height:60px;}
+#deskApp ul li .app .name {display:block; font-size:11px; color:#FFF; word-break:break-all;}
+#deskApp ul li .app button {display:none; position:absolute; top:-8px; right:0px; font-size:16px; width:18px; height:18px; line-height:16px; color:#c0392b; background:#FFF; border-radius:50%;}
+
+/* ----------------------------------------------
+DESK UI - appPlus
+------------------------------------------------*/
+/* appBox */
+#appPlus {}
+#appPlus .apps {position:relative; z-index:2; width:60%; min-width:700px; max-width:1024px; height:100%; padding-top:60px; overflow:hidden; border-radius:0 4px 0 0;}
+#appPlus .apps .appsHeader {display:flex; justify-content:center; align-items:center; height:40px; margin:0 14px; margin-bottom:20px; color:#FFF;}
+#appPlus .apps .appsHeader h2 {font-size:30px; font-weight:bold;}
+#appPlus .apps .appsHeader .search {width:300px; position:relative;}
+#appPlus .apps .appsHeader .search::before {content:''; display:block; position:absolute; top:8px; left:10px; width:24px; height:24px; background:url(../images/desk/search_24_dark.svg) no-repeat;}
+#appPlus .apps .appsHeader .search input {width:100%; height:40px; padding:0 20px 0 40px; border:0; border-radius:20px; background:rgba(255,255,255,0.8); color:#333; font-size:18px; font-weight:600; box-sizing:border-box;}
+#appPlus .apps .appsHeader .tools {}
+#appPlus .apps .appsHeader .tools button {color:#FFF; font-size:30px; width:30px; height:30px;}
+#appPlus .apps .appsHeader .tools button:hover {color:#3f93ff;}
+#appPlus .apps .appsHeader .tools button.zmdi-check-circle {color:#3f93ff;}
+#appPlus .apps .appsHeader .tools button span { display:inline-block; vertical-align:middle; margin-left:6px; line-height:23px; font-size:11px;}
+#appPlus .apps .appsBody {display:flex; flex-direction:column; height:calc(100% - 100px); gap:40px; overflow:auto;}
+#appPlus .apps .appsBody::-webkit-scrollbar {height:10px; width:10px}
+#appPlus .apps .appsBody::-webkit-scrollbar-thumb {background:rgba(255, 255, 255, 0.1); background-clip:padding-box; border:2px solid transparent; border-radius:20px}
+#appPlus .apps .appsBody .appGroup {}
+#appPlus .apps .appsBody .appGroup h3 {display:block; color:rgba(255,255,255,1); margin:10px 14px 6px 14px; line-height:40px; font-size:18px; font-weight:600; text-transform:uppercase;}
+#appPlus .apps .appsBody .appGroup ul {font-size:0;}
+#appPlus .apps .appsBody .appGroup ul li {display:inline-block; vertical-align:top; width:80px; height:90px;}
+#appPlus .apps .appsBody .appGroup ul li .app {text-align:center; position:relative; cursor:pointer;}
+#appPlus .apps .appsBody .appGroup ul li .app .icon {display:inline-block; width:60px; height:60px; overflow:hidden; border-radius:12px; margin-bottom:6px; background:rgba(255,255,255,0.4); backdrop-filter:blur(20px); pointer-events:none;}
+#appPlus .apps .appsBody .appGroup ul li .app .icon img {width:60px; height:60px;}
+#appPlus .apps .appsBody .appGroup ul li .app .name {display:block; font-size:11px; color:#FFF; word-break:break-all;}
+
+/* ----------------------------------------------
+DESK UI - setting
+------------------------------------------------*/
+/* appBox */
+#SettingPop {left:auto; width:600px;}
+#SettingPop .popup {width:90%; height:100%; position:relative; z-index:2; }
+#SettingPop .popup .popHeader {height:40px; margin:0 14px; color:#FFF; margin-bottom:20px;}
+#SettingPop .popup .popHeader .title {}
+#SettingPop .popup .popHeader .title h2 {font-size:30px; font-weight:bold;}
+#SettingPop .popup .popHeader .tools {}
+#SettingPop .popup .popHeader .tools button {width:40px; height:40px; font-size:30px; color:#fff;}
+#SettingPop .popup .popHeader .tools button:hover {color:#3f93ff;}
+#SettingPop .popup .popBody {height:calc(100% - 80px); overflow:hidden;}
+#SettingPop .popup .popBody .colum {padding-bottom:20px; margin-bottom:10px; background:rgba(255, 255, 255, 0.1); border-radius:4px;}
+#SettingPop .popup .popBody .colum .columHeader {margin:0 14px; line-height:40px;}
+#SettingPop .popup .popBody .colum .columHeader h3 {display:block; color:rgba(255,255,255,1); font-size:14px;}
+#SettingPop .popup .popBody .colum .columBody {margin:0 14px;}
+#SettingPop .popup .popBody .colum .columBody .inputWrap .addon button {}
+#SettingPop .popup .popBody .colum .columBody .inputWrap input {border:0;}
+#SettingPop .popup .popBody .colum .columBody dl {line-height:43px; background:rgba(255,255,255,0.2); margin-bottom:10px; border-radius:4px;}
+#SettingPop .popup .popBody .colum .columBody dl dt {font-size:14px; color:#FFF; margin-left:20px;}
+#SettingPop .popup .popBody .colum .columBody dl dd {margin-right:7px;}
+
+/* ----------------------------------------------
+DESK UI - wallpaperPop
+------------------------------------------------*/
+/* appBox */
+#wallpaperPop {left:auto; width:600px;}
+#wallpaperPop .popup {width:90%; height:100%; position:relative; z-index:2; }
+#wallpaperPop .popup .popHeader {height:40px; margin:0 14px; color:#FFF; margin-bottom:20px;}
+#wallpaperPop .popup .popHeader .title {}
+#wallpaperPop .popup .popHeader .title h2 {font-size:30px; font-weight:bold;}
+#wallpaperPop .popup .popHeader .search {width:calc(100% - 50%);}
+#wallpaperPop .popup .popHeader .search input {border-radius:20px; text-align:center; background:rgba(255,255,255,0.1); border:0; color:#FFF;}
+#wallpaperPop .popup .popHeader .tools {}
+#wallpaperPop .popup .popHeader .tools button {width:40px; height:40px; font-size:30px; color:#fff;}
+#wallpaperPop .popup .popHeader .tools button:hover {color:#3f93ff;}
+#wallpaperPop .popup .popBody {height:calc(100% - 80px); overflow:hidden;}
+#wallpaperPop .popup .popBody ul {font-size:0;}
+#wallpaperPop .popup .popBody ul li {display:inline-block; width:160px; height:100px; background:rgba(255,255,255,0.1); margin:10px; cursor:pointer; border-radius:6px; overflow:hidden;}
+#wallpaperPop .popup .popBody ul li img {width:160px; height:100px;}
+
+/* ----------------------------------------------
+DESK UI - WINDOW
+------------------------------------------------*/
+@media (max-width: 1024px) {
+	.window{top:0px !important; left:0px !important; right:0px !important; bottom:0px !important; width:100% !important; height:100% !important; min-width:auto !important; min-height:auto !important;}
+}
+
+@media (max-height: 680px) {
+	.window{top:0px !important; left:0px !important; right:0px !important; bottom:0px !important; width:100% !important; height:100% !important; min-width:auto !important; min-height:auto !important;}
+}
+
+@media (max-width: 1344px) {
+	#wrap.widgetOpen .window {top:0px !important; left:0px !important; right:0px !important; bottom:0px !important; width:100% !important; height:100% !important; min-width:auto !important; min-height:auto !important;}
+	#wrap.widgetOpen .window.ui-draggable-dragging {opacity:1;}
+	#wrap.widgetOpen .window.ui-draggable-dragging .tools,
+	#wrap.widgetOpen .window.ui-draggable-dragging .winBody {opacity:1;}
+}
+
+
+/* common */
+.buttonGroup button {color:#9a9ba2; background:none;}
+
+/* window function */
+.window.listView {min-width:1024px !important;}
+.window.windowFull {position:fixed; top:0px !important;left:0px !important;right:0px !important;bottom:0px !important;width: calc(100% - 0px) !important;height: calc(100% - 0px) !important;min-width:auto !important;min-height:auto !important; border-radius:0;}
+.window.windowFull.ui-draggable-dragging {opacity:1;}
+.window.windowFull.ui-draggable-dragging .tools,
+.window.windowFull.ui-draggable-dragging .winBody {opacity:1;}
+.window.windowFull .ui-resizable-e,
+.window.windowFull .ui-resizable-s,
+.window.windowFull .ui-resizable-se {display:none;}
+.window.windowStack {box-shadow:inset 0 0 0 rgba(0,0,0,0), 0 20px 60px 6px rgba(0,0,0,0.6), 0 0 0 1px rgba(0, 0, 0, 0.1);}
+.window.windowStack .winBody {pointer-events:auto;}
+.window.windowStack .winHeader,
+.window.windowStack .winBody {opacity:1;}
+
+/* window */
+.window.hide {animation:winHidePop 0.12s;-webkit-animation:winHidePop 0.12s; visibility:hidden;}
+.window {border-radius:12px; background:#FFF; box-shadow:0px 4px 14px 0px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(0, 0, 0, 0.06); position:absolute; animation:winShowPop 0.12s;-webkit-animation:winShowPop 0.12s; width:1024px; height:600px; min-width:1024px; min-height:600px; overflow:hidden;}
+.window .winHeader, .window .winBody {opacity:0.8;}
+.window:has(.winHeader[data-wintheme="dark"]) {background:#292c31;}
+.window:has(.winHeader[data-wintheme="dark"]) .winHeader {border-bottom: 1px solid rgba(255, 255, 255, 0.1);}
+.window:has(.winHeader[data-wintheme="dark"]) .title .appName {color:#fff;}
+.window:has(.winHeader[data-wintheme="dark"]) .winHeader .control button:hover {background:rgba(255, 255, 255, 0.1);}
+.window:has(.winHeader[data-wintheme="dark"]) .winHeader .control button img {filter:brightness(10);}
+
+/* winShowPop animation */
+@-webkit-keyframes winShowPop {
+	0% {transform:scale(0.7) translate3d(0, -200px, 0);-webkit-transform:scale(0.7)  translate3d(0, -200px, 0); opacity:0;}
+	100% {transform:scale(1) translate3d(0, 0, 0);-webkit-transform:scale(1)  translate3d(0, 0, 0); opacity:1;}
+}
+@keyframes winShowPop {
+	0% {transform:scale(0.7) translate3d(0, -200px, 0);-webkit-transform:scale(0.7)  translate3d(0, -200px, 0); opacity:0;}
+	100% {transform:scale(1) translate3d(0, 0, 0);-webkit-transform:scale(1)  translate3d(0, 0, 0); opacity:1;}
+}
+
+/* winHidePop animation */
+@-webkit-keyframes winHidePop {
+	0% {transform:scale(1)  translate3d(0, 0, 0);-webkit-transform:scale(1)  translate3d(0, 0, 0); opacity:1;}
+	100% {transform:scale(0.7)  translate3d(0, 200px, 0);-webkit-transform:scale(0.7)  translate3d(0, 200px, 0); opacity:0;}
+}
+@keyframes winHidePop {
+	0% {transform:scale(1)  translate3d(0, 0, 0);-webkit-transform:scale(1)  translate3d(0, 0, 0); opacity:1;}
+	100% {transform:scale(0.7)  translate3d(0, 200px, 0);-webkit-transform:scale(0.7)  translate3d(0, 200px, 0); opacity:0;}
+}
+
+
+
+
+/* window draggable- */
+.window.ui-draggable-dragging {opacity:0.5; transition:none; transform:none; -webkit-transition:none;}
+.window.ui-draggable-dragging .tools,
+.window.ui-draggable-dragging .winTools,
+.window.ui-draggable-dragging .winBody {opacity:0;}
+.window.ui-resizable-resizing {transition:none; transform:none; -webkit-transition:none;}
+.window.ui-resizable-resizing .winBody {pointer-events:none;}
+.window .ui-resizable-handle {position:absolute; background:transparent; z-index:999;}
+.window .ui-resizable-e {top:0px; right:-6px; bottom:0; width:6px; cursor:e-resize;}
+.window .ui-resizable-s {bottom:-6px; left:0px; right:15px; height:6px; cursor:s-resize;}
+.window .ui-resizable-se {right:-5px; bottom:-5px; width:20px; height:20px; cursor:se-resize;}
+.window .ui-resizable-se.ui-icon-gripsmall-diagonal-se {background:url(../images/gui/resize.png) no-repeat;}
+/* winHeader */
+.window .winHeader {display:flex; justify-content:space-between; align-items:center; height:48px; border-bottom:1px solid #ECECEC; font-size:14px; cursor:move; padding:0 20px; box-sizing:border-box;}
+.window .winHeader .title {text-align:center;}
+.window .winHeader .title .appName {font-weight:700; font-size:16px; color:#000;}
+
+.window .winHeader .tools {margin:0 4px !important; text-align:left;}
+.window .winHeader .tools button {font-size:19px !important;}
+.window .winHeader .tools button:hover {box-shadow:none;}
+.window .winHeader .tools button:before { margin:0;}
+.window .winHeader .tools button.active {color:#3f93ff; background:#f1f3f6; -webkit-transform: scaleX(-1); transform: scaleX(-1);}
+.window .winHeader .tools button.spin {background:#f1f3f6;}
+.window .winHeader .tools button.spin:before {-webkit-animation:spin 1.0s infinite linear; animation:spin 1.0s infinite linear; font-size:18px;}
+
+.window .winHeader .control {display:flex; justify-content:flex-end; width:30%; gap:10px;}
+.window .winHeader .control button {display:flex; justify-content:center; align-items:center; width:30px; height:30px; border-radius:6px;}
+.window .winHeader .control button:hover {background: rgba(0, 0, 0, 0.1);}
+.window .winHeader .control button:disabled {border:0; opacity:0.5; cursor:default;}
+.window .winHeader .control button:disabled:hover {}
+.window .winHeader .control button.windowClose:hover {}
+.window .winHeader .control button.back {}
+.window .winHeader .control button.back:disabled {}
+
+
+@keyframes spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}	100%{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}
+
+
+
+/* winTools */
+.window .winTools {border-bottom:1px solid rgba(40, 45, 111, 0.08); height:40px; background:#f7f7f7;}
+.window .winTools .tools {}
+.window .winTools .tools .buttonGroup button:before {font-size:17px;}
+.window .winTools .tools .buttonGroup {margin-left:10px;}
+.window .winTools .tools .buttonGroup:last-child {margin-right:20px;}
+
+
+/* winBody */
+.window .winBody {display:flex; width:100%; height:calc(100% - 48px); pointer-events:none; position:relative;}
+.window .winBody .winside {width:200px; height:100%; background:#fff; border-right:1px solid #ECECEC; overflow:hidden;}
+.window .winBody .winside .winsideHeader {}
+.window .winBody .winside .winsideHeader .userInfoBox {display:flex; align-items:center; margin:20px; gap:10px;}
+.window .winBody .winside .winsideHeader .userInfoBox .userPhoto {display:inline-block; width:32px; height:32px; border-radius:50%; background:url(../../assets/images/gui/user.png)#a1acb9; background-size:cover; vertical-align:middle;}
+.window .winBody .winside .winsideHeader .userInfoBox .userPhoto img {width:32px; height:32px; border-radius:50%;}
+.window .winBody .winside .winsideHeader .userInfoBox .userInfo {display:flex; flex-direction:column; word-break:break-all;gap:2px;}
+.window .winBody .winside .winsideHeader .userInfoBox .userInfo strong {display:block; color:#000; font-size:12px; font-weight:600;}
+.window .winBody .winside .winsideHeader .userInfoBox .userInfo p {display:block; color:#666666; font-size:10px;}
+
+.window .winBody .winside .winsideBody {height:calc(100% - 76px); min-width:200px; overflow:hidden;}
+.window .winBody .winside .winsideBody .mIndex {margin:0 12px;}
+.window .winBody .winside .winsideBody .mIndex ul {}
+
+.window .winBody .winside ~ .winContainer {width:calc(100% - 200px);}
+
+/* winBody > winContainer */
+
+/* control */
+.window .winBody .winContainer {width:calc(100% - 0px); height:100%;}
+.window .winBody .winContainer .winContent {display:flex; height:100%; overflow:hidden; background:#FAFAFA;}
+.window .winBody .winContainer .winContent.list .listBox {width:calc(100% - 0px);}
+.window .winBody .winContainer .winContent.list .viewBox {width:0%;}
+.window .winBody .winContainer .winContent.list.active .listBox {width:calc(100% - 100%);}
+.window .winBody .winContainer .winContent.list.active .viewBox {width:100%; border-left:0px;}
+.window .winBody .winContainer .winContent.list.active .viewClose {display:inline-block !important;}
+.window .winBody .winContainer .winContent.listView .listBox {width:300px;}
+.window .winBody .winContainer .winContent.listView .viewBox {width:calc(100% - 300px); border-left:1px solid rgba(81, 88, 103, 0.14);}
+
+/* listBox */
+.window .winBody .winContainer .winContent .listBox {height:100%; overflow:hidden;}
+.window .winBody .winContainer .winContent .listBox .listBoxheader {height:41px; position:relative; z-index:1; background:#f8f8f8; border-bottom:1px solid rgba(81, 88, 103, 0.1); min-width:300px;}
+.window .winBody .winContainer .winContent .listBox .listBoxheader .lbhTools {height:40px; position:absolute; top:-50px; left:0px; width:100%; background:#FFF; box-shadow: 0 1px 1px rgba(124, 124, 124, 0.1); z-index:10; opacity:0;}
+.window .winBody .winContainer .winContent .listBox .listBoxheader .lbhTools .tools {margin:0 2px;}
+.window .winBody .winContainer .winContent .listBox .listBoxheader .lbhTools .tools .buttonGroup {}
+.window .winBody .winContainer .winContent .listBox .listBoxheader .lbhTools .tools .buttonGroup button {margin:0; padding:0; width:30px; height:30px;}
+.window .winBody .winContainer .winContent .listBox .listBoxheader .lbhTools .tools .buttonGroup button:before {font-size:21px;}
+
+.window .winBody .winContainer .winContent .listBox .listBoxheader .lBheader {height:40px;}
+.window .winBody .winContainer .winContent .listBox .listBoxheader .lBheader h2 {display:inline-block; font-size:14px; line-height:40px; color:#3f93ff; font-weight:bold; text-indent:14px; width:calc(100% - 46%);}
+.window .winBody .winContainer .winContent .listBox .listBoxheader .lBheader .tools {margin-right:10px;}
+.window .winBody .winContainer .winContent .listBox .listBoxheader .lBheader .tools .buttonGroup {}
+.window .winBody .winContainer .winContent .listBox .listBoxheader .lBheader .tools .buttonGroup button {margin:0px; padding:0px; width:34px; height:34px; line-height:34px;}
+.window .winBody .winContainer .winContent .listBox .listBoxheader .lBheader .tools .buttonGroup button:before {font-size:20px;}
+.window .winBody .winContainer .winContent .listBox .listBoxheader .lBheader .tools .buttonGroup button.zmdi-check-square {color:#3f93ff;}
+.window .winBody .winContainer .winContent .listBox .listBoxBody {height:calc(100% - 41px); min-width:300px; background:#fff;}
+.window .winBody .winContainer .winContent .listBox .listBoxBody ul {}
+.window .winBody .winContainer .winContent .listBox .listBoxBody ul li.un_read {}
+.window .winBody .winContainer .winContent .listBox .listBoxBody ul li.un_read .label {position:relative;}
+.window .winBody .winContainer .winContent .listBox .listBoxBody ul li.un_read:before {content:""; width:0; height:0; position:absolute; top:0; left:0; border-top:16px solid #3f93ff; border-right:18px transparent solid;}
+.window .winBody .winContainer .winContent .listBox .listBoxBody ul li {min-width:280px; background:#fff; border-bottom:1px dashed rgba(0,0,0,0.16); position:relative;}
+.window .winBody .winContainer .winContent .listBox .listBoxBody ul li .label {width:0px; min-width:0px; opacity:0; overflow:hidden;}
+.window .winBody .winContainer .winContent .listBox .listBoxBody ul li .label label {}
+.window .winBody .winContainer .winContent .listBox .listBoxBody ul li .label .button {border:0; padding:0 5px; color:#88939a; background:none; font-size:21px;}
+.window .winBody .winContainer .winContent .listBox .listBoxBody ul li .info {width:calc(100% - 0px); font-size:12px; line-height:20px; color:#82848d; padding:10px; cursor:pointer;}
+.window .winBody .winContainer .winContent .listBox .listBoxBody ul li .info .sender {margin-bottom:4px;}
+.window .winBody .winContainer .winContent .listBox .listBoxBody ul li .info .sender strong {font-weight:bold;}
+.window .winBody .winContainer .winContent .listBox .listBoxBody ul li .info .sender em {color:#bdc4c8;}
+.window .winBody .winContainer .winContent .listBox .listBoxBody ul li .info .infoText {display:block;}
+.window .winBody .winContainer .winContent .listBox .listBoxBody ul li .info .infoText strong {display:block; color:#626469; font-weight:bold; font-size:14px; margin-bottom:4px;}
+.window .winBody .winContainer .winContent .listBox .listBoxBody ul li .info .infoText p {display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient: vertical; word-wrap:break-word; line-height: 1.7em; height:3.4em; white-space:normal;}
+.window .winBody .winContainer .winContent .listBox .listBoxBody ul li:hover {}
+.window .winBody .winContainer .winContent .listBox .listBoxBody ul li.active {background:#3f93ff;}
+.window .winBody .winContainer .winContent .listBox .listBoxBody ul li.active .info {color:rgba(255, 255, 255, 0.8);}
+.window .winBody .winContainer .winContent .listBox .listBoxBody ul li.active .info .infoText strong {color:#fff;}
+.window .winBody .winContainer .winContent .listBox .listBoxBody ul li.active input[type=checkbox]+label:before {color:#fff;}
+.window .winBody .winContainer .winContent .listBox .listBoxBody ul li.active input[type=checkbox]+label:hover:before {color:#fff;}
+.window .winBody .winContainer .winContent .listBox .listBoxBody ul li.active .info .sender em {color:rgba(255, 255, 255, 0.8);}
+.window .winBody .winContainer .winContent .listBox .listBoxBody ul li.active .label .button {color:#FFF;}
+
+.window .winBody .winContainer .winContent .listBox.edit {}
+.window .winBody .winContainer .winContent .listBox.edit .listBoxheader .lbhTools {top:0px; opacity:1;}
+.window .winBody .winContainer .winContent .listBox.edit .listBoxBody ul li .label {width:34px; min-width:34px; opacity:1;}
+.window .winBody .winContainer .winContent .listBox.edit .listBoxBody ul li .info {width:calc(100% - 34px); padding:10px 10px 10px 0px;}
+
+/* viewBox */
+.window .winBody .winContainer .winContent .viewBox {position:relative; z-index:1; height:calc(100% - 0px); overflow:hidden;}
+.window .winBody .winContainer .winContent .viewBox .viewBoxheader {position:relative; z-index:1; min-width:480px; background:#f8f8f8; border-bottom:1px solid rgba(81, 88, 103, 0.1);}
+.window .winBody .winContainer .winContent .viewBox .viewBoxheader .buttonBox {height:40px;}
+.window .winBody .winContainer .winContent .viewBox .viewBoxheader .buttonBox .buttonGroup {margin:0 10px;}
+.window .winBody .winContainer .winContent .viewBox .viewBoxheader .buttonBox .buttonGroup button {font-size:20px; width:32px; padding:0;}
+.window .winBody .winContainer .winContent .viewBox .viewBoxheader .buttonBox .buttonGroup button.viewClose {display:none; margin-left:-1px;}
+.window .winBody .winContainer .winContent .viewBox .viewBoxheader .buttonBox .buttonGroup button.mti-star.active {color:#fdb101;}
+.window .winBody .winContainer .winContent .viewBox .viewBoxheader .buttonBox .buttonGroup button.mti-star.active:hover {color:#fdb101 !important;}
+.window .winBody .winContainer .winContent .viewBox .viewBoxBody {height:calc(100% - 41px); width:100%; overflow:auto; min-width:480px;}
+.window .winBody .winContainer .winContent .viewBox .viewBoxBody .contentBox {}
+
+/* connectWrap */
+.connectBox {position:absolute;top:0px; left:0px; right:0px; bottom:0px; background:#fff; z-index:99; display:flex; justify-content:center; align-items:center; /* */ display:-webkit-flex; -webkit-justify-content:center; -webkit-align-items:center; /* */ display: -ms-flexbox; -ms-flex-pack:center; -ms-flex-align: center; border-radius:0 0 4px 0;}
+.connectBox .connect {text-align:center; color:#919daa;}
+.connectBox .connect i {font-size:80px;}
+.connectBox .connect p {display:block; text-align:center; font-size:15px; margin-top:10px;}
+
+/* winFullPop */
+.window .winBody .winFullPop.active {height:calc(100% - 0px); opacity:1; visibility:visible;}
+.window .winBody .winFullPop {position:absolute; bottom:0px; left:0px; right:0px; height:0%; overflow:hidden; background:#fff; z-index:10; opacity:0; visibility:hidden; border-radius: 0 0 4px 4px;}
+.window .winBody .winFullPop .winFPHeader {height:46px; border-bottom:1px solid rgba(81, 88, 103, 0.14); position:relative; z-index:1; background:#f7f8f9;}
+.window .winBody .winFullPop .winFPHeader .title {margin:0 20px;}
+.window .winBody .winFullPop .winFPHeader .title h2 {font-size:18px;}
+.window .winBody .winFullPop .winFPHeader .tools {margin-right:20px;}
+.window .winBody .winFullPop .winFPHeader .tools .buttonGroup button {}
+.window .winBody .winFullPop .winFPBody {height:calc(100% - 46px);}
+
+/* winSetting */
+.window .winBody .winSetting .winFPBody .connectSerivce {width:300px;}
+.window .winBody .winSetting .winFPBody .connectSerivce ul {}
+.window .winBody .winSetting .winFPBody .connectSerivce ul li {font-size:20px; padding:10px; margin:10px; background:#5f6670; box-shadow:0 1px 3px rgba(53, 57, 74, 0.2); border-radius:40px; opacity:0.8;}
+.window .winBody .winSetting .winFPBody .connectSerivce ul li .serivce {color:#fff; padding-left:20px;}
+.window .winBody .winSetting .winFPBody .connectSerivce ul li .serivce:before { margin-right:10px; width:24px;}
+.window .winBody .winSetting .winFPBody .connectSerivce ul li.google.active {background:#ea4739; opacity:1;}
+.window .winBody .winSetting .winFPBody .connectSerivce ul li.naver.active {background:#1dc800; opacity:1;}
+.window .winBody .winSetting .winFPBody .connectSerivce ul li.evernote.active {background:#46b862; opacity:1;}
+.window .winBody .winSetting .winFPBody .connectSerivce ul li .switch_input:checked ~ .switch_label {background:rgba(255,255,255,0.2);}
+
+/* winFooter */
+.window .winFooter {height:20px; border-top:1px solid #e6e6e6; box-sizing:border-box;}
+.window .winFooter .appInfo {display:block; line-height:20px; font-size:11px; margin:0 10px; color:#9ea3b3;}
+.window .winFooter .appInfo.new {}
+.window .winFooter .appInfo.new:before {display:inline-block; vertical-align:middle; content:''; width:6px; height:6px; border-radius:50%; margin-right:6px; background:#427bfd;}
+
+
+
+

@@ -1,0 +1,61 @@
+/* ----------------------------------------------
+APP UI - window_mydesk- Common
+------------------------------------------------*/
+
+/* ----------------------------------------------
+APP UI - window_mydesk - 
+------------------------------------------------*/
+#window_mydesk .winBody .winside .winsideBody .mIndex ul li {}
+#window_mydesk .winBody .winside .winsideBody .mIndex ul li button {display:flex; align-items:center; width:100%; padding:6px; font-size:12px; box-sizing:border-box; gap:4px; border-radius:4px;}
+#window_mydesk .winBody .winside .winsideBody .mIndex ul li button.depth {pointer-events:none;}
+#window_mydesk .winBody .winside .winsideBody .mIndex ul li button[data-state="active"],
+#window_mydesk .winBody .winside .winsideBody .mIndex ul li button[data-state="active"]:hover {background:var(--main-color); color:#fff;}
+#window_mydesk .winBody .winside .winsideBody .mIndex ul li button[data-state="active"] i {filter:brightness(10);}
+#window_mydesk .winBody .winside .winsideBody .mIndex ul li button:hover {background:#ECECEC;}
+#window_mydesk .winBody .winside .winsideBody .mIndex ul li button i {display:block; width:18px; height:18px; display:flex;}
+#window_mydesk .winBody .winside .winsideBody .mIndex ul li button i.desk {background:url(../mydesk/img/side_icon_desk.svg) no-repeat;}
+#window_mydesk .winBody .winside .winsideBody .mIndex ul li button i.background {background:url(../mydesk/img/side_icon_background.svg) no-repeat;}
+#window_mydesk .winBody .winside .winsideBody .mIndex ul li button i.myinfo {background:url(../mydesk/img/side_icon_myinfo.svg) no-repeat;}
+#window_mydesk .winBody .winside .winsideBody .mIndex ul li button i.mydater {background:url(../mydesk/img/side_icon_mydater.svg) no-repeat;}
+#window_mydesk .winBody .winside .winsideBody .mIndex ul li ul li button {}
+#window_mydesk .winBody .winside .winsideBody .mIndex ul li ul li button::before {content:''; display:block; width:2px; height:2px; background:#000; border-radius:50%; margin:8px;}
+
+#window_mydesk .winBody .winContainer .winCHeader {display:flex; justify-content:space-between; align-items:center; height:50px; padding:0 20px; border-bottom:1px solid #ECECEC; background:#fafafa;}
+#window_mydesk .winBody .winContainer .winCHeader h3 {color:#000; font-size:16px;}
+#window_mydesk .winBody .winContainer .winCHeader ~ .winContent {height:calc(100% - 50px);}
+#window_mydesk .winBody .winContainer .winContent {flex-direction:column; padding:20px; overflow:auto; box-sizing:border-box;}
+#window_mydesk .winBody .winContainer .winContent::-webkit-scrollbar {height:10px; width:10px}
+#window_mydesk .winBody .winContainer .winContent::-webkit-scrollbar-thumb {border:2px solid transparent; background:rgba(0, 0, 0, 0.3); background-clip:padding-box; border-radius:20px}
+#window_mydesk .winBody .winContainer .winContent .itemGroup {display:flex; flex-direction:column; width:100%; margin-bottom:20px; gap:12px;}
+#window_mydesk .winBody .winContainer .winContent .itemGroup h3 {color:#000; font-size:14px; font-weight:800;}
+#window_mydesk .winBody .winContainer .winContent .itemGroup .itemBox {display:flex; flex-direction:column; width:100%; padding:20px; border:1px solid #ECECEC; border-radius:8px; background:#fff; box-sizing:border-box; gap:12px;}
+#window_mydesk .winBody .winContainer .winContent .itemGroup .itemBox .itemHeader {display:flex; flex-direction:column; padding-bottom:16px; border-bottom:1px solid #ECECEC; gap:6px;}
+#window_mydesk .winBody .winContainer .winContent .itemGroup .itemBox .itemHeader h4 {}
+#window_mydesk .winBody .winContainer .winContent .itemGroup .itemBox .itemHeader p {color:#000; font-size:12px;}
+#window_mydesk .winBody .winContainer .winContent .itemGroup .itemBox .PhotoSelect {}
+#window_mydesk .winBody .winContainer .winContent .itemGroup .itemBox .PhotoSelect .PhotoSelectHeader {display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;}
+#window_mydesk .winBody .winContainer .winContent .itemGroup .itemBox .PhotoSelect .PhotoSelectHeader h5 {font-size:12px; color:#000;}
+#window_mydesk .winBody .winContainer .winContent .itemGroup .itemBox .PhotoSelect .PhotoSelectContents {display:flex; flex-wrap:wrap; gap:10px;}
+#window_mydesk .winBody .winContainer .winContent .itemGroup .itemBox .PhotoSelect .PhotoSelectContents .picture {width:140px; height:100px; border-radius:8px; background:#efefef; overflow:hidden;}
+#window_mydesk .winBody .winContainer .winContent .itemGroup .itemBox .PhotoSelect .PhotoSelectContents .picture img {width:inherit; height:inherit;}
+
+#window_mydesk .winBody .winContainer .winContent .itemGroup .itemBox h4 {color:#000; font-size:12px;}
+#window_mydesk .winBody .winContainer .winContent .itemGroup .itemBox .dlBox {display:flex; flex-direction:column; gap:10px;}
+#window_mydesk .winBody .winContainer .winContent .itemGroup .itemBox .dlBox dl {display:flex;}
+#window_mydesk .winBody .winContainer .winContent .itemGroup .itemBox .dlBox dl dt {display:flex; align-items:center; color:#666; font-size:12px; width:140px;}
+#window_mydesk .winBody .winContainer .winContent .itemGroup .itemBox .dlBox dl dd {color:#1C1C1C; font-size:12px; font-weight:600; width:calc(100% - 140px);}
+#window_mydesk .winBody .winContainer .winContent .itemGroup .itemBox .dlBox dl dd .profileImg {display:flex; align-items:center; gap:10px;}
+#window_mydesk .winBody .winContainer .winContent .itemGroup .itemBox .dlBox dl dd .profileImg button {width:32px; height:32px; padding:0;}
+#window_mydesk .winBody .winContainer .winContent .itemGroup .itemBox .dlBox dl dd .myName {display:flex; gap:10px;}
+#window_mydesk .winBody .winContainer .winContent .itemGroup .itemBox .dlBox dl dd .myName input {width:calc(100% - 200px);}
+#window_mydesk .winBody .winContainer .winContent .itemGroup .itemBox .dlBox dl dd .postNum {display:flex; gap:10px;}
+#window_mydesk .winBody .winContainer .winContent .itemGroup .itemBox .dlBox dl dd .postNum input {width:calc(100% - 200px);}
+
+/* userInfoBox */
+#window_mydesk .winBody .winContainer .winContent .itemGroup .itemBox .userInfoBox {display:flex; align-items:center; gap:10px;}
+#window_mydesk .winBody .winContainer .winContent .itemGroup .itemBox .userInfoBox .userPhoto {display:inline-block; width:48px; height:48px; border-radius:50%; background:url(../../assets/images/gui/user.png)#a1acb9; background-size:cover; vertical-align:middle;}
+#window_mydesk .winBody .winContainer .winContent .itemGroup .itemBox .userInfoBox .userPhoto img {width:inherit; height:inherit; border-radius:50%;}
+#window_mydesk .winBody .winContainer .winContent .itemGroup .itemBox .userInfoBox {display:flex; align-items:center; padding-bottom:10px; border-bottom:1px solid #ECECEC; gap:10px;}
+#window_mydesk .winBody .winContainer .winContent .itemGroup .itemBox .userInfoBox .userInfo strong {display:block; color:#000; font-size:12px; font-weight:600;}
+#window_mydesk .winBody .winContainer .winContent .itemGroup .itemBox .userInfoBox .userInfo p {display:block; color:#666666; font-size:12px;}
+

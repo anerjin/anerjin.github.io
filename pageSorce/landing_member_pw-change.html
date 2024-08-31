@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title>UD</title>
+
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- css -->
+	<link rel="stylesheet" href="ui_landing/assets/css/layout.css" />
+	<link rel="stylesheet" href="ui_landing/assets/css/ui.css" />
+	<link rel="stylesheet" href="ui_landing/assets/css/member.css" />
+
+	<!-- js -->
+	<script src="ui_landing/assets/js/common.js"></script>
+
+	<!-- jquery -->
+	<script src="plugin/jquery/jquery.min.js"></script>
+    <script src="plugin/jquery/jquery-ui.min.js"></script>
+
+
+</head>
+
+<body>
+<div id="memberWrap">
+
+	<!-- header -->
+	<div class="header fb_ewy">
+		<div class="title">
+			<h1>PASSWORD CHANGE</h1>
+		</div>
+		<div class="tools"></div>
+	
+	</div>
+	
+	<!-- container -->
+	<div class="container fb_xy">
+		
+		<div class="memberWrap">
+			<span class="title">
+				<h2>비밀번호를 잊어버리셨군요.</h2>
+				<p>제한시간 안에 변경해 주세요. 해당 페이지는 곧 파기 됩니다.</p>
+			</span>
+			
+			<div class="memberBox pwchange fb_ew">
+				<!-- visual -->
+				<div class="visual pwchange">
+					<div class="visualtxt">
+						<h2>RESET PASSWORD</h2>
+						<dl>
+							<dt>Reset Lock Password</dt>
+							<dd>패스워드는 6 자 이상이어야하며 글자와 숫자를 포함해야합니다.</dd>
+						</dl>
+						<dl>
+							<dt>Remaining time</dt>
+							<dd>아래 시간이 초과되면 현재 페이지는 이용하실 수 없습니다.</dd>
+							<dd class="time"><div id="countdown"></div></dd>
+						</dl>
+					</div>
+				</div>
+				
+				<!-- deskinMy -->
+				<div class="deskinMy">
+					<div class="deskinfo">
+						<dl>
+							<dt>Reset Lock Password</dt>
+							<dd>
+								<div class="inputWrap label">
+									<input type="password" id="password" required>
+									<label for="password">Password</label>
+								</div>
+								<div class="inputWrap label">
+									<input type="password" id="passwordConfirm" required>
+									<label for="passwordConfirm">Password Confirm</label>
+								</div>
+								<span class="required hidden">비밀번호가 동일하지 않습니다.</span>
+							</dd>
+						</dl>
+						<button type="button" id="pwchange" class="button i mti-refresh animated_y danger fw"><span>RESET</span></button>
+					</div>
+				</div>
+			
+			</div>
+			
+		</div>
+	</div>
+	
+	<!-- footer -->
+	<div class="footer">
+		ⓒ UltraDesk, Inc.
+	</div>
+
+</div>
+
+<div class="wallpaper pwchange"></div>
+
+<script>
+
+	document.querySelector('#pwchange').onclick = function() {
+	  swal({
+		  title: 'Reset Password',
+		  text: "비밀번호를 초기화 하시겠습니까?",
+		  type: 'warning',
+		  showCancelButton: true,
+		  confirmButtonColor: '#03a9f4',
+		  cancelButtonColor: '#C1C1C1',
+		  confirmButtonText: 'Yes',
+		}).then(function() {
+		  swal(
+		    '비밀번호가 변경되었습니다.',
+		    '해당 페이지는 폐기되므로 더 이상 이용하실 수 없습니다.',
+		    'success'
+		  ).then(function(){
+				window.location = "landing_main.html";  
+			})
+		})
+	};
+	
+	/* Timer 예제입니다. 열어본 시간을 기준으로 5분동안 이용가능하게 해야 합니다.*/
+	function countdown( elementId, seconds ){
+	  var element, endTime, hours, mins, msLeft, time;
+	
+	  function updateTimer(){
+		msLeft = endTime - (+new Date);
+		if ( msLeft < 0 ) {
+		  console.log('done');
+		} else {
+		  time = new Date( msLeft );
+		  hours = time.getUTCHours();
+		  mins = time.getUTCMinutes();
+		  element.innerHTML = (hours ? hours + ':' + ('0' + mins).slice(-2) : mins) + ':' + ('0' + time.getUTCSeconds()).slice(-2);
+		  setTimeout( updateTimer, time.getUTCMilliseconds());
+		  // if you want this to work when you unfocus the tab and refocus or after you sleep your computer and come back, you need to bind updateTimer to a $(window).focus event^^
+		}
+	  }
+	
+	  element = document.getElementById( elementId );
+	  endTime = (+new Date) + 1000 * seconds;
+	  updateTimer();
+	}
+	
+	countdown('countdown', 300);	 // second base
+
+</script>
+
+</body>
+</html>

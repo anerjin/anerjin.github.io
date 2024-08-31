@@ -1,0 +1,114 @@
+/* ----------------------------------------------
+APP UI - NOTE
+------------------------------------------------*/
+/* ---- animate ----*/
+.addTools
+{transition:all .2s cubic-bezier(0, 0, 0.1, 1); transform:all .2s cubic-bezier(0, 0, 0.1, 1);-webkit-transition:all .2s cubic-bezier(0, 0, 0.1, 1);}
+
+/* ---- fb_ewy ----*/
+#window_note .winBody .winContainer .winContent .viewBox .viewBoxheader .contentTitle .title
+{display:flex; justify-content:space-between; align-items:center;/* */ display:-webkit-flex; -webkit-justify-content:space-between; -webkit-align-items:center;/* */ display: -ms-flexbox; -ms-flex-pack:justify; -ms-flex-align: center;}
+
+#window_note .winBody.winsideOut .winside {border-right:0; }
+#window_note .winBody .winside .winsideBody {height:calc(100% - 36px);}
+#window_note .winBody .winside .winsideBody .sIndex {height:calc(100% - 117px);}
+#window_note .winBody .winside .winsideBody .sIndex .siHeader h3 {color:#31b8e8;}
+#window_note .winBody .winside .winsideBody .sIndex .siHeader .button.zmdi-check {color:#31b8e8;}
+#window_note .winBody .winside .winsideBody .sIndex ul {height:calc(100% - 26px);}
+#window_note .winBody .winContainer .winContent .viewBox .viewBoxheader {border-bottom:1px solid rgba(40, 45, 111, 0.12);}
+#window_note .winBody .winContainer .winContent .viewBox .viewBoxheader .contentTitle {height:56px; background:#fff;}
+#window_note .winBody .winContainer .winContent .viewBox .viewBoxheader .contentTitle .title {padding:12px 20px 10px 12px;}
+#window_note .winBody .winContainer .winContent .viewBox .viewBoxheader .contentTitle .title h2 {display:block; font-weight:bold; font-size:20px; color:#5d9cec; width:calc(100% - 140px);}
+#window_note .winBody .winContainer .winContent .viewBox .viewBoxheader .contentTitle .title h2 input {font-weight:bold; font-size:18px; color:#5d9cec; border:0; text-overflow:ellipsis; overflow:hidden; white-space:nowrap;}
+#window_note .winBody .winContainer .winContent .viewBox .viewBoxheader .contentTitle .title em {font-size:12px; color:#bdc4c8; width:120px; text-align:right; font-style:normal;}
+#window_note .winBody .winContainer .winContent .viewBox .viewBoxheader .contentTitle dl {font-size:0px; margin:0 20px; color:#647c8c; line-height:20px;}
+#window_note .winBody .winContainer .winContent .viewBox .viewBoxheader .contentTitle dl dt {display:inline-block; width:80px; font-size:14px; font-weight:bold;}
+#window_note .winBody .winContainer .winContent .viewBox .viewBoxheader .contentTitle dl dd {display:inline-block; width:calc(100% - 80px); font-size:12px;}
+#window_note .winBody .winContainer .winContent .viewBox .viewBoxBody {height:calc(100% - 103px);}
+#window_note .winBody .winContainer .winContent .viewBox .viewBoxheader .buttonBox {height:41px; border-bottom:1px solid rgba(40, 45, 111, 0.1);}
+#window_note .winBody .winContainer .winContent .listBox .listBoxBody ul li .label {}
+#window_note .winBody .winContainer .winContent .listBox .listBoxBody ul li .label input[type=checkbox]+label:hover:before {color:#31b8e8;}
+#window_note .winBody .winContainer .winContent .listBox .listBoxBody ul li .label input[type=checkbox]:checked+label:before {color:#31b8e8;}
+
+#window_note .winBody .winContainer .winContent .listBox .listBoxBody ul li.active {background:#31b8e8;}
+#window_note .winBody .winContainer .winContent .listBox .listBoxBody ul li.active .info .date {background:#FFF;}
+#window_note .winBody .winContainer .winContent .listBox .listBoxBody ul li.active .info .date .mm {background:#e7f5fa; color:#31b8e8;}
+#window_note .winBody .winContainer .winContent .listBox .listBoxBody ul li.active .info .date .dd {color:#31b8e8;}
+#window_note .winBody .winContainer .winContent .listBox .listBoxBody ul li.active .label input[type=checkbox]+label:hover:before {color:#fff;}
+#window_note .winBody .winContainer .winContent .listBox .listBoxBody ul li.active .label input[type=checkbox]:checked+label:before {color:#fff;}
+#window_note .winBody .winContainer .winContent .listBox .listBoxBody ul li .label .date .dd {line-height:22px; font-size:12px; color:#708b9d;}
+
+#window_note .winBody .winContainer .winContent .listBox .listBoxBody ul li .info .date {width:40px; background:#f7f8f9; border-radius:4px; border-bottom:2px solid #dde3e9; box-sizing:content-box; margin-top:3px; margin-right:10px; float:left;}
+
+#window_note .winBody .winContainer .winContent .listBox .listBoxBody ul li .info .date .mm,
+#window_note .winBody .winContainer .winContent .listBox .listBoxBody ul li .info .date .dd {display:block; text-align:center; height:20px; line-height:20px; font-size:12px;}
+#window_note .winBody .winContainer .winContent .listBox .listBoxBody ul li .info .date .mm {background:#82848d; color:#fff; height:20px; line-height:20px; border-radius:3px 3px 0 0; font-size:12px;}
+
+#window_note .winBody .winContainer .winContent .listBox .listBoxBody ul li .info {}
+#window_note .winBody .winContainer .winContent .listBox .listBoxBody ul li .info .infoText p {-webkit-line-clamp:2; height:3.4em;}
+
+
+
+/* to-do */
+#window_note .winBody.winsideOut .addTools.active {width:calc(100% - 0px);}
+#window_note .winBody .addTools.active {height:calc(100% - 0px); opacity:1; visibility:visible;}
+#window_note .winBody .addTools {position:absolute; width:calc(100% - 240px); bottom:0px; right:0px; height:0%; overflow:hidden; background:#fff; z-index:10; opacity:0; visibility:hidden;}
+#window_note .winBody .addTools .winSetHeader {padding:9px 21px; border-bottom:1px solid rgba(81, 88, 103, 0.14); position:relative; z-index:1;}
+#window_note .winBody .addTools .winSetHeader .todoWrite {height:44px; border:1px solid #e9e9f0; border-radius:4px; background:#f4f4f6;}
+#window_note .winBody .addTools .winSetHeader .todoWrite input {border:0px; font-size:13px; background:none; color:#0096cb;}
+#window_note .winBody .addTools .winSetHeader .todoWrite .event,
+#window_note .winBody .addTools .winSetHeader .todoWrite .date,
+#window_note .winBody .addTools .winSetHeader .todoWrite  button {display:inline-block; vertical-align:top; margin-top:4px;}
+#window_note .winBody .addTools .winSetHeader .todoWrite .event {width:calc(100% - 210px);}
+#window_note .winBody .addTools .winSetHeader .todoWrite .date {width:150px;}
+#window_note .winBody .addTools .winSetHeader .todoWrite  button {background:#31b8e8; padding:0 10px;}
+#window_note .winBody .addTools .winSetHeader .todoWrite  button.i:before {font-size:24px;}
+
+#window_note .winBody .addTools .winSetBody {height:calc(100% - 99px);}
+#window_note .winBody .addTools .winSetBody ul {margin:0 20px;}
+#window_note .winBody .addTools .winSetBody ul li {display:block; background:#FFF; margin-bottom:1px; position:relative; padding:4px 0; border-bottom:1px dashed rgba(0,0,0,0.1);}
+#window_note .winBody .addTools .winSetBody ul li span {display:inline-block; vertical-align:middle; line-height:40px; color:#919daa; font-weight:bold;}
+#window_note .winBody .addTools .winSetBody ul li span input {border:0; font-size:12px; font-weight:bold;}
+#window_note .winBody .addTools .winSetBody ul li span.check {width:40px; text-align:center; font-weight:normal;}
+#window_note .winBody .addTools .winSetBody ul li span.check input[type=checkbox]+label:before {font-size:24px;}
+#window_note .winBody .addTools .winSetBody ul li span.check input[type=checkbox]+label:hover:before {color:#31b8e8;}
+#window_note .winBody .addTools .winSetBody ul li span.check input[type=checkbox]:checked+label:before {color:#31b8e8;}
+#window_note .winBody .addTools .winSetBody ul li span.date {width:140px;}
+#window_note .winBody .addTools .winSetBody ul li span.date input {text-align:center; font-size:14px;}
+#window_note .winBody .addTools .winSetBody ul li span.event {width:calc(100% - 260px);}
+#window_note .winBody .addTools .winSetBody ul li .zmdi-delete {position:absolute; top:12px; right:12px; width:25px; height:25px; line-height:25px; background:#f2f3f4; color:#a2abb5; text-align:center; border-radius:50%;}
+#window_note .winBody .addTools .winSetBody ul li .zmdi-delete:hover {background:#c0392b; color:#FFF;}
+#window_note .winBody .addTools .winSetBody ul li.done .event input {text-decoration:line-through;}
+
+#window_note .winBody .addTools .footerTools {height:36px; border-top: 1px solid rgba(40, 45, 111, 0.16);}
+#window_note .winBody .addTools .footerTools .tools button {color:rgba(124, 124, 124, 0.9); font-size:12px; padding:0 20px; }
+#window_note .winBody .addTools .footerTools .tools button:before {display:inline-block; vertical-align:middle; font-size:21px; margin:0 4px;}
+#window_note .winBody .addTools .footerTools .tools button:hover {color:#31b8e8;}
+
+/* theme */
+#window_note .winHeader .control button.back {color:#31b8e8;}
+#window_note .winHeader .control button.back:disabled {color:#88939a;}
+#window_note .winHeader .tools .buttonGroup button.active {color:#31b8e8;}
+#window_note .winHeader .appName {color:#31b8e8;}
+#window_note .winHeader .tools .buttonGroup button.spin:before {color:#31b8e8;}
+#window_note .buttonGroup button:hover {color:#31b8e8;}
+#window_note .buttonGroup button.dark:hover {color:#fff;}
+#window_note .buttonGroup button.prime {background:#31b8e8;}
+#window_note .buttonGroup button.prime:hover {color:#fff;}
+#window_note .winBody .winside .winsideBody .mIndex ul li:hover {background:#31b8e8;}
+#window_note .winBody .winside .winsideBody .mIndex ul li:hover em {color:#31b8e8;}
+#window_note .winBody .winside .winsideBody .mIndex ul li.active {background:#31b8e8;}
+#window_note .winBody .winside .winsideBody .mIndex ul li.active em {color:#31b8e8;}
+#window_note .winBody .winside .winsideBody .sIndex ul li:hover {color:#31b8e8;}
+#window_note .winBody .winside .winsideBody .sIndex ul li:hover em {background:#31b8e8;}
+#window_note .winBody .winside .winsideBody .sIndex ul li.active {color:#31b8e8;}
+#window_note .winBody .winside .winsideBody .sIndex ul li.active em {background:#31b8e8;}
+#window_note .winBody .winContainer .winContent .listBox .listBoxheader h2 {color:#31b8e8;}
+#window_note .winBody .winContainer .winContent .viewBox .viewBoxheader .contentTitle .title h2 input {color:#31b8e8;}
+#window_note .winBody .winContainer .winContent .viewBox .viewBoxheader .contentTitle .title h2 input:focus {background:#f8f8f8;}
+#window_note .winBody .winContainer .winContent .viewBox .viewBoxheader .buttonBox .tag {margin:0 10px; font-size:11px;}
+#window_note .winBody .winContainer .winContent .viewBox .connectBox .connect i {color:#31b8e8;}
+#window_note .winBody .winContainer .winContent .listBox .listBoxheader .tools .buttonGroup button.zmdi-check-square {color:#31b8e8;}
+
+/* pop */
+#window_note .winBody .winFullPop .winFPHeader .title h2 {color:#31b8e8;}

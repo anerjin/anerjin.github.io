@@ -1,0 +1,43 @@
+
+/* ----------------------------------------------
+APP UI - window
+------------------------------------------------*/
+#window_gameZoko .winBody .winContainer .winContent {display:block;}
+#window_gameZoko .winBody.winsideOff .winContainer .controlBox {height:40px;}
+#window_gameZoko .winBody.winsideOff .winContainer .controlBox .control,
+#window_gameZoko .winBody.winsideOff .winContainer .controlBox .control strong,
+#window_gameZoko .winBody.winsideOff .winContainer .controlBox .control p {display:inline-block; vertical-align:middle;}
+
+#window_gameZoko .winBody.winsideOff .winContainer .controlBox .control {margin:0 20px;}
+#window_gameZoko .winBody.winsideOff .winContainer .controlBox .control strong { background:#333; color:#fff; padding:8px; border-radius:4px;}
+#window_gameZoko .winBody.winsideOff .winContainer .controlBox .control p {color:#333; font-size:14px; font-weight:bold; margin:0 6px;}
+
+/* ----------------------------------------------
+APP UI - zoko
+------------------------------------------------*/
+#window_gameZoko .zokoBox {height:450px; position:relative;}
+#window_gameZoko .zokoBox #zoko {}
+#window_gameZoko .zokoBox #overlay {position:absolute; z-index:1; top:0; width:850px; height:450px;}
+#window_gameZoko .zokoBox #overlay p {display:block; font-size:22px; font-weight:bold; position:absolute; color:#333;}
+#window_gameZoko .zokoBox #overlay #steps {top:20px; right:20px;}
+#window_gameZoko .zokoBox #overlay #level {top:20px; left:20px;}
+#window_gameZoko .zokoBox #menuOverlay {position:absolute; z-index:2; top:0; width:850px; height:450px; background-color:#333; opacity:0.8;}
+#window_gameZoko .zokoBox #menu {position:absolute; z-index:3; top:0; width:850px; height:450px; color:#fff;}
+#window_gameZoko .zokoBox #menu .highscore {float:right; width:335px; padding:15px; padding-top:60px; padding-right:60px;}
+#window_gameZoko .zokoBox #menu .highscore h2 {font-size:20px; display:block; margin-bottom:10px;}
+#window_gameZoko .zokoBox #menu .highscore table {width:100%; border-collapse:separate; border-spacing:0px; background:transparent; border:2px solid #fff; border-radius:5px;}
+#window_gameZoko .zokoBox #menu .highscore table tr td {padding:8px; border-bottom:1px solid #fff; text-align:left; vertical-align:middle;}
+#window_gameZoko .zokoBox #menu .highscore table tr td:first-child {border-right:1px solid #fff; font-weight:bold;}
+#window_gameZoko .zokoBox #menu .highscore table tr.last td {border-bottom:none;}
+#window_gameZoko .zokoBox #menu .options {float:left; width:335px; padding:15px; padding-top:60px; padding-left:60px;}
+#window_gameZoko .zokoBox #menu .options h2 {font-size:20px; display:block; margin-bottom:10px;}
+#window_gameZoko .zokoBox #menu .options .btn {width:100%; height:40px; margin-bottom:10px; padding:10px; border:1px solid #fff; border-radius:7px; background:transparent; color:#fff; font-size:14px; font-weight:bold;}
+#window_gameZoko .zokoBox #menu .options .btn:hover {background-color:#fff; color:#333;}
+#window_gameZoko .zokoBox #btn-group {position:absolute; bottom:10px; right:10px; z-index:999;}
+#window_gameZoko .zokoBox #btn-group button {font-size:30px; color:#333; margin:6px;}
+
+
+
+
+
+

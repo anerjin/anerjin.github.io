@@ -1,0 +1,58 @@
+/* ----------------------------------------------
+APP UI - Common
+------------------------------------------------*/
+/* ---- fb_ewy ----*/
+#window_calendar .fc-toolbar.fc-header-toolbar
+{display:flex; justify-content:space-between; align-items:center;/* */ display:-webkit-flex; -webkit-justify-content:space-between; -webkit-align-items:center;/* */ display: -ms-flexbox; -ms-flex-pack:justify; -ms-flex-align: center;}
+
+/* ----------------------------------------------
+APP UI - CALENDAR
+------------------------------------------------*/
+#window_calendar #appCalendar {width:100%;}
+#window_calendar .fc-widget-content {height:100%;}
+#window_calendar .fc-toolbar.fc-header-toolbar {height:46px; border-bottom:1px solid rgba(40, 45, 111, 0.1);}
+#window_calendar .fc-toolbar .fc-center {display:none;}
+#window_calendar .fc-view-container {height:calc(100% - 46px);}
+#window_calendar .fc-view-container .fc-month-view {height:calc(100% - 0px);}
+#window_calendar .fc-view-container .fc-month-view table {height:100%;}
+
+#window_calendar .fc th {text-align:right; font-weight:500; height:24px; line-height:24px; color:#f36363; font-size:13px; border:0px;}
+#window_calendar .fc th span {margin-right:4px;}
+#window_calendar .fc-toolbar .fc-left {margin-left:20px;}
+#window_calendar .fc-toolbar .fc-left h2 {font-size:22px; font-weight:bold; color:#f36363;}
+#window_calendar .fc-toolbar .fc-right {margin-right:20px;}
+#window_calendar .fc-day-grid-container {height:100% !important; overflow:hidden;}
+#window_calendar .fc-row.fc-rigid {height:16.6%;}
+#window_calendar .fc-other-month {background:rgba(145, 157, 170, 0.06);}
+#window_calendar .winBody .winside .winsideBody {height:calc(100% - 36px);}
+#window_calendar .winBody .winside .winsideBody .sIndex ul li i {font-size:14px; margin-right:0;}
+
+/* theme */
+#window_calendar .winHeader .control button.back {color:#f36363;}
+#window_calendar .winHeader .control button.back:disabled {color:#88939a;}
+#window_calendar .winHeader .tools .buttonGroup button.active {color:#f36363;}
+#window_calendar .winHeader .appName {color:#f36363;}
+#window_calendar .winHeader .tools button.active {color:#f36363;}
+#window_calendar .winHeader .tools .buttonGroup button.spin:before {color:#f36363;}
+#window_calendar .buttonGroup button:hover {color:#f36363;}
+#window_calendar .buttonGroup button.prime {background:#f36363;}
+#window_calendar .buttonGroup button.prime:hover {color:#fff;}
+#window_calendar .fc-unthemed td.fc-today span {background:#f36363;}
+#window_calendar .winBody .winside .winsideBody .sIndex .siHeader h3 {color:#f36363;}
+#window_calendar .winBody .winside .winsideBody .sIndex ul li {color:#5a6f7d;}
+#window_calendar .winBody .winside .winsideBody .sIndex ul li .check {padding:0 4px;}
+#window_calendar .winBody .winside .winsideBody .sIndex ul li .check label {}
+#window_calendar .winBody .winside .winsideBody .sIndex ul li .check label .text {font-size:12px; color:#737479; font-weight:bold; width:134px; text-overflow:ellipsis; overflow:hidden; white-space:nowrap;}
+#window_calendar .winBody .winside .winsideBody .sIndex ul li .check label:before {font-size:24px;}
+#window_calendar .winBody .winside .winsideBody .sIndex ul li .check label[for="g1"]:before {color:#33b679;}
+#window_calendar .winBody .winside .winsideBody .sIndex ul li .check label[for="g2"]:before {color:#ef6c00;}
+#window_calendar .winBody .winside .winsideBody .sIndex ul li .check label[for="g3"]:before {color:#efb70e;}
+#window_calendar .winBody .winside .winsideBody .sIndex ul li .check label[for="g4"]:before {color:#f09300;}
+#window_calendar .winBody .winside .winsideBody .sIndex ul li .check label[for="g5"]:before {color:#d50000;}
+#window_calendar .winBody .winside .winsideBody .sIndex ul li .check label[for="g6"]:before {color:#4285f4;}
+#window_calendar .winBody .winside .winsideBody .sIndex ul li .check label[for="g7"]:before {color:#8e24aa;}
+#window_calendar .winBody .winside .winsideBody .sIndex ul li .check label[for="g8"]:before {color:#3facb5;}
+
+/* pop */
+#window_calendar .winBody .winFullPop .winFPHeader .title h2 {color:#f36363;}
+

@@ -1,0 +1,103 @@
+<!-- window_header -->
+<div class="winHeader dbcResize">
+	<div class="control"></div>
+	<div class="title">
+		<div class="appName">ZOKO</div>
+	</div>
+	<div class="control" rel="#icon_dock_gameZoko">
+		<button type="button" class="windowMin i zmdi-minus"></button>
+		<button type="button" class="windowResize i zmdi-square-o"></button>
+		<button type="button" class="windowClose i zmdi-close"></button>
+	</div>
+</div>
+
+<!-- window_content /winsideOut/-->
+<div class="winBody winsideOff">
+
+	<!-- window_main -->
+	<div class="winContainer">
+		<!-- listWrap -->
+		<div class="winContent">
+			
+			
+			<div class="zokoBox">
+			
+				  <canvas id="zoko" height="450" width="850"></canvas>
+		
+				  <div id="overlay">
+					<p id="steps">0 steps</p>
+					<p id="level">Level <span class="levelNumber">1</span></p>
+				  </div>
+		
+				  <div id="menu">
+					<div class="options">
+					  <h2 class="title">Options</h2>
+					  <button id="continueBtn" class="btn">Continue Game</button>
+					  <button id="nextBtn" class="btn">Next Level &rarr;</button>
+					  <button id="previousBtn" class="btn">&larr; Previous Level</button>
+					</div>
+					<div class="highscore">
+					  <h2>Highscore</h2>
+					  <table class="table">
+						<tbody>
+						  <tr>
+							<td>Level 1
+							<td>2 steps</td>
+						  </tr>
+						  <tr>
+							<td>Level 2
+							<td>3 steps</td>
+						  </tr>
+						  <tr>
+							<td>Level 3
+							<td>?</td>
+						  </tr>
+						  <tr>
+							<td>Level 4
+							<td>?</td>
+						  </tr>
+						  <tr class="last">
+							<td>Level 5
+							<td>?</td>
+						  </tr>
+						</tbody>
+					  </table>
+					</div>
+				  </div>
+				  <div id="menuOverlay"></div>
+
+				  <div id="btn-group">
+					<button type="button" id="menuBtn" title="Show Menu"><i class="zmdi zmdi-rotate-left"></i></button>
+					<button type="button"  id="restartBtn" title="Restart Level"><i class="zmdi zmdi-home"></i></button>
+				  </div>
+
+			</div>
+			
+			<div class="controlBox fb_ewy">
+				<div class="control">
+					<strong>Mouse</strong>
+					<p>Rotation</p>
+				</div>
+				<div class="control">
+					<strong> ê</strong>
+					<strong> ë</strong>
+					<strong> ì</strong>
+					<strong> í</strong>
+					<p>Move</p>
+				</div>
+			</div>
+			
+			
+		</div>
+	</div>
+		
+</div>
+
+<script>
+$(function() {
+  $(document).ready(function() {
+	container = $('div.zokoBox');
+	zoko = new Zoko(container);
+  });
+});
+</script>

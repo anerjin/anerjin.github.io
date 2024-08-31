@@ -1,0 +1,184 @@
+<!-- appBox -->
+<div class="apps">
+	<div class="appsHeader">
+		<h2 class="sr-only">APPS</h2>
+		<div class="search">
+			<input type="text" id="" placeholder="Search">
+		</div>
+		<div class="tools">
+			<button type="button" class="i zmdi-close" data-ui="appPlusExit"></button>
+		</div>
+	</div>
+	<div class="appsBody">
+		<div class="appGroup">
+			<h3>Search</h3>
+			<ul>
+				<li>
+					<div class="app" rel="#icon_dock_email">
+						<span class="icon"><img src="ui_deskboard/app/email/icon.png" alt="E-mail"></span>
+						<p class="name">E-mail</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="appGroup">
+			<h3>Default</h3>
+			<ul>
+				<li>
+					<div class="app" rel="#icon_dock_email">
+						<span class="icon"><img src="ui_deskboard/app/email/icon.png" alt="E-mail"></span>
+						<p class="name">E-mail</p>
+					</div>
+				</li>
+				<li>
+					<div class="app" rel="#icon_dock_calendar">
+						<span class="icon"><img src="ui_deskboard/app/calendar/icon.png" alt="calendar"></span>
+						<p class="name">Calendar</p>
+					</div>
+				</li>
+				<li>
+					<div class="app" rel="#icon_dock_note">
+						<span class="icon"><img src="ui_deskboard/app/note/icon.png" alt="calendar"></span>
+						<p class="name">Note</p>
+					</div>
+				</li>
+				<li>
+					<div class="app" rel="#icon_dock_bookmark">
+						<span class="icon"><img src="ui_deskboard/app/bookmark/icon.png" alt="bookmark"></span>
+						<p class="name">BookMark</p>
+					</div>
+				</li>
+				<li>
+					<div class="app" rel="#icon_dock_drive">
+						<span class="icon"><img src="ui_deskboard/app/drive/icon.png" alt="drive"></span>
+						<p class="name">Drive</p>
+					</div>
+				</li>
+                <li>
+					<div class="app" rel="#icon_dock_talk">
+						<span class="icon"><img src="ui_deskboard/app/talk/icon.png" alt="ultraTalk"></span>
+						<p class="name">UltraTalk</p>
+					</div>
+				</li>
+
+
+				<li>
+					<div class="app" rel="#icon_dock_mydesk">
+						<span class="icon"><img src="ui_deskboard/app/mydesk/icon.png" alt="mydesk"></span>
+						<p class="name">My Desk</p>
+					</div>
+				</li>
+
+			</ul>
+		</div>
+		<div class="appGroup">
+			<h3>Tools</h3>
+			<ul>
+				<li>
+					<div class="app" rel="#icon_dock_pixlr">
+						<span class="icon"><img src="ui_deskboard/app/pixlr/icon.png" alt="mario"></span>
+						<p class="name">pixlr</p>
+					</div>
+				</li>
+				<li>
+					<div class="app">
+						<span class="icon"></span>
+						<p class="name">Cloud</p>
+					</div>
+				</li>
+				<li>
+					<div class="app">
+						<span class="icon"></span>
+						<p class="name">Calendar</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="appGroup">
+			<h3>Life Style</h3>
+			<ul>
+				<li>
+					<div class="app" rel="#icon_dock_colorscripter">
+						<span class="icon"><img src="ui_deskboard/app/colorscripter/icon.png" alt="mario"></span>
+						<p class="name">color scripter</p>
+					</div>
+				</li>
+				<li>
+					<div class="app" rel="#icon_dock_hancomtaja">
+						<span class="icon"><img src="ui_deskboard/app/hancomtaja/icon.png" alt="hancomtaja"></span>
+						<p class="name">TAJA</p>
+					</div>
+				</li>
+				<li>
+					<div class="app">
+						<span class="icon"></span>
+						<p class="name">Calendar</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="appGroup">
+			<h3>Shopping</h3>
+			<ul>
+				<li>
+					<div class="app">
+						<span class="icon"></span>
+						<p class="name">Email</p>
+					</div>
+				</li>
+				<li>
+					<div class="app">
+						<span class="icon"></span>
+						<p class="name">Cloud</p>
+					</div>
+				</li>
+				<li>
+					<div class="app">
+						<span class="icon"></span>
+						<p class="name">Calendar</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="appGroup">
+			<h3>Game</h3>
+			<ul>
+				<li>
+					<div class="app" rel="#icon_dock_gameZoko">
+						<span class="icon"><img src="ui_deskboard/app/gameZoko/icon.png" alt="gameZoko"></span>
+						<p class="name">Zoko</p>
+					</div>
+				</li>
+
+			</ul>
+		</div>
+
+
+	</div>
+</div>
+
+<div class="dim" data-ui="dim"></div>
+
+<script>
+$(function(){
+
+	//nuContextMenu
+	var context = $('#appPlus')
+      .nuContextMenu({
+          hideAfterClick: true,
+          items: '.app',
+          callback: function(key, element) {
+             //alert('Clicked ' + key + ' on ' + $(element).attr('rel'));
+				if(key=="AddDesk"){
+					$(element).parent().clone().appendTo("#deskApp ul");
+				}
+          },
+          menu: [
+		  		{name:'AddDesk', title:'바탕화면에 추가', icon:'mti-plus-circle',},
+		  		]
+      });
+
+	  $(".scrollbar").mCustomScrollbar({theme:"minimal",scrollInertia:100});
+})
+
+</script>

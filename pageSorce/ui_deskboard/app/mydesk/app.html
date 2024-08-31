@@ -1,0 +1,329 @@
+<!-- window_header -->
+<div class="winHeader dbcResize">
+	<div class="title">
+		<h2 class="appName">My Desk</h2>
+	</div>
+	<div class="control" rel="#icon_dock_mydesk">
+		<button type="button" class="windowMin">
+			<img src="../pageSorce/ui_deskboard/assets/images/window/win_maximize.svg" alt="maximize">
+		</button>
+		<button type="button" class="windowResize">
+			<img src="../pageSorce/ui_deskboard/assets/images/window/win_select.svg" alt="select">
+		</button>
+		<button type="button" class="windowClose">
+			<img src="../pageSorce/ui_deskboard/assets/images/window/win_close.svg" alt="close">
+		</button>
+	</div>
+</div>
+
+
+<!-- window_content -->
+<div class="winBody">
+	<!-- window_aside -->
+	<div class="winside">
+		<div class="winsideHeader">
+			<!-- userInfo -->
+			<div class="userInfoBox">
+				<div class="userPhoto">
+					<img src="ui_deskboard/assets/images/desk/person_circlebg.svg" alt="no photo">
+				</div>
+				<div class="userInfo">
+					<strong>First Last</strong>
+					<p>hongd@gmail.com</p>
+				</div>
+
+			</div>
+		</div>
+		<div class="winsideBody">
+			<div class="mIndex">
+				<ul>
+					<li>
+						<button type="button" data-state="active">
+							<i class="i desk"></i> 데스크 설정
+						</button>
+					</li>
+					<li>
+						<button type="button">
+							<i class="i background"></i> 배경화면 설정
+						</button>
+					</li>
+					<li>
+						<button type="button" class="depth">
+							<i class="i myinfo"></i> 내정보 설정
+						</button>
+						<ul>
+							<li>
+								<button type="button">개인 정보</button>
+							</li>
+							<li>
+								<button type="button">구매 목록</button>
+							</li>
+							<li>
+								<button type="button">결제 정보</button>
+							</li>
+							<li>
+								<button type="button">알림기록</button>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<button type="button"  class="depth">
+							<i class="i mydater"></i> 마이데이터
+						</button>
+						<ul>
+							<li>
+								<button type="button">의료 데이터 연동</button>
+							</li>
+							<li>
+								<button type="button">금융 데이터 연동</button>
+							</li>
+						</ul>
+					</li>
+				</ul>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<!-- window_main -->
+	<div class="winContainer">
+		<div class="winCHeader">
+			<h3>개인정보</h3>
+			<button type="button" class="button prime square sBtn" disabled>저장</button>
+		</div>
+
+		<!-- listWrap -->
+		<div class="winContent">
+
+			<div class="itemGroup">
+
+				<div class="itemBox">
+					<div class="fb_ewy">
+						<h4>툴팁 보이기</h4>
+						<label class="switch">
+							<input type="checkbox" class="switch_input">
+							<span class="switch_label" data-on="ON" data-off="OFF"></span>
+							<span class="switch_handle"></span>
+						</label>
+					</div>
+					<p class="guide">가이드로 보여지는 툴팁이 안보이도록 합니다.</p>
+				</div>
+
+				<div class="itemBox">
+					<div class="fb_ewy">
+						<h4>다크모드 적용</h4>
+						<label class="switch">
+							<input type="checkbox" id="themeDark" class="switch_input">
+							<span class="switch_label" data-on="ON" data-off="OFF"></span>
+							<span class="switch_handle"></span>
+						</label>
+					</div>
+					<p class="guide">UI를 다크모드로 적용 합니다.</p>
+				</div>
+
+				<div class="itemBox">
+					<div class="itemHeader">
+						<h4>배경 개인 설정</h4>
+						<p>개인 사진은 3개 까지 저장 가능합니다.</p>
+					</div>
+					<div class="PhotoSelect">
+						<div class="PhotoSelectHeader">
+							<h5>사진 선택</h5>
+							<button type="button" class="button gray round sBtn">사진 찾아보기</button>
+						</div>
+						<div class="PhotoSelectContents">
+							<button type="button" class="picture">이미지 1</button>
+							<button type="button" class="picture">이미지 2</button>
+							<button type="button" class="picture">이미지 3</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="itemBox">
+					<div class="PhotoSelect">
+						<div class="PhotoSelectHeader">
+							<h5>배경 이미지 선택</h5>
+						</div>
+						<div class="PhotoSelectContents">
+							<button type="button" class="picture" rel="bg1"><img src="ui_deskboard/assets/images/bg/thumb/bg1.jpg"></button>
+							<button type="button" class="picture" rel="bg2"><img src="ui_deskboard/assets/images/bg/thumb/bg2.jpg"></button>
+							<button type="button" class="picture" rel="bg3"><img src="ui_deskboard/assets/images/bg/thumb/bg3.jpg"></button>
+							<button type="button" class="picture" rel="bg4"><img src="ui_deskboard/assets/images/bg/thumb/bg4.jpg"></button>
+							<button type="button" class="picture" rel="bg5"><img src="ui_deskboard/assets/images/bg/thumb/bg5.jpg"></button>
+							<button type="button" class="picture" rel="bg6"><img src="ui_deskboard/assets/images/bg/thumb/bg6.jpg"></button>
+							<button type="button" class="picture" rel="bg7"><img src="ui_deskboard/assets/images/bg/thumb/bg7.jpg"></button>
+							<button type="button" class="picture" rel="bg8"><img src="ui_deskboard/assets/images/bg/thumb/bg8.jpg"></button>
+							<button type="button" class="picture" rel="bg9"><img src="ui_deskboard/assets/images/bg/thumb/bg9.jpg"></button>
+						</div>
+					</div>
+				</div>
+
+				<div class="itemBox">
+					<!-- userInfoBox -->
+					<div class="userInfoBox">
+						<div class="userPhoto">
+							<img src="ui_deskboard/assets/images/desk/person_circlebg.svg" alt="no photo">
+						</div>
+						<div class="userInfo">
+							<strong>First Last</strong>
+							<p>hongd@gmail.com</p>
+						</div>
+					</div>
+
+					<div class="dlBox">
+						<dl>
+							<dt>닉네임</dt>
+							<dd>
+								<div class="myName">
+									<input type="text" value="First Last" data-status="default">
+									<button type="button" class="button dark square mBtn">닉네임 변경</button>
+								</div>
+							</dd>
+						</dl>
+						<dl>
+							<dt>프로필 이미지</dt>
+							<dd>
+								<div class="profileImg">
+									<button type="button" class="button gray circle mBtn">
+										<img src="ui_deskboard/app/mydesk/img/app_icon_photo.svg" alt="아이콘선택">
+									</button>
+									<button type="button" class="button gray circle mBtn"></button>
+									<button type="button" class="button gray circle mBtn"></button>
+									<button type="button" class="button gray circle mBtn"></button>
+									<button type="button" class="button gray circle mBtn"></button>
+									<button type="button" class="button gray circle mBtn"></button>
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</div>
+
+				<div class="itemBox">
+					<h4>개인 정보</h4>
+					<div class="dlBox">
+						<dl>
+							<dt>이름</dt>
+							<dd>First Last</dd>
+						</dl>
+						<dl>
+							<dt>전화번호</dt>
+							<dd>010-000-0000</dd>
+						</dl>
+						<dl>
+							<dt>이메일</dt>
+							<dd>abc123@gmail.com</dd>
+						</dl>
+					</div>
+				</div>
+				<div class="itemBox">
+					<h4>배송지</h4>
+					<div class="dlBox">
+						<dl>
+							<dt>우편번호</dt>
+							<dd>0000-0000</dd>
+						</dl>
+						<dl>
+							<dt>주소</dt>
+							<dd>서울 강남구 테헤란로 123</dd>
+						</dl>
+						<dl>
+							<dt>상세주소</dt>
+							<dd>4층 401호</dd>
+						</dl>
+					</div>
+				</div>
+				
+				<div class="itemBox">
+					<div class="fb_ewy">
+						<h4>데스크 비밀번호</h4>
+						<button type="button" class="button gray round sBtn">비밀번호 재설정</button>
+					</div>
+					<div class="dlBox">
+						<dl>
+							<dt>기존 비밀번호</dt>
+							<dd><input type="text" value="" data-status="default"></dd>
+						</dl>
+						<dl>
+							<dt>기존 비밀번호</dt>
+							<dd><input type="password" value="" data-status="confirm"></dd>
+						</dl>
+						<dl>
+							<dt>변경 비밀번호 확인</dt>
+							<dd><input type="password" value="" data-status="warning"></dd>
+						</dl>
+					</div>
+				</div>
+				<div class="itemBox">
+					<h4>개인 정보</h4>
+					<div class="dlBox">
+						<dl>
+							<dt>이름</dt>
+							<dd><input type="text" value="" data-status="default"></dd>
+						</dl>
+						<dl>
+							<dt>전화번호</dt>
+							<dd><input type="text" value="" data-status="default"></dd>
+						</dl>
+						<dl>
+							<dt>이메일 주소</dt>
+							<dd><input type="text" value="" data-status="default"></dd>
+						</dl>
+					</div>
+				</div>
+				<div class="itemBox">
+					<h4>배송지</h4>
+					<div class="dlBox">
+						<dl>
+							<dt>우편번호</dt>
+							<dd>
+								<div class="postNum">
+									<input type="text" value="" data-status="default">
+									<button type="button" class="button dark square mBtn">우편번호 검색</button>
+								</div>
+							</dd>
+						</dl>
+						<dl>
+							<dt>주소</dt>
+							<dd><input type="text" value="" data-status="default"></dd>
+						</dl>
+						<dl>
+							<dt>상세주소</dt>
+							<dd><input type="text" value="" data-status="default"></dd>
+						</dl>
+					</div>
+				</div>
+				<div class="itemBox">
+					<h4>수신동의</h4>
+					<div class="dlBox">
+						<dl>
+							<dt>정보메일 수신 동의</dt>
+							<dd>
+								<label class="switch">
+									<input type="checkbox" class="switch_input">
+									<span class="switch_label" data-on="ON" data-off="OFF"></span>
+									<span class="switch_handle"></span>
+								</label>
+							</dd>
+						</dl>
+						<dl>
+							<dt>알림 수신 동의</dt>
+							<dd>
+								<label class="switch">
+									<input type="checkbox" class="switch_input">
+									<span class="switch_label" data-on="ON" data-off="OFF"></span>
+									<span class="switch_handle"></span>
+								</label>
+							</dd>
+						</dl>
+					</div>
+				</div> 
+
+			</div>
+		
+		</div>
+	</div>
+	
+	
+</div>

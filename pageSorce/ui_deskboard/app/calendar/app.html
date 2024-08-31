@@ -1,0 +1,159 @@
+<!-- window_header -->
+<div class="winHeader dbcResize">
+	<div class="tools control">
+		<button type="button" class="i mti-chevron-left back" data-ui="backTool" disabled></button>
+		<button type="button" class="i mti-menu active" data-ui="sideToggle"></button>
+		<button type="button" class="i mti-autorenew toolTip-bottom" title="Sync" data-ui="winRefresh"></button>
+	</div>
+	<div class="title">
+		<div class="appName">CALENDAR</div>
+	</div>
+	<div class="control" rel="#icon_dock_calendar">
+		<button type="button" class="windowMin i mti-window-minimize"></button>
+		<button type="button" class="windowResize i mti-window-maximize"></button>
+		<button type="button" class="windowClose i mti-window-close"></button>
+	</div>
+</div>
+
+
+<!-- window_content -->
+<div class="winBody winsideOut">
+	<!-- window_aside -->
+	<div class="winside">
+
+		<div class="winsideBody scrollbarDark">
+			<div class="sIndex" id="calendarCatagory">
+				<div class="siHeader">
+					<h3>Desk Local</h3>
+					<!--<button type="button" class="button i zmdi-plus smini"></button> -->
+				</div>
+				<ul>
+					<li>
+						<span class="check opt">
+                            <input type="checkbox" id="cal1" name="checkbox">
+                            <label for="cal1"><span class="text">Home</span></label>
+                        </span>
+					</li>
+					<li>
+						<span class="check opt">
+                            <input type="checkbox" id="cal2" name="checkbox">
+                            <label for="cal2"><span class="text">Work</span></label>
+                        </span>
+					</li>
+				</ul>
+			</div>
+
+			<div class="sIndex">
+				<div class="siHeader">
+					<h3>Google</h3>
+				</div>
+				<ul>
+					<li>
+						<span class="check opt">
+                            <input type="checkbox" id="g1" name="checkbox">
+                            <label for="g1"><span class="text">반복일정</span></label>
+                        </span>
+
+					</li>
+					<li>
+						<span class="check opt">
+                            <input type="checkbox" id="g2" name="checkbox">
+                            <label for="g2"><span class="text">대소사</span></label>
+                        </span>
+					</li>
+					<li>
+						<span class="check opt">
+                            <input type="checkbox" id="g3" name="checkbox">
+                            <label for="g3"><span class="text">비즈니스</span></label>
+                        </span>
+					</li>
+					<li>
+						<span class="check opt">
+                            <input type="checkbox" id="g4" name="checkbox">
+                            <label for="g4"><span class="text">미팅약속</span></label>
+                        </span>
+					</li>
+					<li>
+						<span class="check opt">
+                            <input type="checkbox" id="g5" name="checkbox">
+                            <label for="g5"><span class="text">생일</span></label>
+                        </span>
+					</li>
+					<li>
+						<span class="check opt">
+                            <input type="checkbox" id="g6" name="checkbox">
+                            <label for="g6"><span class="text">name</span></label>
+                        </span>
+					</li>
+
+					<li>
+						<span class="check opt">
+                            <input type="checkbox" id="g8" name="checkbox">
+                            <label for="g8"><span class="text">name</span></label>
+                        </span>
+					</li>
+
+
+
+				</ul>
+			</div>
+		</div>
+
+		<!-- sideTools -->
+		<div class="sideTools fb_xy">
+			<div class="buttonGroup">
+				<button type="button" class="button i mti-settings mini toolTip-top" title="Settings" data-ui="setOpen"></button>
+				<button type="button" class="button i mti-playlist-plus mini toolTip-top" title="Local List Add" data-ui="addListOpen"></button>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- window_main -->
+	<div class="winContainer">
+		<!-- listWrap -->
+		<div class="winContent">
+			<div class="" id="appCalendar"></div>
+		</div>
+	</div>
+
+	<!-- window_setting -->
+	<div class="winFullPop winSetting">
+		<div class="winFPHeader">
+			<div class="title">
+				<h2>캘린더 연동</h2>
+			</div>
+			<div class="tools"></div>
+		</div>
+		<div class="winFPBody fb_xy">
+			<div class="connectSerivce">
+				<ul>
+					<li class="google">
+						<span class="serivce i zmdi-google">Google</span>
+						<label class="switch">
+							<input type="checkbox" class="switch_input">
+							<span class="switch_label" data-on="ON" data-off="OFF"></span>
+							<span class="switch_handle"></span>
+						</label>
+					</li>
+					<!--
+					<li class="naver">
+						<span class="serivce i zmdi-city-alt">Naver</span>
+						<label class="switch">
+							<input type="checkbox" class="switch_input">
+							<span class="switch_label" data-on="ON" data-off="OFF"></span>
+							<span class="switch_handle"></span>
+						</label>
+					</li>
+					 -->
+				</ul>
+			</div>
+
+		</div>
+	</div>
+
+</div>
+
+<div class="winFooter">
+	<span class="appInfo new">complete</span>
+</div>

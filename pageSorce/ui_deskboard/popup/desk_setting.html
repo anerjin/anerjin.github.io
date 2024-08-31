@@ -1,0 +1,131 @@
+<script>
+$( function() {
+	var availableTags = [
+	  "ActionScript",
+	  "AppleScript",
+	  "Asp",
+	  "BASIC",
+	  "C",
+	  "C++",
+	  "Clojure",
+	  "COBOL",
+	  "ColdFusion",
+	  "Erlang",
+	  "Fortran",
+	  "Groovy",
+	  "Haskell",
+	  "Java",
+	  "JavaScript",
+	  "Lisp",
+	  "Perl",
+	  "PHP",
+	  "Python",
+	  "Ruby",
+	  "Scala",
+	  "Scheme"
+	];
+	$( "#location" ).autocomplete({
+	  source: availableTags
+	});
+});
+</script>
+
+<div class="popup">
+	<div class="popHeader">
+		<div class="title">
+			<h2>Setting</h2>
+		</div>
+		<div class="tools">
+			<button type="button" class="i zmdi-close" data-ui="settingExit"></button>
+		</div>
+	</div>
+	<div class="popBody scrollbar">
+		
+		<div class="colum">
+			<div class="columHeader">
+				<h3>현재 위치 설정</h3>
+				<div class="tools">
+					<p class="required">날씨, 미세먼지, 시간 등 표시에 적용됩니다.</p>
+				</div>
+			</div>
+			<div class="columBody">
+				<!--  -->
+				<div class="inputWrap">
+					<div class="addon">
+						<button type="button" class="hding button i zmdi-gps-dot"></button>
+					</div>
+					<label for="location">현위치</label>
+					<input type="text" id="location" placeholder="">
+				</div>
+				
+			</div>
+		</div>
+		
+		<div class="colum">
+			<div class="columHeader">
+				<h3>내 사진변경</h3>
+			</div>
+			<div class="columBody">
+				<dl>
+					<dt>랜덤</dt>
+					<dd>
+						<label class="switch">
+							<input type="checkbox" class="switch_input">
+							<span class="switch_label" data-on="ON" data-off="OFF"></span>
+							<span class="switch_handle"></span>
+						</label>
+					</dd>
+				</dl>
+
+			</div>
+		</div>
+		
+		
+		
+		<div class="colum">
+			<div class="columHeader">
+				<h3>배경화면</h3>
+			</div>
+			<div class="columBody">
+				<dl>
+					<dt>랜덤</dt>
+					<dd>
+						<label class="switch">
+							<input type="checkbox" class="switch_input">
+							<span class="switch_label" data-on="ON" data-off="OFF"></span>
+							<span class="switch_handle"></span>
+						</label>
+					</dd>
+				</dl>
+
+			</div>
+		</div>
+        
+        
+        <div class="colum">
+			<div class="columHeader">
+				<h3>탈퇴</h3>
+			</div>
+			<div class="columBody">
+				<dl>
+					<dt>모든 정보를 삭제하시고 탈퇴하시겠습니까?</dt>
+					<dd>
+						<button type="button" class="button danger">탈퇴하기</button>
+					</dd>
+				</dl>
+
+			</div>
+		</div>
+	
+	</div>
+
+</div>
+
+<div class="dim" data-ui="dim"></div>
+
+<script>
+$(function(){
+	  $(".scrollbar").mCustomScrollbar({theme:"minimal",scrollInertia:100});
+})
+
+</script>

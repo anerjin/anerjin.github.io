@@ -1,0 +1,406 @@
+<!-- window_header -->
+<div class="winHeader dbcResize">
+	<div class="title">
+		<h2 class="appName">E-mail</h2>
+	</div>
+	<div class="control" rel="#icon_dock_email">
+		<button type="button" class="windowMin">
+			<img src="../pageSorce/ui_deskboard/assets/images/window/win_maximize.svg" alt="maximize">
+		</button>
+		<button type="button" class="windowResize">
+			<img src="../pageSorce/ui_deskboard/assets/images/window/win_select.svg" alt="select">
+		</button>
+		<button type="button" class="windowClose">
+			<img src="../pageSorce/ui_deskboard/assets/images/window/win_close.svg" alt="close">
+		</button>
+	</div>
+</div>
+
+
+<!-- window_content -->
+<div class="winBody">
+	<!-- window_aside -->
+	<div class="winside">
+		<div class="winsideHeader">
+			<div class="majorMail">
+				<div class="userPhoto"><img src="ui_desk/assets/images/gui/user_sample_01.png" alt="thomas"></div>
+				<div class="nameMail">
+					<strong>Thomas Cruise</strong>
+					<p>thomas@gmail.com</p>
+				</div>
+
+			</div>
+		</div>
+		<div class="winsideBody scrollbarDark">
+			<div class="mIndex">
+				<ul>
+					<li>
+						<i class="i mti-archive"></i>
+						<span class="name">모든 받은 편지함</span>
+						<span class="tools">
+							<em>99</em>
+						</span>
+					</li>
+					<li>
+						<i class="i mti-star-circle"></i>
+						<span class="name">중요 편지함</span>
+						<span class="tools">
+							<em>99</em>
+						</span>
+					</li>
+					<li class="active">
+						<i class="i mti-email"></i>
+						<span class="name">Naver</span>
+						<span class="tools">
+							<em>99</em>
+						</span>
+					</li>
+					<li>
+						<i class="i mti-email"></i>
+						<span class="name">Gmail</span>
+						<span class="tools">
+							<em>99</em>
+						</span>
+					</li>
+					<li>
+						<i class="i mti-email"></i>
+						<span class="name">Daum</span>
+						<span class="tools">
+							<em>99</em>
+						</span>
+					</li>
+				</ul>
+			</div>
+
+			<div class="sIndex">
+				<div class="siHeader">
+					<h3>Naver</h3>
+				</div>
+				<ul>
+					<li class="active">
+						<i class="i mti-inbox"></i>
+						<span class="name">받은 편지함</span>
+						<span class="tools">
+							<em>99</em>
+						</span>
+					</li>
+					<li>
+						<i class="i mti-file"></i>
+						<span class="name">임시저장</span>
+						<span class="tools">
+							<em>99</em>
+						</span>
+					</li>
+					<li>
+						<i class="i mti-send"></i>
+						<span class="name">보낸편지함</span>
+						<span class="tools">
+							<em>99</em>
+						</span>
+					</li>
+					<li>
+						<i class="i mti-delete"></i>
+						<span class="name">휴지통</span>
+						<span class="tools">
+							<em>99</em>
+						</span>
+					</li>
+					<li>
+						<i class="i mti-folder-outline"></i>
+						<span class="name">분류1</span>
+						<span class="tools">
+							<em>99</em>
+						</span>
+					</li>
+					<li>
+						<i class="i mti-folder-outline"></i>
+						<span class="name">분류2</span>
+						<span class="tools">
+							<em>99</em>
+						</span>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+
+		<!-- sideTools -->
+		<div class="sideTools fb_xy">
+			<div class="buttonGroup">
+				<button type="button" class="button i mti-settings mini toolTip-top" title="Settings" data-ui="setOpen"></button>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- window_main -->
+	<div class="winContainer">
+		<!-- listWrap -->
+		<div class="winContent listView">
+			<!-- email_list -->
+			<div class="listBox">
+				<div class="listBoxheader">
+					<div class="lbhTools">
+						<div class="tools">
+							<div class="buttonGroup">
+								<button type="button" class="button i mti-checkbox-blank-outline mini toolTip-bottom" title="All Check"></button>
+								<button type="button" class="button i mti-delete mini toolTip-bottom" title="Delete"></button>
+							</div>
+						</div>
+						<div class="tools">
+							<div class="buttonGroup">
+								<button type="button" class="button i mti-close mini toolTip-bottom" title="close" data-ui="listEditClose"></button>
+							</div>
+						</div>
+					</div>
+
+					<div class="lBheader">
+						<h2>모든 받은 편지함</h2>
+						<div class="tools">
+							<div class="buttonGroup">
+								<button type="button" class="button i mti-send mini toolTip-bottom" title="New Mail" data-ui="sendOpen"></button>
+								<button type="button" class="button i mti-magnify mini toolTip-bottom" title="Search"></button>
+								<button type="button" class="button i mti-tune mini toolTip-bottom" title="Edit" data-ui="listEdit"></button>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="listBoxBody scrollbarDark">
+					<ul>
+						<li class="un_read">
+							<div class="label fb_dir_y">
+                            	<div class="opt">
+                                    <input type="checkbox" id="c2" name="checkbox" value="">
+                                    <label for="c2"></label>
+                                </div>
+								<button type="button" class="button i mti-star mini"></button>
+								<button type="button" class="button i mti-delete mini"></button>
+							</div>
+							<div class="info" data-ui="viewInfo">
+								<span class="sender">
+									<strong>행복한경영이야기</strong>
+									<em> 16-05-18 04:39</em>
+								</span>
+								<span class="infoText">
+									<strong>큰 꿈을 가진 사람에겐 큰 벽이 나타난다큰 꿈을 가진 사람에겐 큰 벽이 나타난다큰 꿈을 가진 사람에겐 큰 벽이 나타난다</strong>
+									<p>큰 꿈을 가진 사람에겐 큰 벽이 나타난다큰 꿈을 가진 사람에겐 큰 벽이 나타난다큰 꿈을 가진 사람에겐 큰 벽이 나타난다</p>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="label">
+                            	<div class="opt">
+                                    <input type="checkbox" id="c1" name="checkbox" value="">
+                                    <label for="c1"></label>
+                                </div>
+								<button type="button" class="button i mti-star mini"></button>
+								<button type="button" class="button i mti-delete mini"></button>
+							</div>
+							<div class="info" data-ui="viewInfo">
+								<span class="sender">
+									<strong>행복한경영이야기</strong>
+									<em> 16-05-18 04:39</em>
+								</span>
+								<span class="infoText">
+									<strong>큰 꿈을 가진 사람에겐 큰 벽이 나타난다</strong>
+									<p>큰 꿈을 가진 사람에겐 큰 벽이 나타난다큰 꿈을 가진 사람에겐 큰 벽이 나타난다큰 꿈을 가진 사람에겐 큰 벽이 나타난다</p>
+								</span>
+							</div>
+						</li>
+						<li class="un_read">
+							<div class="label">
+                            	<div class="opt">
+                                    <input type="checkbox" id="c2" name="checkbox" value="">
+                                    <label for="c2"></label>
+                                </div>
+								<button type="button" class="button i mti-star mini"></button>
+								<button type="button" class="button i mti-delete mini"></button>
+							</div>
+							<div class="info" data-ui="viewInfo">
+								<span class="sender">
+									<strong>행복한경영이야기</strong>
+									<em> 16-05-18 04:39</em>
+								</span>
+								<span class="infoText">
+									<strong>큰 꿈을 가진 사람에겐 큰 벽이 나타난다</strong>
+									<p>큰 꿈을 가진 사람에겐 큰 벽이 나타난다큰 꿈을 가진 사람에겐 큰 벽이 나타난다큰 꿈을 가진 사람에겐 큰 벽이 나타난다</p>
+								</span>
+							</div>
+						</li>
+
+						<li>
+							<div class="label">
+                            	<div class="opt">
+                                    <input type="checkbox" id="c2" name="checkbox" value="">
+                                    <label for="c2"></label>
+                                </div>
+								<button type="button" class="button i mti-star mini"></button>
+								<button type="button" class="button i mti-delete mini"></button>
+							</div>
+							<div class="info" data-ui="viewInfo">
+								<span class="sender">
+									<strong>행복한경영이야기</strong>
+									<em> 16-05-18 04:39</em>
+								</span>
+								<span class="infoText">
+									<strong>큰 꿈을 가진 사람에겐 큰 벽이 나타난다큰 꿈을 가진 사람에겐 큰 벽이 나타난다큰 꿈을 가진 사람에겐 큰 벽이 나타난다</strong>
+									<p>큰 꿈을 가진 사람에겐 큰 벽이 나타난다큰 꿈을 가진 사람에겐 큰 벽이 나타난다큰 꿈을 가진 사람에겐 큰 벽이 나타난다</p>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="label">
+								<div class="opt">
+                                    <input type="checkbox" id="c2" name="checkbox" value="">
+                                    <label for="c2"></label>
+                                </div>
+								<button type="button" class="button i mti-star mini"></button>
+								<button type="button" class="button i mti-delete mini"></button>
+							</div>
+							<div class="info" data-ui="viewInfo">
+								<span class="sender">
+									<strong>행복한경영이야기</strong>
+									<em> 16-05-18 04:39</em>
+								</span>
+								<span class="infoText">
+									<strong>큰 꿈을 가진 사람에겐 큰 벽이 나타난다큰 꿈을 가진 사람에겐 큰 벽이 나타난다큰 꿈을 가진 사람에겐 큰 벽이 나타난다</strong>
+									<p>큰 꿈을 가진 사람에겐 큰 벽이 나타난다큰 꿈을 가진 사람에겐 큰 벽이 나타난다큰 꿈을 가진 사람에겐 큰 벽이 나타난다</p>
+								</span>
+							</div>
+						</li>
+
+
+
+					</ul>
+				</div>
+
+			</div>
+
+			<!-- viewWrap -->
+			<div class="viewBox">
+
+				<!-- connect -->
+				<div class="connectBox">
+                    <div class="connect">
+						<i class="i mti-email-open"></i>
+						<p>메일을 선택해 주세요.</p>
+                    </div>
+                </div>
+
+				<!-- viewBoxheader -->
+				<div class="viewBoxheader">
+					<div class="buttonBox">
+						<div class="buttonGroup">
+							<button type="button" class="button i mti-star toolTip-bottom" data-ui="favorite" title="Favorite"></button>
+						</div>
+						<div class="buttonGroup">
+							<button type="button" class="button i mti-reply toolTip-bottom" title="Reply"></button>
+							<button type="button" class="button i mti-reply-all toolTip-bottom" title="Reply All"></button>
+							<button type="button" class="button i mti-open-in-new toolTip-bottom" title="Delivery"></button>
+							<button type="button" class="button i mti-delete-forever toolTip-bottom" title="Delete"></button>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="viewBoxBody">
+
+					<div class="contentTitle">
+						<div class="title">
+							<h2>큰 꿈을 가진 사람에겐 큰 벽이 나타난다큰 꿈을 가진 사람에겐 큰 벽이 나타난다큰 꿈을 가진 사람에겐 큰 벽이 나타난다</h2>
+							<em>17-04-25 (화) 12:01</em>
+						</div>
+						<dl>
+							<dt>보낸사람</dt>
+							<dd>행복한경영이야기 &lt; ml@hunet.co.kr &gt;</dd>
+							<dt>받은사람</dt>
+							<dd>김*석 &lt; anerjin@naver.com &gt;</dd>
+						</dl>
+					</div>
+
+					<div class="contentBox emailReset">
+
+
+
+<table align="center" cellpadding="0" cellspacing="0" border="0" width="680"><tbody><tr><td style="padding:0 0 7px 0;"><table cellpadding="0" cellspacing="0" border="0" width="100%"><tbody><tr><td><a href="http://mailer.hunet.co.kr:8881/bin/checker?mode=5&amp;module=11&amp;mailidx=4629&amp;dmidx=0&amp;emidx=0&amp;service=0&amp;cidx=&amp;etime=20170502000500&amp;seqidx=824269&amp;objidx=1&amp;encoding=0&amp;url=http://www.happyceo.co.kr" target="_blank"><img src="http://img.hunet.co.kr/letter/happyCeo/mailingService_v5/logo.gif" alt="" border="0"></a></td><td align="right" valign="bottom" style="color:#5e9235; font-size:12px;"><strong>| 제3167호 |</strong> 2017.04.25</td></tr></tbody></table></td></tr><tr><td bgcolor="#5e9235"><table cellpadding="0" cellspacing="0" border="0" width="100%"><tbody><tr><td height="44" style="padding:0 0 0 15px; font-size:11px; color:#fff;">현재 <strong style="color:#ffff00;">2,084,489명</strong>이 행복한 경영이야기와 함께하고 계십니다.</td><td align="right" style="font-size:0;"><a href="http://mailer.hunet.co.kr:8881/bin/checker?mode=5&amp;module=11&amp;mailidx=4629&amp;dmidx=0&amp;emidx=0&amp;service=0&amp;cidx=&amp;etime=20170502000500&amp;seqidx=824269&amp;objidx=2&amp;encoding=0&amp;url=https://www.facebook.com/happyceo" target="_blank"><img src="http://img.hunet.co.kr/letter/happyCeo/mailingService_v5/btn_h_facebook.gif" alt="행경 facebook" border="0"></a></td></tr></tbody></table></td></tr><tr><td><table cellpadding="0" cellspacing="0" border="0" width="100%"><tbody><tr><td style="padding:5px; border-left:1px solid #cdcecf; border-right:1px solid #cdcecf;"><table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#f0f1eb"><tbody><tr><td valign="top" width="492" height="440" style="padding:30px 0 30px 50px; font-size:12px; line-height:20px;"><p style="margin:0 0 10px 0; font-size:18px; color:#000000; letter-spacing:-3px; font-weight:bold; font-family:'BatangChe','sans-serif'; ">오늘을 가장 특별한 날로 만들어라</p>어떤 일을 하든 “나중에”, “기회를 봐서”, “기회가 또 있잖아.<br> 특별한 날을 기다리자”라고 말해선 안된다.<br> 바로 지금 이 순간을 살라.<br> 오늘이 ‘그 특별한 날’이 되게 하라.<br> 당신이 사는 하루하루를 삶에서 가장 특별한 날로 만들어야 한다.<br> 길든 짧든 인생을 이렇게 살아갈 수 있다면<br> 우리의 삶은 분명 풍성해질 것이다.<br> - 리카이푸, ‘내게 남은 날이 백일이라면’<p style="margin:30px 0 10px 0;"><img src="http://img.hunet.co.kr/letter/happyCEO/mailingService_v4/comment.gif" alt="촌철활인 : 한치의 혀로 사람을 살린다!" border="0"></p>소설가 커트 보니것은 “인생의 작은 일들을 누려라.<br> 나중에 되돌아보면<br> 그것들이 결코 작지 않음을 깨닫게 된다.”고 말했습니다.<br> 오늘 하루를 평생 잊지 못할 특별한 날로 만들겠다는 각오로<br> 매일 새벽을 맞이한다면 그야말로<br> ‘특별한 인생’을 살아갈 수 있을 것입니다. <p style="margin:20px 0 0 0;"><a href="http://mailer.hunet.co.kr:8881/bin/checker?mode=5&amp;module=11&amp;mailidx=4629&amp;dmidx=0&amp;emidx=0&amp;service=0&amp;cidx=&amp;etime=20170502000500&amp;seqidx=824269&amp;objidx=3&amp;encoding=0&amp;url=http://www.happyceo.co.kr/Contents/View.aspx?num=3457" target="_blank"><img src="http://img.hunet.co.kr/letter/happyCEO/mailingService_v5/btn_reply.gif" alt="댓글쓰기" border="0"></a>&nbsp;<a href="http://mailer.hunet.co.kr:8881/bin/checker?mode=5&amp;module=11&amp;mailidx=4629&amp;dmidx=0&amp;emidx=0&amp;service=0&amp;cidx=&amp;etime=20170502000500&amp;seqidx=824269&amp;objidx=4&amp;encoding=0&amp;url=http://www.happyceo.co.kr/Mypage/Propose/Write.aspx" target="_blank"><img src="http://img.hunet.co.kr/letter/happyCEO/mailingService_v5/btn_good.gif" alt="추천하기" border="0"></a>&nbsp;<a href="http://mailer.hunet.co.kr:8881/bin/checker?mode=5&amp;module=11&amp;mailidx=4629&amp;dmidx=0&amp;emidx=0&amp;service=0&amp;cidx=&amp;etime=20170502000500&amp;seqidx=824269&amp;objidx=5&amp;encoding=0&amp;url=http://www.happyceo.co.kr/GateTwitter/GateTwitter.aspx?num=3457&amp;facebook=Y" target="_blank"><img src="http://img.hunet.co.kr/letter/happyCEO/mailingService_v5/btn_facebook.gif" alt="페이스북" border="0"></a>&nbsp;<a href="http://mailer.hunet.co.kr:8881/bin/checker?mode=5&amp;module=11&amp;mailidx=4629&amp;dmidx=0&amp;emidx=0&amp;service=0&amp;cidx=&amp;etime=20170502000500&amp;seqidx=824269&amp;objidx=6&amp;encoding=0&amp;url=http://www.happyceo.co.kr/GateTwitter/GateTwitter.aspx?num=3457" target="_blank"><img src="http://img.hunet.co.kr/letter/happyCEO/mailingService_v5/btn_twitter.gif" alt="트위터" border="0"></a></p>                                                                            <!-- 20160324 -->    <p style="margin:0; padding:0;">    <a href="http://mailer.hunet.co.kr:8881/bin/checker?mode=5&amp;module=11&amp;mailidx=4629&amp;dmidx=0&amp;emidx=0&amp;service=0&amp;cidx=&amp;etime=20170502000500&amp;seqidx=824269&amp;objidx=7&amp;encoding=0&amp;url=http://www.xiunaichina.com/HappyBusinessStory/Subscribe" target="_blank"><img src="http://img.hunet.co.kr/letter/encourage_mail/2016/happyceo/china-happyceo.png" alt="" border="0"></a>    </p>    <!-- /20160324 --><br><a href="http://mailer.hunet.co.kr:8881/bin/checker?mode=5&amp;module=11&amp;mailidx=4629&amp;dmidx=0&amp;emidx=0&amp;service=0&amp;cidx=&amp;etime=20170502000500&amp;seqidx=824269&amp;objidx=8&amp;encoding=0&amp;url=http://job.hunet.co.kr/Apply/Index" target="_blank"><strong style="font-weight: 600;">심리상담사, 독서지도사 외 유망자격증 수강료 0원!</strong><br><img src="http://img.hunet.co.kr/letter/happyCEOMail/2017/img_banner_0424.jpg" alt="공인중개사 평생 패스" border="0"></a>                                    </td><td align="center" width="188" height="440" style="font-size:0;padding:20px 0 20px 0"><a href="http://mailer.hunet.co.kr:8881/bin/checker?mode=5&amp;module=11&amp;mailidx=4629&amp;dmidx=0&amp;emidx=0&amp;service=0&amp;cidx=&amp;etime=20170502000500&amp;seqidx=824269&amp;objidx=9&amp;encoding=0&amp;url=http://smartmba.hunet.co.kr/Apply/LabourerCard" target="_blank"><img src="https://img.hunet.co.kr/files/public/170424172938.jpg" alt="공인중개사 평생 패스" border="0"></a></td></tr></tbody></table><!--- - - - - - - - - - - - - - - - - - - - - 교육과정 1 - - - - - - - - - - - - - - - - - - - - - --><table align="center" width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td style="padding:10px 0 10px 0;"> <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td style="border:#cecece 1px solid;">                                            <a href="http://mailer.hunet.co.kr:8881/bin/checker?mode=5&amp;module=11&amp;mailidx=4629&amp;dmidx=0&amp;emidx=0&amp;service=0&amp;cidx=&amp;etime=20170502000500&amp;seqidx=824269&amp;objidx=10&amp;encoding=0&amp;url=https://kigepe-online.hunet.co.kr/Counsel/NoticeViewKigepe?noticeSeq=884289" target="_blank"><img src="https://img.hunet.co.kr/files/public/170424173107.jpg" alt="사회복지사 자격증" width="330" height="330" border="0"></a></td><td width="10px"></td><td style="border:#cecece 1px solid; ">                                <table style="padding:0px 10px 10px 10px" cellpadding="0" cellspacing="0" border="0" width="100%">                                <tbody><tr><td style="font-weight:bold; font-size:14px; color:#333333; letter-spacing:-1px; font-family:'나눔고딕','nanumgothic','맑은 고딕','malgun gothic','돋움','dotum',sans-serif;">살아있는 지식, 함께하는 학습</td><td align="right"><a href="http://mailer.hunet.co.kr:8881/bin/checker?mode=5&amp;module=11&amp;mailidx=4629&amp;dmidx=0&amp;emidx=0&amp;service=0&amp;cidx=&amp;etime=20170502000500&amp;seqidx=824269&amp;objidx=11&amp;encoding=0&amp;url=http://www.hunet.co.kr/Knowledge" target="_blank"><img src="http://img.hunet.co.kr/letter/happyCeo/mailingService_v5/logo_klive.gif" alt="지식라이브" border="0"></a></td></tr>                                </tbody></table>                                <table cellpadding="0" cellspacing="0" border="0" width="100%">                                <tbody><tr><td style="padding:0px 10px 0 10px"><a href="http://mailer.hunet.co.kr:8881/bin/checker?mode=5&amp;module=11&amp;mailidx=4629&amp;dmidx=0&amp;emidx=0&amp;service=0&amp;cidx=&amp;etime=20170502000500&amp;seqidx=824269&amp;objidx=12&amp;encoding=0&amp;url=http://www.hunet.co.kr/Knowledge/LiveMovieView?movieSeq=1007" target="_blank"><img src="http://img.hunet.co.kr/files/happyceo/manage/170424173411.png" alt="" border="0" width="179" height="98"></a></td><td valign="top" style="padding:0px 10px 0 1px; font-size:12px; line-height:22px; color:#666666; letter-spacing:-1px;table-layout:fixed; word-break:break-all">                                <a href="http://mailer.hunet.co.kr:8881/bin/checker?mode=5&amp;module=11&amp;mailidx=4629&amp;dmidx=0&amp;emidx=0&amp;service=0&amp;cidx=&amp;etime=20170502000500&amp;seqidx=824269&amp;objidx=13&amp;encoding=0&amp;url=http://www.hunet.co.kr/Knowledge/LiveMovieView?movieSeq=1007" target="_blank" style="text-decoration:none; color:#666666; font-family:'나눔고딕','nanumgothic','맑은 고딕','malgun gothic','돋움','dotum',sans-serif;">                                <b><font color="blue">골드코프의 위기탈출 묘책 '협력'</font></b>캐나다의 금광회사 골드코프는 계속되는 노조원들의...                                </a>                                </td></tr>                                </tbody></table>                                <table style="padding:20px 10px 0 10px" cellpadding="0" cellspacing="0" border="0" width="100%">                                <tbody><tr><td style="font-size:12px; line-height:22px; font-family:'나눔고딕','nanumgothic','맑은 고딕','malgun gothic','돋움','dotum',sans-serif;">                                                                <img src="http://img.hunet.co.kr/letter/happyCEO/mailingService_v3/icon_dott.gif" alt="">                                                                <a href="http://mailer.hunet.co.kr:8881/bin/checker?mode=5&amp;module=11&amp;mailidx=4629&amp;dmidx=0&amp;emidx=0&amp;service=0&amp;cidx=&amp;etime=20170502000500&amp;seqidx=824269&amp;objidx=14&amp;encoding=0&amp;url=http://www.hunet.co.kr/Knowledge/LiveMovieView?movieSeq=1152&amp;categoryCD=081002&amp;submitType=LiveMovieList" target="_blank" style="color:#1d1d1d; text-decoration:none;">[인문교양] 백성들에게 채워주기</a><br>                                                                <img src="http://img.hunet.co.kr/letter/happyCEO/mailingService_v3/icon_dott.gif" alt="">                                                                <a href="http://mailer.hunet.co.kr:8881/bin/checker?mode=5&amp;module=11&amp;mailidx=4629&amp;dmidx=0&amp;emidx=0&amp;service=0&amp;cidx=&amp;etime=20170502000500&amp;seqidx=824269&amp;objidx=15&amp;encoding=0&amp;url=http://www.hunet.co.kr/Knowledge/LiveMovieView?movieSeq=885&amp;categoryCD=081004&amp;submitType=LiveMovieList" target="_blank" style="color:#1d1d1d; text-decoration:none;">[비즈스킬] 논리적 흐름으로 스토리 전개하기</a><br>                                                                <img src="http://img.hunet.co.kr/letter/happyCEO/mailingService_v3/icon_dott.gif" alt="">                                                                <a href="http://mailer.hunet.co.kr:8881/bin/checker?mode=5&amp;module=11&amp;mailidx=4629&amp;dmidx=0&amp;emidx=0&amp;service=0&amp;cidx=&amp;etime=20170502000500&amp;seqidx=824269&amp;objidx=16&amp;encoding=0&amp;url=http://www.hunet.co.kr/Knowledge/LiveArticleView?articleSeq=35152&amp;contentType=0&amp;categoryCD=082003" target="_blank" style="color:#1d1d1d; text-decoration:none;">[리더십] F를 받더라도 결코 포기할 수 없는 것...</a><br>                                                                <img src="http://img.hunet.co.kr/letter/happyCEO/mailingService_v3/icon_dott.gif" alt="">                                                                <a href="http://mailer.hunet.co.kr:8881/bin/checker?mode=5&amp;module=11&amp;mailidx=4629&amp;dmidx=0&amp;emidx=0&amp;service=0&amp;cidx=&amp;etime=20170502000500&amp;seqidx=824269&amp;objidx=17&amp;encoding=0&amp;url=http://www.hunet.co.kr/Knowledge/LiveArticleView?articleSeq=36129&amp;contentType=0&amp;categoryCD=082001" target="_blank" style="color:#1d1d1d; text-decoration:none;">[경영/경제] 창조적 공존의 시대 만들기</a><br>                                                                <img src="http://img.hunet.co.kr/letter/happyCEO/mailingService_v3/icon_dott.gif" alt="">                                                                <a href="http://mailer.hunet.co.kr:8881/bin/checker?mode=5&amp;module=11&amp;mailidx=4629&amp;dmidx=0&amp;emidx=0&amp;service=0&amp;cidx=&amp;etime=20170502000500&amp;seqidx=824269&amp;objidx=18&amp;encoding=0&amp;url=http://www.hunet.co.kr/Knowledge/LiveArticleView?articleSeq=35690&amp;contentType=0&amp;categoryCD=082003" target="_blank" style="color:#1d1d1d; text-decoration:none;">[지식자료] 화가 바뀌어 오히려 복이 되다</a>                                                                </td></tr>                                </tbody></table>                                <table style="padding:0px 10px 0 10px" cellpadding="0" cellspacing="0" border="0" width="100%">                                <tbody><tr><td align="right">                                <a href="http://mailer.hunet.co.kr:8881/bin/checker?mode=5&amp;module=11&amp;mailidx=4629&amp;dmidx=0&amp;emidx=0&amp;service=0&amp;cidx=&amp;etime=20170502000500&amp;seqidx=824269&amp;objidx=19&amp;encoding=0&amp;url=http://www.hunet.co.kr/Knowledge" target="_blank"><img src="http://img.hunet.co.kr/letter/happyCEO/mailingService_v5/btn_more.gif" alt="더보기" border="0"></a>                                </td></tr>                                </tbody></table></td></tr></tbody></table></td></tr></tbody></table><!--- - - - - - - - - - - - - - - - - - - - - 교육과정 2 - - - - - - - - - - - - - - - - - - - - - --><table align="center" width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td valign="top"><table align="center" width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td><table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><img src="http://img.hunet.co.kr/letter/happyCEO/mailingService_v5/ttl_happyceo.gif" alt="지난행경보기"></td><td align="right" valign="bottom"><a href="http://mailer.hunet.co.kr:8881/bin/checker?mode=5&amp;module=11&amp;mailidx=4629&amp;dmidx=0&amp;emidx=0&amp;service=0&amp;cidx=&amp;etime=20170502000500&amp;seqidx=824269&amp;objidx=20&amp;encoding=0&amp;url=http://www.happyceo.co.kr/Contents/Calendar.aspx" target="_blank"><img src="http://img.hunet.co.kr/letter/happyCEO/mailingService_v5/btn_more.gif" alt="더보기" border="0"></a></td></tr></tbody></table></td></tr><tr><td style="padding:10px 2px 20px 10px; font-family:'나눔고딕','nanumgothic','맑은 고딕','malgun gothic','돋움','dotum',sans-serif; font-size:12px; line-height:25px; "><a href="http://mailer.hunet.co.kr:8881/bin/checker?mode=5&amp;module=11&amp;mailidx=4629&amp;dmidx=0&amp;emidx=0&amp;service=0&amp;cidx=&amp;etime=20170502000500&amp;seqidx=824269&amp;objidx=21&amp;encoding=0&amp;url=http://www.happyceo.co.kr/Contents/View.aspx?num=3456" target="_blank" style="color:#4a4a4a; text-decoration:none;"><span style="color:#34a851;">[<strong>제3166호</strong>]</span> 재무성과는 직원 만족도의 후행지표다</a><br><a href="http://mailer.hunet.co.kr:8881/bin/checker?mode=5&amp;module=11&amp;mailidx=4629&amp;dmidx=0&amp;emidx=0&amp;service=0&amp;cidx=&amp;etime=20170502000500&amp;seqidx=824269&amp;objidx=22&amp;encoding=0&amp;url=http://www.happyceo.co.kr/Contents/View.aspx?num=3455" target="_blank" style="color:#4a4a4a; text-decoration:none;"><span style="color:#34a851;">[<strong>제3165호</strong>]</span> 모든 사람은 하느님이 인간세계에 보낸 ...</a><br><a href="http://mailer.hunet.co.kr:8881/bin/checker?mode=5&amp;module=11&amp;mailidx=4629&amp;dmidx=0&amp;emidx=0&amp;service=0&amp;cidx=&amp;etime=20170502000500&amp;seqidx=824269&amp;objidx=23&amp;encoding=0&amp;url=http://www.happyceo.co.kr/Contents/View.aspx?num=3454" target="_blank" style="color:#4a4a4a; text-decoration:none;"><span style="color:#34a851;">[<strong>제3164호</strong>]</span> 선행(善行)이 보다 나은 사업을 만들어...</a><br><a href="http://mailer.hunet.co.kr:8881/bin/checker?mode=5&amp;module=11&amp;mailidx=4629&amp;dmidx=0&amp;emidx=0&amp;service=0&amp;cidx=&amp;etime=20170502000500&amp;seqidx=824269&amp;objidx=24&amp;encoding=0&amp;url=http://www.happyceo.co.kr/Contents/View.aspx?num=3453" target="_blank" style="color:#4a4a4a; text-decoration:none;"><span style="color:#34a851;">[<strong>제3163호</strong>]</span> 오늘 만난 어려움과 장애를 기뻐하세요</a><br><a href="http://mailer.hunet.co.kr:8881/bin/checker?mode=5&amp;module=11&amp;mailidx=4629&amp;dmidx=0&amp;emidx=0&amp;service=0&amp;cidx=&amp;etime=20170502000500&amp;seqidx=824269&amp;objidx=25&amp;encoding=0&amp;url=http://www.happyceo.co.kr/Contents/View.aspx?num=3452" target="_blank" style="color:#4a4a4a; text-decoration:none;"><span style="color:#34a851;">[<strong>제3162호</strong>]</span> 성급히 문제의 답을 제시하지 말라</a><br></td></tr></tbody></table></td><td valign="top" width="20"></td><td valign="top" width="330"><table align="center" width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td><table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><img src="http://img.hunet.co.kr/letter/happyCEO/mailingService_v5/ttl_program.gif" alt="조영탁의 추천 자기계발 프로그램"></td></tr></tbody></table></td></tr><tr><td style="padding:10px 2px 20px 10px; font-family:'나눔고딕','nanumgothic','맑은 고딕','malgun gothic','돋움','dotum',sans-serif; font-size:12px; line-height:25px; ">                                                        <a href="http://mailer.hunet.co.kr:8881/bin/checker?mode=5&amp;module=11&amp;mailidx=4629&amp;dmidx=0&amp;emidx=0&amp;service=0&amp;cidx=&amp;etime=20170502000500&amp;seqidx=824269&amp;objidx=26&amp;encoding=0&amp;url=http://job.hunet.co.kr/Lecture/Detail?cate3=336&amp;goods_id=Y00046727&amp;processcd=HLSP14247&amp;processTerm=420&amp;licenceType=10" target="_blank" style="color:#4a4a4a; text-decoration:none;">    1. 방과후지도사[무료 수강]</a><br>                                                        <a href="http://mailer.hunet.co.kr:8881/bin/checker?mode=5&amp;module=11&amp;mailidx=4629&amp;dmidx=0&amp;emidx=0&amp;service=0&amp;cidx=&amp;etime=20170502000500&amp;seqidx=824269&amp;objidx=27&amp;encoding=0&amp;url=http://hbs.hunet.co.kr/Education/Detail?gid=Y00046537" target="_blank" style="color:#4a4a4a; text-decoration:none;">    2. 0.1초의 싸움, 카피라이팅</a><br>                                                        <a href="http://mailer.hunet.co.kr:8881/bin/checker?mode=5&amp;module=11&amp;mailidx=4629&amp;dmidx=0&amp;emidx=0&amp;service=0&amp;cidx=&amp;etime=20170502000500&amp;seqidx=824269&amp;objidx=28&amp;encoding=0&amp;url=http://pass.hunet.co.kr/PLicence/LicenceDetail?gid=Y00067158&amp;cate2_code=350&amp;cate3_code=351" target="_blank" style="color:#4a4a4a; text-decoration:none;">    3. 직무전문자격증 - 창업지도사</a><br>                                                        <a href="http://mailer.hunet.co.kr:8881/bin/checker?mode=5&amp;module=11&amp;mailidx=4629&amp;dmidx=0&amp;emidx=0&amp;service=0&amp;cidx=&amp;etime=20170502000500&amp;seqidx=824269&amp;objidx=29&amp;encoding=0&amp;url=http://hbs.hunet.co.kr/Education/Detail?gid=Y00071257" target="_blank" style="color:#4a4a4a; text-decoration:none;">    4. 미래학자 최윤식 박사의 미래인사이트</a><br>                                                        <a href="http://mailer.hunet.co.kr:8881/bin/checker?mode=5&amp;module=11&amp;mailidx=4629&amp;dmidx=0&amp;emidx=0&amp;service=0&amp;cidx=&amp;etime=20170502000500&amp;seqidx=824269&amp;objidx=30&amp;encoding=0&amp;url=http://seum.hunet.co.kr/Admission/ApplyList?cate=8400" target="_blank" style="color:#4a4a4a; text-decoration:none;">    5. 보육교사 자격증 취득 [61% 할인]</a><br>    </td></tr></tbody></table></td></tr></tbody></table>        <table cellpadding="0" cellspacing="0" border="0" width="100%">        <tbody><tr><td>        <img src="http://img.hunet.co.kr/letter/happyCeo/mailingService_v5/quick.gif" alt="" border="0" usemap="#quickMap">        <map name="quickMap">          <area target="_blank" shape="rect" coords="14,20,120,141" href="http://mailer.hunet.co.kr:8881/bin/checker?mode=5&amp;module=11&amp;mailidx=4629&amp;dmidx=0&amp;emidx=0&amp;service=0&amp;cidx=&amp;etime=20170502000500&amp;seqidx=824269&amp;objidx=31&amp;encoding=0&amp;url=http://www.hunet.co.kr/Knowledge/HappyCeo10thSpecialBook" alt="행복한경영이야기10주년특별도서">          <area target="_blank" shape="rect" coords="150,21,256,142" href="http://mailer.hunet.co.kr:8881/bin/checker?mode=5&amp;module=11&amp;mailidx=4629&amp;dmidx=0&amp;emidx=0&amp;service=0&amp;cidx=&amp;etime=20170502000500&amp;seqidx=824269&amp;objidx=32&amp;encoding=0&amp;url=http://www.happyceo.co.kr/BookMentor/MentorSchool.aspx" alt="조영탁 대표의 행복한 멘토스쿨">          <area target="_blank" shape="rect" coords="282,20,389,142" href="http://mailer.hunet.co.kr:8881/bin/checker?mode=5&amp;module=11&amp;mailidx=4629&amp;dmidx=0&amp;emidx=0&amp;service=0&amp;cidx=&amp;etime=20170502000500&amp;seqidx=824269&amp;objidx=33&amp;encoding=0&amp;url=http://www.happyceo.co.kr/Contents/Others/WallpaperV2.aspx" alt="휴대폰,PC배경화면 서비스">          <area target="_blank" shape="rect" coords="419,24,517,140" href="http://mailer.hunet.co.kr:8881/bin/checker?mode=5&amp;module=11&amp;mailidx=4629&amp;dmidx=0&amp;emidx=0&amp;service=0&amp;cidx=&amp;etime=20170502000500&amp;seqidx=824269&amp;objidx=34&amp;encoding=0&amp;url=https://www.facebook.com/happyceo" alt="행경 페이스북 팬 페이지">        </map>        </td></tr>        </tbody></table></td></tr></tbody></table></td></tr><tr><td bgcolor="#9da4af" style="padding:30px 35px;"><table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="font-size:0; padding:0 0 20px 0;"><img src="http://img.hunet.co.kr/letter/happyCeo/mailingService_v5/footer1.gif" alt="" border="0"></td></tr><tr><td style="padding:0 0 20px 0;"><table cellpadding="0" cellspacing="0" border="0" width="100%"><tbody><tr><!-- 20141103 --><td align="center" width="15%" style="font-size:0;"><a href="http://mailer.hunet.co.kr:8881/bin/checker?mode=5&amp;module=11&amp;mailidx=4629&amp;dmidx=0&amp;emidx=0&amp;service=0&amp;cidx=&amp;etime=20170502000500&amp;seqidx=824269&amp;objidx=35&amp;encoding=0&amp;url=http://www.hunet.co.kr/" target="_blank"><img src="http://img.hunet.co.kr/letter/happyCeo/mailingService_v5/fl_hunet.png" alt="휴넷" border="0"></a></td><td align="center" width="15%" style="font-size:0;"><a href="http://mailer.hunet.co.kr:8881/bin/checker?mode=5&amp;module=11&amp;mailidx=4629&amp;dmidx=0&amp;emidx=0&amp;service=0&amp;cidx=&amp;etime=20170502000500&amp;seqidx=824269&amp;objidx=36&amp;encoding=0&amp;url=http://hbs.hunet.co.kr" target="_blank"><img src="http://img.hunet.co.kr/letter/happyCeo/mailingService_v5/fl_hbs.png" alt="비즈니스스쿨" border="0"></a></td><td align="center" width="15%" style="font-size:0;"><a href="http://mailer.hunet.co.kr:8881/bin/checker?mode=5&amp;module=11&amp;mailidx=4629&amp;dmidx=0&amp;emidx=0&amp;service=0&amp;cidx=&amp;etime=20170502000500&amp;seqidx=824269&amp;objidx=37&amp;encoding=0&amp;url=http://edubank.hunet.co.kr" target="_blank"><img src="http://img.hunet.co.kr/letter/happyCeo/mailingService_v5/fl_edubank.png" alt="학점은행" border="0"></a></td><td align="center" width="15%" style="font-size:0;"><a href="http://mailer.hunet.co.kr:8881/bin/checker?mode=5&amp;module=11&amp;mailidx=4629&amp;dmidx=0&amp;emidx=0&amp;service=0&amp;cidx=&amp;etime=20170502000500&amp;seqidx=824269&amp;objidx=38&amp;encoding=0&amp;url=http://pass.hunet.co.kr" target="_blank"><img src="http://img.hunet.co.kr/letter/happyCeo/mailingService_v5/fl_pass.png" alt="자격증" border="0"></a></td><td align="center" width="15%" style="font-size:0;"><a href="http://mailer.hunet.co.kr:8881/bin/checker?mode=5&amp;module=11&amp;mailidx=4629&amp;dmidx=0&amp;emidx=0&amp;service=0&amp;cidx=&amp;etime=20170502000500&amp;seqidx=824269&amp;objidx=39&amp;encoding=0&amp;url=http://www.jrhunet.co.kr/" target="_blank"><img src="http://img.hunet.co.kr/letter/happyCeo/mailingService_v5/fl_jr2.png" alt="청소년/부모" border="0"></a></td><td align="center" width="15%" style="font-size:0;"><a href="http://mailer.hunet.co.kr:8881/bin/checker?mode=5&amp;module=11&amp;mailidx=4629&amp;dmidx=0&amp;emidx=0&amp;service=0&amp;cidx=&amp;etime=20170502000500&amp;seqidx=824269&amp;objidx=40&amp;encoding=0&amp;url=http://hrd.hunet.co.kr/" target="_blank"><img src="http://img.hunet.co.kr/letter/happyCeo/mailingService_v5/fl_hrd.png" alt="기업교육" border="0"></a></td><!-- /20141103 --></tr></tbody></table></td></tr><tr><td style="padding:15px 0 0 0; font-size:11px; color:#ebedef; line-height:16px; letter-spacing:-1px; border-top:1px solid #b0b5bc;">                        <!-- 20150608 -->                        본 메일은 행복한 경영이야기 회원님들께 발송되는 발송전용 메일로 회신되지 않습니다. [고객행복센터 : 1588-6559]<br>                        정보수정이나 수신거부를 원하시면 <a href="http://mailer.hunet.co.kr:8881/bin/checker?mode=5&amp;module=11&amp;mailidx=4629&amp;dmidx=0&amp;emidx=0&amp;service=0&amp;cidx=&amp;etime=20170502000500&amp;seqidx=824269&amp;objidx=41&amp;encoding=0&amp;url=http://www.happyceo.co.kr/Mypage/Modify/Input.aspx?userNm=anerjin&amp;emailNm=anerjin@naver.com" target="_blank" style="color:#ebedef;">이곳</a>을 클릭해 주시기 바랍니다. <a href="http://mailer.hunet.co.kr:8881/bin/checker?mode=5&amp;module=11&amp;mailidx=4629&amp;dmidx=0&amp;emidx=0&amp;service=0&amp;cidx=&amp;etime=20170502000500&amp;seqidx=824269&amp;objidx=42&amp;encoding=0&amp;url=http://www.happyceo.co.kr/Mypage/Modify/Input.aspx?userNm=anerjin&amp;emailNm=anerjin@naver.com" target="_blank" style="color:#ebedef;">[수신거부]</a><br>                        If you don't want this type of information or e-mail, please <a href="http://mailer.hunet.co.kr:8881/bin/checker?mode=5&amp;module=11&amp;mailidx=4629&amp;dmidx=0&amp;emidx=0&amp;service=0&amp;cidx=&amp;etime=20170502000500&amp;seqidx=824269&amp;objidx=43&amp;encoding=0&amp;url=http://www.happyceo.co.kr/Mypage/Modify/Input.aspx?userNm=anerjin&amp;emailNm=anerjin@naver.com" target="_blank" style="color:#ebedef;">[click here]</a>.                        <!-- /20150608 --></td></tr></tbody></table></td></tr></tbody></table>
+
+
+
+					</div>
+				</div>
+
+
+
+			</div>
+
+		</div>
+	</div>
+
+	<!-- email_send -->
+	<div class="winFullPop emailSend">
+
+		<div class="winFPHeader">
+			<div class="title">
+				<h2>Mail Write</h2>
+			</div>
+			<div class="tools">
+				<div class="buttonGroup">
+					<button type="button" class="button prime">보내기</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="winFPBody">
+			<div class="emailSendBox">
+				<div class="inputWrap">
+					<div class="addon">
+						<span class="hding">받는사람</span>
+					</div>
+					<label for="to">받는사람</label>
+					<input type="text" id="to" placeholder="">
+				</div>
+
+				<div class="inputWrap">
+					<div class="addon">
+						<span class="hding">참조</span>
+					</div>
+					<label for="cc">참조</label>
+					<input type="text" id="cc" placeholder="">
+				</div>
+
+				<div class="inputWrap">
+					<div class="addon">
+						<span class="hding">제목</span>
+					</div>
+					<label for="title">제목</label>
+					<input type="text" id="title" placeholder="">
+				</div>
+
+				<!-- editor -->
+				<div id="emailEditor"></div>
+			</div>
+		</div>
+
+
+	</div>
+
+	<!-- window_setting -->
+	<div class="winFullPop winSetting">
+		<div class="winFPHeader">
+			<div class="title">
+				<h2>외부메일 가져오기</h2>
+			</div>
+			<div class="tools"></div>
+		</div>
+		<div class="winFPBody fb_xy">
+			프로세스 정리
+		</div>
+	</div>
+
+</div>
+
+<div class="winFooter">
+	<span class="appInfo new">complete</span>
+</div>

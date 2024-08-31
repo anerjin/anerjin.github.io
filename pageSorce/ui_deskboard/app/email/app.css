@@ -1,0 +1,58 @@
+/* ----------------------------------------------
+APP UI - EMAIL- Common
+------------------------------------------------*/
+
+/* ---- animate ----*/
+#window_email .winBody .emailSend, .addTools
+{transition:all .2s cubic-bezier(0, 0, 0.1, 1); transform:all .2s cubic-bezier(0, 0, 0.1, 1);-webkit-transition:all .2s cubic-bezier(0, 0, 0.1, 1);}
+
+/* ---- restrict ----*/
+.winsideHeader .majorMail .nameMail strong,
+.winsideHeader .majorMail .nameMail p,
+#window_email .winBody .winContainer .winContent .viewBox .viewBoxBody .contentTitle .title h2
+{text-overflow:ellipsis; overflow:hidden; white-space:nowrap;}
+
+/* ---- fb_ewy ----*/
+#window_email .winBody .winContainer .winContent .viewBox .viewBoxBody .contentTitle .title
+{display:flex; justify-content:space-between; align-items:center;/* */ display:-webkit-flex; -webkit-justify-content:space-between; -webkit-align-items:center;/* */ display: -ms-flexbox; -ms-flex-pack:justify; -ms-flex-align: center;}
+
+/* ----------------------------------------------
+theme
+------------------------------------------------*/
+#window_email .winHeader .control button.back {color:#3f93ff;}
+#window_email .winHeader .control button.back:disabled {color:#88939a;}
+
+#window_email .winHeader .tools .buttonGroup button.spin:before {color:#3f93ff;}
+#window_email .winBody.winsideOut .winside {border-right:0;}
+#window_email .winBody .winside .winsideHeader .majorMail {margin:0 10px; width:calc(100% - 20px);}
+#window_email .winBody .winside .winsideHeader .majorMail .userPhoto {width:32px; height:32px; border-radius:50%; display:inline-block; vertical-align:middle; background: url(../../assets/images/gui/user.png)#a1acb9; background-size:cover;}
+#window_email .winBody .winside .winsideHeader .majorMail .userPhoto img {width:32px; height:32px; border-radius:50%;}
+#window_email .winBody .winside .winsideHeader .majorMail .nameMail {display:inline-block; vertical-align:middle; line-height:14px; margin-left:8px; color:#8da1ae;}
+#window_email .winBody .winside .winsideHeader .majorMail .nameMail strong {display:block; color:#3f93ff; width:114px; font-size:12px; font-weight:bold;}
+#window_email .winBody .winside .winsideHeader .majorMail .nameMail p {display:block; width:114px; font-size:11px;}
+
+#window_email .winBody .winContainer .winContent .listBox .listBoxBody ul li.active {}
+#window_email .winBody .winContainer .winContent .listBox .listBoxBody ul li .info .sender strong {text-overflow:ellipsis; overflow: hidden; white-space: nowrap; width: calc(100% - 80px);}
+#window_email .winBody .winContainer .winContent .viewBox .connectBox .connect i {color:#3f93ff;}
+#window_email .winBody .winContainer .winContent .viewBox .viewBoxBody .contentTitle {height:110px; border-bottom:1px solid rgba(40, 45, 111, 0.1);}
+#window_email .winBody .winContainer .winContent .viewBox .viewBoxBody .contentTitle .title {padding:18px 20px 16px 20px;}
+#window_email .winBody .winContainer .winContent .viewBox .viewBoxBody .contentTitle .title h2 {display:block; font-weight:bold; font-size:20px; color:#3f93ff; width:calc(100% - 140px);}
+#window_email .winBody .winContainer .winContent .viewBox .viewBoxBody .contentTitle .title h2 input {font-weight:bold; font-size:18px; color:#3f93ff; border:0; text-overflow:ellipsis; overflow:hidden; white-space:nowrap;}
+#window_email .winBody .winContainer .winContent .viewBox .viewBoxBody .contentTitle .title em {font-size:12px; color:#8c959f; width:120px; text-align:right; font-style:normal;}
+#window_email .winBody .winContainer .winContent .viewBox .viewBoxBody .contentTitle dl {font-size:0px; margin:0 20px; color:#8c959f; line-height:20px;}
+#window_email .winBody .winContainer .winContent .viewBox .viewBoxBody .contentTitle dl dt {display:inline-block; width:80px; font-size:14px; font-weight:bold;}
+#window_email .winBody .winContainer .winContent .viewBox .viewBoxBody .contentTitle dl dd {display:inline-block; width:calc(100% - 80px); font-size:12px;}
+/* pop */
+#window_email .winBody .winFullPop .winFPHeader .title h2 {color:#3f93ff;}
+#window_email .winBody .winFullPop .emailSendBox {height:100%;}
+#window_email .winBody .winFullPop .emailSendBox .inputWrap {}
+#window_email .winBody .winFullPop .emailSendBox .inputWrap input {border-top:0; border-left:0; border-right:0; border-radius:0; height:35px; line-height:35px;}
+#window_email .winBody .winFullPop .emailSendBox .inputWrap .addon span.hding {background:#fff; color:#3f93ff; width:100px; font-size:13px; text-align:right; border-top:0;}
+#window_email .winBody .winFullPop .emailSendBox #emailEditor {height:calc(100% - 146px);}
+#window_email .winBody .winFullPop .emailSendBox .buttonWrap {height:45px; border-bottom:1px solid rgba(40, 45, 111, 0.1); background:#f7f8f9;}
+#window_email .winBody .winFullPop .emailSendBox .buttonWrap .buttonGroup {margin:0 20px;}
+/* emailReset */
+.emailReset {font-size:inherit; margin:20px;}
+.emailReset table {table-layout:auto;}
+.emailReset table td {vertical-align:middle;}
+

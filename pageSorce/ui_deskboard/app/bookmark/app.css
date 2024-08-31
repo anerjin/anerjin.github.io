@@ -1,0 +1,56 @@
+/* ----------------------------------------------
+APP UI - BOOKMARK -
+------------------------------------------------*/
+#window_bookmark .winBody .winside .winsideBody {height:calc(100% - 36px);}
+#window_bookmark .winBody .winside .winsideBody .sIndex {height:calc(100% - 81px);}
+#window_bookmark .winBody .winside .winsideBody .sIndex .siHeader .button.zmdi-check {color:#807fff;}
+#window_bookmark .winBody .winside .winsideBody .sIndex ul {height:calc(100% - 26px);}
+#window_bookmark .winBody.winsideOut .winside {border-right:0;}
+
+#window_bookmark .bookmark {height:calc(100% - 4px);}
+#window_bookmark .bookmark .bookmarkWrite {position:relative; z-index:1; border-bottom:1px solid rgba(81, 88, 103, 0.14);}
+#window_bookmark .bookmark .bookmarkWrite .writeBox {margin:15px 21px;}
+#window_bookmark .bookmark .bookmarkWrite .inputWrap {padding:16px 20px;}
+#window_bookmark .bookmark .bookmarkWrite .inputWrap input {color:#807fff; font-weight:500; background:#f4f4f6;}
+#window_bookmark .bookmark .bookmarkWrite .inputWrap input:-ms-input-placeholder {color:rgba(0, 0, 0, 0.4);}
+#window_bookmark .bookmark .bookmarkWrite .inputWrap input::-webkit-input-placeholder {color:rgba(0, 0, 0, 0.4);}
+
+#window_bookmark .bookmark .bookmarkWrite .inputWrap .addon button {background:#807fff;}
+#window_bookmark .bookmark .bookmarkWrite .inputWrap .addon button.i:before {font-size:24px;}
+
+#window_bookmark .bookmark .bookmarkBox {height:calc(100% - 63px); background:#fff;}
+#window_bookmark .bookmark .bookmarkBox ul {margin:0px; }
+#window_bookmark .bookmark .bookmarkBox ul li {display:block; background:#FFF; margin-bottom:1px; position:relative; border-bottom:1px dashed rgba(0,0,0,0.1);}
+#window_bookmark .bookmark .bookmarkBox ul li:hover {background:#f9f9f9;}
+#window_bookmark .bookmark .bookmarkBox ul li button {position:absolute;}
+#window_bookmark .bookmark .bookmarkBox ul li .zmdi-star {top:0px; left:0px; font-size:14px; width:46px; height:46px; color:#ccc;}
+#window_bookmark .bookmark .bookmarkBox ul li .zmdi-star:hover {color:#999;}
+#window_bookmark .bookmark .bookmarkBox ul li .zmdi-star.active {color:#fdb101;}
+#window_bookmark .bookmark .bookmarkBox ul li .zmdi-delete {top:9px; right:9px; width:30px; height:30px;line-height:30px; background:#c0392b; opacity:0; color:#FFF; border-radius:50%;}
+#window_bookmark .bookmark .bookmarkBox ul li:hover .zmdi-delete {opacity:1;}
+#window_bookmark .bookmark .bookmarkBox ul li a {display:block; vertical-align:middle; width:calc(100% - 50px); height:46px; line-height:46px; padding-left:46px;}
+#window_bookmark .bookmark .bookmarkBox ul li a img {width:20px; height:20px; display:inline-block; vertical-align:middle; margin-right:6px;}
+#window_bookmark .bookmark .bookmarkBox ul li a span {width:calc(100% - 50px); display:inline-block; vertical-align:middle; text-overflow:ellipsis; overflow:hidden; white-space:nowrap;}
+
+/* theme */
+#window_bookmark .winHeader .control button.back {color:#807fff;}
+#window_bookmark .winHeader .control button.back:disabled {color:#88939a;}
+#window_bookmark .winHeader .tools .buttonGroup button.active {color:#807fff;}
+#window_bookmark .winHeader .appName {color:#807fff;}
+#window_bookmark .winHeader .tools .buttonGroup button.spin:before {color:#807fff;}
+#window_bookmark .buttonGroup button:hover {color:#807fff;}
+#window_bookmark .buttonGroup button.prime {background:#807fff;}
+#window_bookmark .buttonGroup button.prime:hover {color:#fff;}
+#window_bookmark .winBody .winside .winsideBody .mIndex ul li:hover {background:#807fff;}
+#window_bookmark .winBody .winside .winsideBody .mIndex ul li:hover em {color:#807fff;}
+#window_bookmark .winBody .winside .winsideBody .mIndex ul li.active {background:#807fff;}
+#window_bookmark .winBody .winside .winsideBody .mIndex ul li.active em {color:#807fff;}
+#window_bookmark .winBody .winside .winsideBody .sIndex ul li:hover {color:#807fff;}
+#window_bookmark .winBody .winside .winsideBody .sIndex ul li:hover em {background:#807fff;}
+#window_bookmark .winBody .winside .winsideBody .sIndex ul li.active {color:#807fff;}
+#window_bookmark .winBody .winside .winsideBody .sIndex ul li.active em {background:#807fff;}
+#window_bookmark .winBody .winSetting .winSetHeader h2 {color:#807fff;}
+
+/* pop */
+#window_bookmark .winBody .winFullPop .winFPHeader .title h2 {color:#807fff;}
+

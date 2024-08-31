@@ -1,12 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Portfolio</title>
+
+	<title id="hTitle"></title>
+
+	<link rel="shortcut icon" type="image/x-icon" href="markup/img/icon.ico">
+	<link rel="stylesheet" href="markup/css/markup.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+
+	<script src="markup/js/jquery.min.js"></script>
+	<script type="text/javascript" src="markup/js/markup.js"></script>
+
+	<script>
+	$( "#page_show" ).contents().find( "a" ).css( "background-color", "#BADA55" );
+	</script>
+
+
 </head>
 <body>
-  <p>Hello, World!</p>
+<div id="bodyWrap">
+	<div id="header">
+		<h1 id="title"></h1>
+		<div class="ctrl">
+			<button type="button" id="btn_reload" class="btn_ctrl" title="새로고침"><i class="zmdi zmdi-refresh"></i></button>
+			<span class="pageurl_box">
+				<input type="text" name="" id="page_url" value="" class="pageurl" readonly>
+				<!--<span id="page_title"></span> -->
+			</span>
+			<button type="button" id="btn_external" class="btn_ctrl" title="새창열기"><i class="zmdi zmdi-arrow-right-top"></i></button>
+			<button type="button" id="btn_mobile" class="btn_ctrl" title="모바일보기"><i class="zmdi zmdi-smartphone-iphone"></i></button>
+			<button type="button" id="btn_desktop" class="btn_ctrl" title="PC보기"><i class="zmdi zmdi-desktop-mac"></i></button>
+			<button type="button" id="btn_dir" class="btn_ctrl" title="direction 변경"><i class="zmdi zmdi-compare"></i></button>
+		</div>
+		<div class="tools">
+			<button type="button" id="sideOnf" class="btn_ctrl on" title="sideOnf"><i class="zmdi zmdi-sort-amount-desc"></i></button>
+		</div>
+	</div>
+	<div id="side">
+		<h2><span id="page_title2">Page title</span><!-- : <span id="page_leng"></span>--></h2>
+		<div id="urls" class="links"></div>
+	</div>
+	<div id="frame">
+
+		<div class="iframe_wrap">
+			<iframe src="" frameborder="0" id="page_show"></iframe>
+			<button type="button" class="rotate"><i class="zmdi zmdi-screen-rotation"></i></button>
+		</div>
+	</div>
+</div>
+
+<script>
+var title = "ULTRADESK";
+var mobile = false;
+var page_list = {"pages":[
+
+// {"title":"INFO","url":""},
+// 	{"title":"INFO", "url":"markup/info.html"},
+
+{"title":"Landing", "url":""},
+	{"title":"Landing UI Component", "url":"pageSorce/landing_ui-component.html"},
+	{"title":"Landing main", "url":"pageSorce/landing_main.html"},
+	{"title":"Landing member_create", "url":"pageSorce/landing_member_create.html"},
+	{"title":"Landing member_pw_change", "url":"pageSorce/landing_member_pw-change.html"},
+
+{"title":"desk Service", "url":""},
+	{"title":"desk UI Component", "url":"pageSorce/desk_ui-component.html"},
+	{"title":"desk Start Page", "url":"pageSorce/desk_lock.html"},
+	{"title":"desk My DESK", "url":"pageSorce/desk_board.html"},
+
+{"title":"ADMIN", "url":""},
+	{"title":"관리자 로그인", "url":"pageSorce/ui_manageSystem/login.html"},
+	{"title":"대시보드", "url":"pageSorce/ui_manageSystem/dashboard.html"},
+	{"title":"회원 리스트 (주석확인)", "url":"pageSorce/ui_manageSystem/member_list.html"},
+	{"title":"탈퇴 리스트", "url":"pageSorce/ui_manageSystem/member_leave.html"},
+	{"title":"명언 관리", "url":"pageSorce/ui_manageSystem/startPage.html"},
+	{"title":"랜덤 배경화면", "url":"pageSorce/ui_manageSystem/desk.html"},
+	{"title":"앱 리스트", "url":"pageSorce/ui_manageSystem/apps.html"},
+	{"title":"위젯 리스트", "url":"pageSorce/ui_manageSystem/widget.html"},
+	{"title":"통계관리", "url":"pageSorce/ui_manageSystem/statistics.html"},
+
+
+{"title":"--------END--------", "url":""},
+
+]};
+
+
+</script>
+
 </body>
 </html>

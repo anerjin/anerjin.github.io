@@ -1,0 +1,64 @@
+/* ----------------------------------------------
+APP UI - driveWrap -
+------------------------------------------------*/
+#window_drive .winBody .winside .winsideBody {height:calc(100% - 36px);}
+#window_drive .winBody .winside .winsideBody .sIndex {height:calc(100% - 81px);}
+#window_drive .winBody .winside .winsideBody .sIndex .siHeader .button.zmdi-check {color:#1b97f5;}
+#window_drive .winBody .winside .winsideBody .sIndex ul {height:calc(100% - 26px);}
+#window_drive .winBody.winsideOut .winside {border-right:0;}
+
+#window_drive .driveWrap {height:calc(100% - 0px);}
+#window_drive .driveWrap .driveHeader {height:40px; position:relative; border-bottom:1px solid rgba(40, 45, 111, 0.1); z-index:1;}
+#window_drive .driveWrap .driveHeader .depth {}
+#window_drive .driveWrap .driveHeader .depth ul {margin-left:20px;}
+#window_drive .driveWrap .driveHeader .depth ul li {display:inline-block; vertical-align:middle; cursor:pointer; font-size:12px;}
+#window_drive .driveWrap .driveHeader .depth ul li:hover {background:#FFF;}
+#window_drive .driveWrap .driveHeader .depth ul li span {display:inline-block; vertical-align:middle; padding:8px; margin-left:4px; border-radius:4px; color:#999;}
+#window_drive .driveWrap .driveHeader .depth ul li span:hover {color:#1b97f5; background:#f3f4f7;}
+#window_drive .driveWrap .driveHeader .depth ul li:first-child:before {content:'\f228'; font-size:18px;}
+#window_drive .driveWrap .driveHeader .depth ul li:before {content:'\f2f6'; font-size:18px; color:#bbb;}
+#window_drive .driveWrap .driveHeader .depth ul li:before,
+#window_drive .driveWrap .driveHeader .depth ul li:first-child:before {font-family:'Material-Design-Iconic-Font'; display:inline-block; vertical-align:middle; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;}
+
+#window_drive .driveWrap .driveBody {height:calc(100% - 40px);}
+#window_drive .driveWrap .driveBody ul {margin:10px; font-size:0;}
+#window_drive .driveWrap .driveBody ul li {width:80px; display:inline-block; vertical-align:top; color:#666; font-size:12px; text-align:center; position:relative; padding:8px 0 10px 0; cursor:pointer; margin:6px;}
+#window_drive .driveWrap .driveBody ul li:hover {background:#fff; border-radius:4px; box-shadow:0 1px 1px rgba(18, 41, 69, 0.2);}
+#window_drive .driveWrap .driveBody ul li:before{font:normal normal normal 14px/1 'Material-Design-Iconic-Font'; width:70px; height:54px; font-size:54px; text-align:center; display:inline-block; vertical-align:middle;}
+#window_drive .driveWrap .driveBody ul li.folder:before{content:"\f228"; color:#3fc2f1; font-size:60px;}
+#window_drive .driveWrap .driveBody ul li.pdf:before{content:"\f14d"; color:#d42b2a;}
+#window_drive .driveWrap .driveBody ul li.ppt:before{content:"\f150"; color:#e8592c;}
+#window_drive .driveWrap .driveBody ul li.excel:before{content:"\f150"; color:#39a438;}
+#window_drive .driveWrap .driveBody ul li.word:before{content:"\f150"; color:#6583fc;}
+#window_drive .driveWrap .driveBody ul li.hwp:before{content:"\f150"; color:#6098e2;}
+#window_drive .driveWrap .driveBody ul li.txt:before{content:"\f222"; color:#666;}
+#window_drive .driveWrap .driveBody ul li.img:before{content:"\f140"; color:#f9b800;}
+#window_drive .driveWrap .driveBody ul li.video:before{content:"\f151"; color:#b255c1;}
+#window_drive .driveWrap .driveBody ul li.music:before{content:"\f14c"; color:#95bf31;}
+#window_drive .driveWrap .driveBody ul li.other:before{content:"\f223"; color:#bbb;}
+#window_drive .driveWrap .driveBody ul li .thumb {width:70px; height:54px; display:flex; justify-content:center; align-items:center; /* */ display:-webkit-flex; -webkit-justify-content:center; -webkit-align-items:center; /* */ display: -ms-flexbox; -ms-flex-pack:center; -ms-flex-align: center;}
+#window_drive .driveWrap .driveBody ul li .thumb img {max-width:60px; max-height:54px; border-radius:4px;}
+#window_drive .driveWrap .driveBody ul li .name {text-overflow:ellipsis; overflow:hidden; white-space:nowrap; display:block; text-align:center;}
+
+/* theme */
+#window_drive .winHeader .control button.back {color:#1b97f5;}
+#window_drive .winHeader .control button.back:disabled {color:#88939a;}
+#window_drive .winHeader .tools .buttonGroup button.active {color:#1b97f5;}
+#window_drive .winHeader .appName {color:#1b97f5;}
+#window_drive .winHeader .tools .buttonGroup button.spin:before {color:#1b97f5;}
+#window_drive .buttonGroup button:hover {color:#1b97f5;}
+#window_drive .buttonGroup button.prime {background:#1b97f5;}
+#window_drive .buttonGroup button.prime:hover {color:#fff;}
+#window_drive .winBody .winside .winsideBody .mIndex ul li:hover {background:#1b97f5;}
+#window_drive .winBody .winside .winsideBody .mIndex ul li:hover em {color:#1b97f5;}
+#window_drive .winBody .winside .winsideBody .mIndex ul li.active {background:#1b97f5;}
+#window_drive .winBody .winside .winsideBody .mIndex ul li.active em {color:#1b97f5;}
+#window_drive .winBody .winside .winsideBody .sIndex ul li:hover {color:#1b97f5;}
+#window_drive .winBody .winside .winsideBody .sIndex ul li:hover em {background:#1b97f5;}
+#window_drive .winBody .winside .winsideBody .sIndex ul li.active {color:#1b97f5;}
+#window_drive .winBody .winside .winsideBody .sIndex ul li.active em {background:#1b97f5;}
+#window_drive .winBody .winSetting .winSetHeader h2 {color:#1b97f5;}
+
+/* pop */
+#window_drive .winBody .winFullPop .winFPHeader .title h2 {color:#1b97f5;}
+

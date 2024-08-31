@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title>UD</title>
+
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- css -->
+	<link rel="stylesheet" href="ui_deskboard/assets/css/desk_ui.css" />
+	<link rel="stylesheet" href="ui_deskboard/assets/css/desk_lock.css" />
+	<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+	
+	<!-- jquery -->
+	<script src="plugin/jquery/jquery.min.js"></script>
+    <script src="plugin/jquery/jquery-ui.min.js"></script>
+
+	<!-- desk js -->
+    <script src="ui_deskboard/assets/js/common.js"></script>
+	<script src="ui_deskboard/assets/js/desk_login.js"></script>
+	
+	
+	
+
+
+</head>
+
+<body>
+<div id="lockWrap" data-theme="glass">
+
+	<div class="lock">
+	
+		<!-- header -->
+		<div class="header fb_ewy">
+			<div class="title">
+				<h1>
+					<img src="../pageSorce/ui_deskboard/assets/images/lock/common/logo.svg" alt="ultradesk">
+				</h1>
+			</div>
+			<div class="tools">
+				<button type="button" class="button prime round mBtn toolTip-bottom" data-pop="lock_login" title="로그인이 필요합니다.">로그인</button>
+				<button type="button" class="button prime round mBtn toolTip-bottom" data-pop="lock_password" title="패스워드로 잠겨 있습니다.">잠금해제</button>
+				<button type="button" class="button gray round mBtn toolTip-bottom" data-pop="lock_logout" title="로그아웃">로그아웃</button>
+
+
+			</div>
+		</div>
+		
+		<div class="container fb_xy">
+	
+			<!-- loginUi -->
+			<div id="loadPop"></div>
+		
+			<!-- widget -->
+			<div class="widget">
+				<!-- weather -->
+				<div class="weather">
+					<img src="../pageSorce/ui_deskboard/assets/images/lock/login/partly_cloudy_day.svg" alt="ultradesk">
+				</div>
+				<!-- time -->
+				<div class="time">
+					<div class="clock">
+						<div id="date"></div>
+						<div id="clock"></div>
+					</div>
+				</div>
+
+				
+			</div>
+		
+		</div>
+
+		
+	</div>
+	
+	
+	<!-- wallpaper -->
+	<div class="wallpaper" style="background: url(ui_deskboard/assets/images/bg/bg10.jpg) no-repeat #333;"></div>
+	
+</div>
+
+
+
+
+</body>
+</html>
