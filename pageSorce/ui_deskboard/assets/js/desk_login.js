@@ -29,7 +29,6 @@ function deskLogin() {
 		
 		var loadPopName = $(this).attr("data-pop");
 		var widget = "#lockWrap .container .widget";
-		var headerButton = "#lockWrap .header .tools button";
 		var loadPopClose = "[data-ui='loadPopClose']";
 		
 		if($(widget).hasClass("hide")){
@@ -44,7 +43,7 @@ function deskLogin() {
 		
 		// showPop
 		function showPop() {
-			$(loadPop).append( "<div id='"+loadPopName+"' class='loginWrap fb_xy'></div>" );
+			$(loadPop).append( "<div id='"+loadPopName+"' class='loginWrap'></div>" );
 			$('#'+loadPopName).load('./ui_deskboard/popup/'+loadPopName+'.html');
 		}
 
