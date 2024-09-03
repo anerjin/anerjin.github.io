@@ -167,7 +167,8 @@ button.button.prime {background:var(--main-color); color:#FFF;}
 button.button.white {background:#fff; color:#1C1C1C;}
 button.button.gray {background:#ECECEC; color:#1C1C1C;}
 button.button.dark {background:#000; color:#fff;}
-
+button.button.clearDark {background:rgba(0,0,0,0); color:#333;}
+button.button.clearWhite {background:rgba(0,0,0,0); color:#fff;}
 
 
 
@@ -232,18 +233,18 @@ button.button.animated_x.big:disabled:hover:before, .button button.animated_x.bi
 SWITCH
 ------------------------------------------------*/
 /* switch */
-.switch {position:relative; display:inline-block; vertical-align:middle; width:24px; height:14px; border-radius:20px;}
-.switch input {position:absolute; z-index:1; left:0; width:100%; height:100%; opacity:0;}
+.switch {display:inline-block; position:relative; width:34px; height:20px; border-radius:20px; vertical-align:middle;}
+.switch input {position:absolute; z-index:1; left:0; width:100%; height:100%; opacity:0; margin:0; cursor:pointer;}
 .switch .switch_input:checked ~ .switch_label {background:var(--main-color);}
 .switch .switch_input:checked ~ .switch_label:before {opacity:0;}
 .switch .switch_input:checked ~ .switch_label:after {opacity:0;}
-.switch .switch_input:checked ~ .switch_handle {left:12px;}
-.switch .switch_label {position:relative; display:block; height:inherit; font-size:10px; background:#d5d5d5; border-radius:inherit; -webkit-transition:0.15s ease-out; transition:0.15s ease-out; cursor:pointer;}
-.switch .switch_label:before, .switch_label:after {position:absolute; top:2px; -webkit-transition:inherit; transition:inherit; opacity:0;}
+.switch .switch_input:checked ~ .switch_handle {left:17px;}
+.switch .switch_label {display:block; position:relative; height:inherit; border-radius:inherit; background:#d5d5d5; font-size:10px; cursor:pointer; transition:0.15s ease-out;-webkit-transition:0.15s ease-out;}
+.switch .switch_label:before, .switch_label:after {position:absolute; top:2px; opacity:0; transition:inherit;-webkit-transition:inherit;}
 .switch .switch_label:before {content:attr(data-off); right:10px; color:rgba(255,255,255,0.5); font-weight:bold;}
-.switch .switch_label:after {content:attr(data-on); left:10px; color:#fff; opacity:0; font-weight:bold;}
-.switch .switch_handle {position:absolute; top:2px; left:2px; width:10px; height:10px; background:#fff; border-radius:10px; -webkit-transition:left 0.15s ease-out; transition: left 0.15s ease-out;  cursor:pointer;}
-.switch .switch_handle:before {content:''; position:absolute; top:50%; left:50%; margin:-10px 0 0 -10px; width:20px; height:20px; background:#cf0652; border-radius:50%; display:none;}
+.switch .switch_label:after {content:attr(data-on); left:10px; opacity:0; color:#fff; font-weight:bold;}
+.switch .switch_handle {position:absolute; top:3px; left:3px; width:14px; height:14px; border-radius:10px; background:#fff; cursor:pointer; transition:left 0.15s ease-out;-webkit-transition:left 0.15s ease-out;}
+.switch .switch_handle:before {content:''; display:none; position:absolute; top:50%; left:50%; width:20px; height:20px; margin:-10px 0 0 -10px; border-radius:50%; background:#cf0652;}
 .switch .switch_input:disabled ~ .switch_label,
 .switch .switch_input:disabled ~ .switch_handle {cursor:default;}
 

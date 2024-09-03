@@ -21,7 +21,7 @@ lockWrap
 ------------------------------------------------*/
 #lockWrap {width:100%; height:100%; position:relative;}
 #lockWrap .wallpaper {background-size:cover !important; background-position:center top !important; position:fixed; top:-20px; left:-20px; right:-20px; bottom:-20px; z-index:1;}
-#lockWrap .dim {content:''; position:fixed; top:0px; left:0px; right:0px; bottom:0px; background:rgba(0,0,0,0.4); z-index:2; backdrop-filter: blur(20px);}
+#lockWrap .dim {content:''; position:fixed; top:0px; left:0px; right:0px; bottom:0px; background:rgba(0,0,0,0.2); z-index:2; backdrop-filter: blur(20px);}
 
 #lockWrap .lock {width:100%; height:100%; position:relative; z-index:3;}
 #lockWrap .lock .header {height:60px; position:relative; z-index:10;}
@@ -104,31 +104,30 @@ lockWrap
 
 #lockWrap .lock .container #loadPop:has(#lock_password) {}
 #lockWrap .lock .container #loadPop:has(#lock_password) .loginWrap {align-items:flex-end;}
-#lockWrap .lock .container #loadPop:has(#lock_password) ~ .widget.hide {animation:unset;}
-#lockWrap .lock .container #loadPop:has(#lock_password)  .dim {backdrop-filter:unset; background:none;}
-#lockWrap .lock .container #loadPop:has(#lock_password) .loginWrap.hide {animation:popHide 0.3s;-webkit-animation:popHide 0.3s;}
-#lockWrap  .loginWrap .passwordInit {animation:popShow 0.3s;-webkit-animation:popShow 0.3s; padding-bottom:6%; z-index:10;}
+#lockWrap .lock .container #loadPop:has(#lock_password) ~ .widget.hide {}
+#lockWrap .lock .container #loadPop:has(#lock_password)  .dim {}
+#lockWrap .lock .container #loadPop:has(#lock_password) .loginWrap.hide {}
+#lockWrap  .loginWrap .passwordInit {display:flex; align-items:center; flex-direction:column; z-index:10; padding-bottom:6%; animation:popShow 0.3s;-webkit-animation:popShow 0.3s;}
+#lockWrap  .loginWrap.hide .passwordInit {animation:popHide 0.3s;-webkit-animation:popHide 0.3s;}
 #lockWrap  .loginWrap .passwordInit .login {}
 #lockWrap  .loginWrap .passwordInit .login .user {display:flex; align-items:center; flex-direction:column; margin-bottom:30px; text-align:center;}
 #lockWrap  .loginWrap .passwordInit .login .user .userPhoto {display:flex; position:relative; margin-bottom:10px; border-radius:50%;}
 #lockWrap  .loginWrap .passwordInit .login .user .userPhoto img {width:48px; height:48px; border-radius:50%;}
 #lockWrap  .loginWrap .passwordInit .login .user .userName {display:block; color:#fff; font-size:14px; font-weight:600;}
 #lockWrap  .loginWrap .passwordInit .login .loginForm {}
-#lockWrap  .loginWrap .passwordInit .login .loginForm .inputWrap {}
+#lockWrap  .loginWrap .passwordInit .login .loginForm .inputWrap {border-radius:20px; background:#FAFAFA; overflow:hidden;}
 #lockWrap  .loginWrap .passwordInit .login .loginForm .inputWrap form {display:flex;}
-#lockWrap  .loginWrap .passwordInit .login .loginForm .inputWrap form input {padding:0 20px; border-radius:20px; font-size:12px;}
-#lockWrap  .loginWrap .passwordInit .login .loginForm .inputWrap form button {display:block; padding:10px; background:#ffffff;}
-
+#lockWrap  .loginWrap .passwordInit .login .loginForm .inputWrap form input {padding:0 0 0 20px; font-size:12px; border:0;}
+#lockWrap  .loginWrap .passwordInit .login .loginForm .inputWrap form button {display: flex;min-width:28px;height:28px;min-height:28px;margin:4px;border-radius:50%;background:#ccc;align-items: center;justify-content: center;}
+#lockWrap  .loginWrap .passwordInit .login .loginForm .inputWrap form button svg {margin-left: 6px;}
 
 #lockWrap  .loginWrap .passwordInit .login .loginForm .buttonBox {display:block; color:#FFF; margin-bottom:20px;}
 #lockWrap  .loginWrap .passwordInit .login .loginForm .buttonBox button {}
-#lockWrap  .loginWrap .passwordInit .infoText {display:block; font-size:14px; color:#FFF; line-height:22px; margin-bottom:20px;}
-#lockWrap  .loginWrap .passwordInit .infoText .description {padding-left:26px; position:relative;}
-#lockWrap  .loginWrap .passwordInit .infoText .description i {position:absolute; top:-1px; left:0; font-size:24px; text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);}
-#lockWrap  .loginWrap .passwordInit .infoText .description p {text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);}
-#lockWrap  .loginWrap .passwordInit .infoText .description p strong {cursor:pointer; color:#FF0;}
-#lockWrap  .loginWrap .passwordInit .infoText .description p strong:hover {text-decoration:underline;}
-#lockWrap  .loginWrap .passwordInit .infoText #countdown {text-shadow:1px 1px 1px rgba(0, 0, 0, 0.2); text-align:center; font-size:30px; height:50px; line-height:50px; margin-top:10px; background: rgba(0,0,0,0.2); border-radius: 30px;}
 
+#lockWrap  .loginWrap .passwordInit .passwordSearch {display:flex; justify-content:center; margin:10px 0;}
+#lockWrap  .loginWrap .passwordInit .passwordSearch button {}
+
+#lockWrap  .loginWrap .passwordInit .countTost {display:flex; align-items:center; padding:20px; border-radius:6px; background:rgba(0, 0, 0, 0.2); color:#fff; font-size:12px; backdrop-filter:blur(10px);}
+#lockWrap  .loginWrap .passwordInit .countTost strong {font-size:14px; color:#B1A8FA; margin-right:6px;}
 
 
