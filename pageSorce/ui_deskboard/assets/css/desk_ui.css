@@ -115,16 +115,6 @@ GLOBAL class
 .sr-only {position:absolute; width:1px; height:1px; margin:-1px; padding:0; overflow:hidden; border:0; clip-path:inset(50%);clip:rect(0 0 0 0);}
 
 
-/* flexBox__align */
-.fb_x {display:flex; justify-content:center; /* */ display:-webkit-flex; -webkit-justify-content:center; /* */ display:-ms-flexbox; -ms-flex-pack:center;}
-.fb_y {display:flex; align-items:center; /* */ display:-webkit-flex; -webkit-align-items:center; /* */  display:-ms-flexbox; -ms-flex-align: center;}
-.fb_xy {display:flex; justify-content:center; align-items:center; /* */ display:-webkit-flex; -webkit-justify-content:center; -webkit-align-items:center; /* */ display: -ms-flexbox; -ms-flex-pack:center; -ms-flex-align: center;}
-.fb_e {display:flex; justify-content:flex-start; /* */ display:-webkit-flex; -webkit-justify-content:flex-start;/* */ display: -ms-flexbox; -ms-flex-pack:start;}
-.fb_w {display:flex; justify-content:flex-end; /* */ display:-webkit-flex; -webkit-justify-content:flex-end;/* */ display: -ms-flexbox; -ms-flex-pack:end;}
-.fb_ey {display:flex; justify-content:flex-start; align-items:center; /* */ display:-webkit-flex; -webkit-justify-content:flex-start; -webkit-align-items:center;/* */ display: -ms-flexbox; -ms-flex-pack:start; -ms-flex-align: center;}
-.fb_wy {display:flex; justify-content:flex-end; align-items:center; /* */ display:-webkit-flex; -webkit-justify-content:flex-end; -webkit-align-items:center; /* */ display: -ms-flexbox; -ms-flex-pack:end; -ms-flex-align: center;}
-.fb_ew {display:flex; justify-content:space-between; /* */ display:-webkit-flex; -webkit-justify-content:space-between;/* */ display: -ms-flexbox; -ms-flex-pack:justify;}
-.fb_ewy {display:flex; justify-content:space-between; align-items:center;/* */ display:-webkit-flex; -webkit-justify-content:space-between; -webkit-align-items:center;/* */ display: -ms-flexbox; -ms-flex-pack:justify; -ms-flex-align: center;}
 
 
 /* ---- multiModal ----*/
@@ -181,54 +171,9 @@ button.button.circle {border-radius:50%;}
 button.button.sBtn {padding:6px 20px; font-size:12px;}
 button.button.mBtn {padding:8px 20px; font-size:12px;}
 
-/* option - icon
-button.button.i:before, button.button.ir:before, .button button.i:before, .button button.ir:before {font-size:18px; width:24px;}
-*/
-/* option - fw */
 
 button.button.fw, .button .fw {width:calc(100% - 0px) !important;}
 
-/* option - animated_x */
-button.button.animated_x, .button button.animated_x {}
-button.button.animated_x span, .button button.animated_x span {display:inline-block; padding:0 12px; transition:0.2s; position:relative; z-index:2;}
-button.button.animated_x:hover span, .button button.animated_x:hover span {padding:0; transition:0.2s;}
-button.button.animated_x.i:before, .button button.animated_x.i:before,  button.button.animated_x.ir:before, .button button.animated_x.ir:before {position:relative; opacity:0; width:0px; transition:0.2s;}
-button.button.animated_x.i:hover:before, .button button.animated_x.i:hover:before,  button.button.animated_x.ir:hover:before, .button button.animated_x.ir:hover:before {position:relative; opacity:1; width:24px; transition:0.2s;}
-button.button.animated_x:disabled:hover:before, .button button.animated_x:disabled:hover:before {width:0; opacity:0;}
-button.button.animated_x:disabled span, .button button.animated_x:disabled span {padding:0 12px;}
-/* option - animated_y */
-button.button.animated_y, .button button.animated_y {}
-button.button.animated_y span, .button button.animated_y span {display:inline-block; width:100%; height:100%; padding:0; transition:0.2s; position:relative; z-index:2;}
-button.button.animated_y:hover span, .button button.animated_y:hover span {-webkit-transform: translateY(300%); transform:translateY(300%);}
-button.button.animated_y.i:before, .button button.animated_y.i:before,  button.button.animated_y.ir:before, .button button.animated_y.ir:before {position:absolute; top:-100%; left:0; width:100%; height:100%; opacity:0; transition:0.2s;}
-button.button.animated_y.i:hover:before, .button button.animated_y.i:hover:before,  button.button.animated_y.ir:hover:before, .button button.animated_y.ir:hover:before {position:absolute; top:0; opacity:1;}
-button.button.animated_y:disabled:hover:before, .button button.animated_y:disabled:hover:before {width:0; opacity:0;}
-button.button.animated_y:disabled span, .button button.animated_y:disabled span {-webkit-transform:translateY(0%); transform:translateY(0%);}
-/* option - size smini */
-button.button.smini, .button button.smini {padding:0 4px; height:26px; line-height:24px; font-size:12px;}
-button.button.smini:before, .button button.smini:before {font-size:14px; width:18px;}
-/* option - size mini */
-button.button.mini, .button button.mini {padding:0 10px; height:30px; line-height:26px; font-size:12px;}
-button.button.animated_x.mini span, .button button.animated_x.mini span {padding:0 9px;}
-button.button.animated_x.mini:hover span, .button button.animated_x.mini:hover span {padding:0;}
-button.button.animated_x.mini:hover:before, .button button.animated_x.mini:hover:before {width:18px;}
-button.button.animated_x.mini:disabled span, .button button.animated_x.mini:disabled span {padding:0 9px;}
-button.button.animated_x.mini:disabled:hover:before, .button button.animated_x.mini:disabled:hover:before {width:0px;}
-/* option - size big */
-button.button.big, .button button.big  {padding:0 24px; height:48px; line-height:48px; font-size:28px;}
-button.button.big:before, .button button.big:before {font-size:28px; width:38px;}
-button.button.animated_x.big span, .button button.animated_x.big span {padding:0 18px;}
-button.button.animated_x.big:hover span, .button button.animated_x.big:hover span {padding:0;}
-button.button.animated_x.big:hover:before, .button button.animated_x.big:hover:before {width:36px;}
-button.button.animated_x.big:disabled span, .button button.animated_x.big:disabled span {padding:0 18px;}
-button.button.animated_x.big:disabled:hover:before, .button button.animated_x.big:disabled:hover:before {width:0px;}
-/* option - group */
-.buttonGroup {font-size:0;}
-.buttonGroup button {border:0px;}
-/*
-.buttonGroup button:first-child {border-left:1px solid rgba(40, 45, 111, 0.16) !important; border-top-left-radius:4px; border-bottom-left-radius:4px;}
-.buttonGroup button:last-child {border-top-right-radius:4px; border-bottom-right-radius:4px;}
-*/
 /* ----------------------------------------------
 SWITCH
 ------------------------------------------------*/
