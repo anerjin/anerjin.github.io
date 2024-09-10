@@ -180,12 +180,11 @@ function showHide() {
 function profile() {
 
     //
-    $('#profileInfo').on("click",function(){
-		$(this).addClass("active");
-		$("#profileInfoCard").addClass("active"); //카드 레이어 활성
-		$('#notifyInfo').removeClass("active"); //버튼비활성
-		$("#notifyInfoCard").removeClass("active"); //카드 레이어 활성
-	});
+    // $('#profileInfo').on("click",function(){
+	// 	$(this).addClass("active");
+	// 	$("#profileInfoCard").addClass("active"); //카드 레이어 활성
+		
+	// });
 
 	$('#notifyInfo').on("click",function(){
 		$(this).addClass("active");
@@ -193,6 +192,31 @@ function profile() {
 		$('#profileInfo').removeClass("active"); // 버튼 비활성
 		$("#profileInfoCard").removeClass("active"); // 카드레이어 비활성
 	});
+
+	$(function(){
+		$("#profileInfo").on("click", function(e){
+			if($(this).hasClass("active")){
+
+			}else{
+				var name = $(this).attr("data-hpop");
+				target = $(e.target);
+				var p = $(target).position();
+
+				// var divTop = p.top + 40; //상단 좌표
+				var divLeft = p.left + -100;
+
+				$(this).addClass("active").siblings().removeClass("active"); // 선택버튼 활성
+	
+				$('#profileInfoCard').addClass("active");
+				$('#profileInfoCard').css({"left":divLeft});
+
+				$('#notifyInfo').removeClass("active"); //버튼비활성
+				$("#notifyInfoCard").removeClass("active"); //카드 레이어 활성
+	
+			}
+		})
+	})
+
 
 }
 

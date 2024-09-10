@@ -107,7 +107,7 @@ DESK UI
 #toolbar .toolbarWrap .tools {display:flex; align-items:center; padding:8px; gap:12px; }
 
 /* cardInfo */
-.cardInfo {position:fixed; top:40px; left:50%; transform:translate(-50%, 0); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-radius:12px; z-index:999; box-shadow:0px 10px 25px 0px rgba(0, 0, 0, 0.4); padding:16px; visibility:hidden; overflow:hidden; opacity:0; transition:all .16s cubic-bezier(.7,0,.3,1);}
+.cardInfo {position:fixed; top:40px; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-radius:12px; z-index:999; box-shadow:0px 10px 25px 0px rgba(0, 0, 0, 0.4); padding:16px; visibility:hidden; overflow:hidden; opacity:0; transition:all .16s cubic-bezier(.7,0,.3,1);}
 .cardInfo.active {visibility:visible; opacity:1; top:56px;}
 .cardInfo.profile {min-width:240px;}
 .cardInfo.profile .userInfoBox {display:flex; align-items:center; margin-bottom:12px; gap:12px;}
@@ -147,6 +147,8 @@ DESK UI
 
 #toolbar .appPlusOnf {}
 #toolbar .widegtOnf {}
+
+#notifyInfoCard {right:10px;}
 
 /* ----------------------------------------------
 DESK UI - desktop

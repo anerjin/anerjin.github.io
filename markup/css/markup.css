@@ -39,7 +39,8 @@ button{outline:none}
 #header .ctrl {position:relative;}
 #header .ctrl button,
 #header .ctrl span { display:inline-block; vertical-align:top; position:relative; font-size:20px;}
-#header .ctrl .pageurl_box{position:relative;display:inline-block;vertical-align:top}
+#header .ctrl .pageurl_box {position:relative;display:inline-block;vertical-align:top}
+#header .ctrl .pageurl_box label {display:none;}
 #header .ctrl .pageurl_box span{position:absolute; top:0; line-height:30px; font-size:12px; color:#333;}
 #header .ctrl .pageurl_box #page_size{right:.5em}
 #header .ctrl .pageurl_box #page_title{left:.5em}

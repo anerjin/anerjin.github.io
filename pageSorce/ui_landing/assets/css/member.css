@@ -11,9 +11,6 @@
 MEMBER UI - COMMON
 ------------------------------------------------*/
 
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css");
-
-
 /* ---- setup ----*/
 html, body {background:#FAFAFA; height:100%;font-size:12px; overflow:hidden; margin: 0; font-family: "Pretendard Variable", Pretendard;}
 
@@ -28,7 +25,7 @@ a:hover {color:#656d78;}
 .memberWrap .header .resWidth {display:flex; justify-content:space-between; align-items:center; height:60px;}
 .memberWrap .header .staWrap {display:flex; align-items:center; gap:36px;}
 .memberWrap .header .staWrap .title {display:flex; align-items:center; gap:10px;}
-.memberWrap .header .staWrap .title i {display:block; width:32px; height:32px; background:url(../images/svg/common/logo.svg)no-repeat;}
+.memberWrap .header .staWrap .title i {display:block; width:32px; height:32px; background:url(../images/svg/common/logo.svg)no-repeat; font-size:0; color:transparent;}
 .memberWrap .header .staWrap .title h1 {margin:0; font-size:14px; font-weight:800;}
 .memberWrap .header .staWrap .gnb {display:flex; gap:4px;}
 .memberWrap .header .staWrap .gnb a {display:block; font-size:14px; padding:10px; font-weight:400;}
@@ -36,7 +33,7 @@ a:hover {color:#656d78;}
 .memberWrap .header .tools {display:flex; gap:10px;}
 
 /* container */
-.memberWrap .container {display:flex; justify-content:center; align-items:flex-start; height:calc(100% - 160px);}
+.memberWrap .container {display:flex; justify-content:center; align-items:center; height:calc(100% - 160px);}
 
 
 /* ---- member ----*/
@@ -56,7 +53,9 @@ a:hover {color:#656d78;}
 .memberWrap .container .memberBoxWrap .insertBox .insert .desc {font-size:14px; margin:10px 0;}
 .memberWrap .container .memberBoxWrap .insertBox .btnWrap {display:flex; justify-content:center;}
 .memberWrap .container .memberBoxWrap .insertBox .btnWrap .btnPwChange {font-size:18px; padding:20px 80px; border-radius:40px;}
-
+.memberWrap .container .memberBoxWrap .insertBox .confirmPw {display:flex; flex-direction:column; align-items:center; margin:40px 0 60px;}
+.memberWrap .container .memberBoxWrap .insertBox .confirmPw i {width:100px; height:100px; background:url(../images/svg/confirmPw.svg)no-repeat;}
+.memberWrap .container .memberBoxWrap .insertBox .confirmPw p {font-size:20px;}
 
 /* ---- footer ----*/
 .memberWrap .footer {display:flex; justify-content:center; align-items:center; height:100px; font-size:12px;}
