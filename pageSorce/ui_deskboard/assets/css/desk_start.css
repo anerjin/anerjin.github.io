@@ -79,7 +79,7 @@ lockWrap
 	{0% {opacity:1;} 100% {opacity:0;}}
 
 /* ---- loginArea ----*/
-#lockWrap  .loginArea {width:310px; z-index:10; border-radius:16px; animation:loginAreaPop 0.2s;-webkit-animation:loginAreaPop 0.2s; padding:30px 24px 60px; background:url(../images/lock/login/login_bg.svg)no-repeat bottom rgba(255, 255, 255, 0.6); background-size:contain; box-sizing:border-box;}
+#lockWrap  .loginArea {width:30dassdfsdf8px; z-index:10; border-radius:16px; animation:loginAreaPop 0.2s;-webkit-animation:loginAreaPop 0.2s; padding:30px 24px 60px; background:url(../images/lock/login/login_bg.svg)no-repeat bottom rgba(255, 255, 255, 0.6); box-sizing:border-box;}
 
 /* ---- loginArea > opid ----*/
 #lockWrap  .loginArea .opid {margin-bottom:20px; text-align:center;}

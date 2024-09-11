@@ -33,8 +33,7 @@ input[data-status="confirm"] ~ .desc {color:var(--main-color);}
 input[data-status="warning"] {border:1px solid #EF4444; color:#EF4444;}
 input[data-status="warning"] ~ .desc {color:#EF4444;}
 input:focus {}
-input:disabled {background:#f8f8f8; text-shadow:1px 1px 0px rgba(255,255,255,1); }
-
+input:disabled {background:#ddd; border:1px solid #C7C7C7; text-shadow:1px 1px 0px rgba(255,255,255,1); }
 
 /* ----------------------------------------------
 BUTTON
