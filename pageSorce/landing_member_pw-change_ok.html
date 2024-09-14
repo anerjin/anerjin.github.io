@@ -10,21 +10,21 @@
 
     <!-- css -->
 	<link rel="stylesheet" href="ui_landing/assets/css/ui.css" />
+	<link rel="stylesheet" href="ui_landing/assets/css/layout.css" />
 	<link rel="stylesheet" href="ui_landing/assets/css/member.css" />
 	<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
-
-	<!-- js -->
-	<!-- <script src="ui_landing/assets/js/common.js"></script> -->
 
 	<!-- jquery -->
 	<script src="plugin/jquery/jquery.min.js"></script>
     <script src="plugin/jquery/jquery-ui.min.js"></script>
 
+	<!-- js -->
+	<script src="ui_landing/assets/js/common.js"></script>
 
 </head>
 
 <body>
-<div class="memberWrap">
+<div class="wrap">
 
 	<!-- header -->
 	<div class="header">
@@ -48,7 +48,7 @@
 	</div>
 	
 	<!-- container -->
-	<div class="container">
+	<div class="container memberWrap">
 		<div class="memberBoxWrap">
 			<div class="memberBox">
 
@@ -74,34 +74,6 @@
 
 </div>
 
-<script>
-	
-	/* Timer 예제입니다. 열어본 시간을 기준으로 5분동안 이용가능하게 해야 합니다.*/
-	function countdown( elementId, seconds ){
-	  var element, endTime, hours, mins, msLeft, time;
-	
-	  function updateTimer(){
-		msLeft = endTime - (+new Date);
-		if ( msLeft < 0 ) {
-		  console.log('done');
-		} else {
-		  time = new Date( msLeft );
-		  hours = time.getUTCHours();
-		  mins = time.getUTCMinutes();
-		  element.innerHTML = (hours ? hours + ':' + ('0' + mins).slice(-2) : mins) + ':' + ('0' + time.getUTCSeconds()).slice(-2);
-		  setTimeout( updateTimer, time.getUTCMilliseconds());
-		  // if you want this to work when you unfocus the tab and refocus or after you sleep your computer and come back, you need to bind updateTimer to a $(window).focus event^^
-		}
-	  }
-	
-	  element = document.getElementById( elementId );
-	  endTime = (+new Date) + 1000 * seconds;
-	  updateTimer();
-	}
-	
-	countdown('countdown', 300);	 // second base
-
-</script>
 
 </body>
 </html>
