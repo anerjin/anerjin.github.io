@@ -72,7 +72,7 @@ DESK UI
 #wrap[data-theme="dark"] .cardInfo.notify .notifyList .notifyItem .infoBox .info .desc {color:#fff;}
 #wrap[data-theme="dark"] .cardInfo.notify .notifyList .notifyItem .infoBox.nodata {color:#fff;}
 #wrap[data-theme="dark"] button.button.white {background:rgba(0, 0, 0, 0.8); color:#fff;}
-#wrap[data-theme="dark"] #toolbar .toolbarWrap .deskDock:has(.dockBox ul li) .dockBox {border-right:1px dashed rgba(255, 255, 255, 0.2); border-left:1px dashed rgba(255, 255, 255, 0.2);}
+#wrap[data-theme="dark"] #toolbar .toolbarWrap .deskDock:has(.dockBox ul li) .dockBox {border-right:1px solid rgba(255, 255, 255, 0.1); border-left:1px solid rgba(255, 255, 255, 0.1);}
 #wrap[data-theme="dark"] ~ .nu-context-menu ul {background:rgba(0, 0, 0, 0.8);}
 #wrap[data-theme="dark"] ~ .nu-context-menu ul li {color:#fff;}
 /* ---- toolbar ui ----*/
@@ -86,7 +86,7 @@ DESK UI
 
 #toolbar .toolbarWrap .deskDock {display:flex; align-items:center; padding-left: 8px;}
 #toolbar .toolbarWrap .deskDock:has(.dockBox ul li) {gap:8px;}
-#toolbar .toolbarWrap .deskDock:has(.dockBox ul li) .dockBox {padding:8px 12px; border-right:1px dashed rgba(0, 0, 0, 0.3); border-left:1px dashed rgba(0, 0, 0, 0.3);}
+#toolbar .toolbarWrap .deskDock:has(.dockBox ul li) .dockBox {padding:8px 12px; border-right:1px solid rgba(0, 0, 0, 0.1); border-left:1px solid rgba(0, 0, 0, 0.1);}
 #toolbar .toolbarWrap .deskDock .dockBox {}
 #toolbar .toolbarWrap .deskDock .dockBox ul {display:flex; align-items:center; gap:12px;}
 #toolbar .toolbarWrap .deskDock .dockBox ul li {display:block; height:30px; width:30px; border-radius:5px; position:relative; background:#C7C7C7; animation:appShow 0.2s; -webkit-animation:appShow 0.2s;}
